@@ -1,20 +1,24 @@
-# Phase 4: User Feeds
+# Phase 4: Connecting Data Point
 
 ## Rails
 ### Models
+* Users
+* Artists
+* Artist Trackings
+* Events
+* Event Trackings
+* Locations
+* User Locations
 
 ### Controllers
-Api::PostsController (feed)
+YourPlansController(index) (route will be nested within users)
+YourConcertsController(index) (route will be nested with users)
+LocationsController(show)
 
 ### Views
-posts/feed.json.jbuilder
-
-## Backbone
-### Models
-
-### Collections
-
-### Views
-* FeedShow (composite view, contains PostsIndex subview)
+* /locations/show.html.erb
+* /your_plans/index.html.erb
+* /your_concerts/index.html.erb
 
 ## Gems/Libraries
+* jQuery

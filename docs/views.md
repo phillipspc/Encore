@@ -1,26 +1,26 @@
 # View Wireframes
 
-## New Session
-![new-session]
+## Home Page
+![home]
 
-## Feed Show (landing page)
-![feed-show]
+## User Dashboard (landing page)
+![dashboard]
 
-## Blog Show
-![blog-show]
+## Artist Page
+![artist-page]
 
-## Post Show
-![post-show]
+## Tracked Artists Page
+![tracked-artists]
 
-## Post Form
-![post-form]
+## Your Plans Page
+![your-plans]
 
-## Search Results
-![search-results]
+## Location Page
+![location-page]
 
-[new-session]: ./wireframes/new_session.png
-[feed-show]: ./wireframes/feed_show.png
-[blog-show]: ./wireframes/blog_show.png
-[post-show]: ./wireframes/post_show.png
-[post-form]: ./wireframes/post_form.png
-[search-results]: ./wireframes/search_results.png
+[home]: ./wireframes/1-Home.png
+[dashboard]: ./wireframes/2-User-Dashboard.png
+[artist-page]: ./wireframes/3-Artist-Page.png
+[tracked-artists]: ./wireframes/4-Tracked-Artists.png
+[your-plans]: ./wireframes/5-Your-Plans.png
+[location-page]: ./wireframes/6-Location-Page.png

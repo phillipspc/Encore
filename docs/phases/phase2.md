@@ -1,29 +1,18 @@
-# Phase 2: Viewing Blogs and Posts
+# Phase 2: Artist Show Page
 
 ## Rails
 ### Models
+* User
+* Artist
+* Artist Trackings
 
 ### Controllers
-Api::BlogsController (create, destroy, index, show)
-Api::PostsController (create, destroy, show, update)
+ArtistsController(show)
+TrackedArtistsController(index) (route will be nested within users)
 
 ### Views
-* blogs/show.json.jbuilder
-
-## Backbone
-### Models
-* Blog (parses nested `posts` association)
-* Post
-
-### Collections
-* Blogs
-* Posts
-
-### Views
-* BlogForm
-* BlogShow (composite view, contains PostsIndex subview)
-* PostsIndex (composite view, contains PostsIndexItem subviews)
-* PostsIndexItem
-* PostShow
+* /artists/show.html.erb
+* /tracked_artists/index.html.erb
 
 ## Gems/Libraries
+* jQuery

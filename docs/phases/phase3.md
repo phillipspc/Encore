@@ -1,21 +1,18 @@
-# Phase 3: Editing and Displaying Posts
+# Phase 3: Events Show Page
 
 ## Rails
 ### Models
+* User
+* Artist
+* Event
+* Event Trackings
 
 ### Controllers
+EventsController(show)
+
 
 ### Views
-
-## Backbone
-### Models
-
-### Collections
-
-### Views
-* PostForm
+* /events/show.html.erb
 
 ## Gems/Libraries
-* Filepicker
-* Markdown-js
-* Bootstrap Markdown
+* jQuery

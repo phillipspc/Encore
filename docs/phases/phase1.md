@@ -1,8 +1,10 @@
-# Phase 1: User Authentication, Basic Blogs and Posts
+# Phase 1: User authentication and User Dashboard
 
 ## Rails
 ### Models
 * User
+* Locations
+* User Locations
 
 ### Controllers
 * UsersController (create, new)
@@ -10,7 +12,9 @@
 
 
 ### Views
-* / (main page)
+* /static_pages/main.html.erb (main page)
 * users/new.html.erb
-* /home (logged in)
+* /static_pages/dashboard.html.erb (logged in)
 * session/new.html.erb
+
+## Gems/Libraries
