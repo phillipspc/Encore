@@ -8,7 +8,8 @@
 * Event Trackings
 
 ### Controllers
-EventsController(show)
+EventsController (show)
+EventsTrackingsController (will be nested resource within users)
 
 
 ### Views

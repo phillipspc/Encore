@@ -11,9 +11,9 @@
 * User Locations
 
 ### Controllers
-YourPlansController(index) (route will be nested within users)
-YourConcertsController(index) (route will be nested with users)
-LocationsController(show)
+YourPlansController (index) (will be nested resource within users)
+YourConcertsController (index) (will be nested resource within users)
+LocationsController (show)
 
 ### Views
 * /locations/show.html.erb

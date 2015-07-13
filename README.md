@@ -20,6 +20,7 @@ Encore is a clone of SongKick built on Rails. Users can:
 - [ ] View an event page to see more info about that event (other attendees)
 - [ ] View artist pages to see their upcoming shows
 - [ ] View location pages to see all upcoming shows in that area
+- [ ] Search Artists/Events from the home page without sign-in (guest user)
 
 
 ## Design Docs
@@ -69,14 +70,14 @@ tracked artists in the user's location(s). 'Your Plans' will be a list of events
 the user has tracked and/or tagged as attending. The dashboard can now show a mix
 of this info by default, i.e. the next upcoming concert you're tracking, and
 a handful of upcoming events from tracked artists. Location pages should display
-all upcoming shows for that location.
+all upcoming shows for that location. If not already implemented, all buttons
+should be dynamic, 'toggle-style' buttons. Will likely create a JQuery plugin for
+this.
 
 [Details][phase-four]
 
 
 ### Bonus Features (TBD)
-- [ ] Dynamic toggle buttons for tracking artists, events, etc.
-- [ ] Home page will allow guest users to search artists/events
 - [ ] Users can add 'live reviews' which show up on the artist's page
 - [ ] Users can "friend" other users
 - [ ] "Friends' plans" page displays upcoming shows of friends

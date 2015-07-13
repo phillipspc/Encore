@@ -7,8 +7,8 @@
 * Artist Trackings
 
 ### Controllers
-ArtistsController(show)
-TrackedArtistsController(index) (route will be nested within users)
+ArtistsController (show)
+ArtistTrackingsController (index) (will be nested resource within users)
 
 ### Views
 * /artists/show.html.erb
