@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
-  root to: 'static_pages#root'
+  root to: 'users#dashboard'
+  get 'users/dashboard', to: 'users#dashboard'
   resources :users
   resource :session
 end

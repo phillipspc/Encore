@@ -9,9 +9,8 @@ class SessionsController < ApplicationController
       params[:user][:password])
 
     if user
-      fail
       log_in(user)
-      redirect_to root_url
+      redirect_to users_dashboard_url
     else
       flash.now[:errors] = ['Sorry, that username or password is incorrect']
       render :new
