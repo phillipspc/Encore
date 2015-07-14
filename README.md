@@ -51,6 +51,7 @@ I'm hoping I can use this to populate event info for a limited number of bands
 (maybe 100 or so). Otherwise I will use a database seed to add this information.
 The artist page will display their upcoming events as well as allow a user to
 "track" an event, which will add that event to the 'your plans' section of site.
+This will also be the phase in which search is implemented.
 
 [Details][phase-two]
 

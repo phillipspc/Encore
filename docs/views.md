@@ -24,6 +24,9 @@
 ## Location Page
 ![location-page]
 
+## Search Results Page
+![search]
+
 [home]: ./wireframes/1-Home.png
 [dashboard]: ./wireframes/2-User-Dashboard.png
 [artist-page]: ./wireframes/3-Artist-Page.png
@@ -32,3 +35,4 @@
 [location-page]: ./wireframes/6-Location-Page.png
 [signup]: ./wireframes/7-Signup.png
 [login]: ./wireframes/8-Login.png
+[search]: ./wireframes/9-Search.png
