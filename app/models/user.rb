@@ -21,6 +21,18 @@ class User < ActiveRecord::Base
 
   attr_reader :password
 
+  def self.find_by_username_and_password(username, password)
+    user = User.find_by_username(username)
+    return nil unless user && user.valid_password?(password)
+    user
+  end
+
+  def self.find_by_email_and_password(email, password)
+    user = User.find_by_email(email)
+    return nil unless user && user.valid_password?(password)
+    user
+  end
+
   def password=(password)
     @password = password
     self.password_digest = BCrypt::Password.create(password)
