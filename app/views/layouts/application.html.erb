@@ -7,6 +7,7 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
+  <%= flash[:errors].join("<br>") if flash[:errors] %><br>
   <% if logged_in? %>
   <%= current_user.username %>
   <form action="<%= session_url %>" method="post">
