@@ -5,11 +5,11 @@ class SessionsController < ApplicationController
 
   def create
     user = User.find_by_username_and_password(
-      params[:user][:username],
+      params[:user][:username_or_email],
       params[:user][:password])
     if !user
       user = User.find_by_email_and_password(
-        params[:user][:email],
+        params[:user][:username_or_email],
         params[:user][:password])
     end
 
