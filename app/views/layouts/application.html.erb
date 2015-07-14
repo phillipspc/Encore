@@ -8,6 +8,11 @@
 </head>
 <body>
 <a href="<%= root_url %>">ENCORE</a>
+<% if logged_in? %>
+<%= render partial: 'layouts/header_logged_in' %>
+<% else %>
+<%= render partial: 'layouts/header_guest' %>
+<% end %>
 <%= yield %>
 
 </body>
