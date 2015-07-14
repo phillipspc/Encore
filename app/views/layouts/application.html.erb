@@ -9,6 +9,13 @@
 <body>
   <% if logged_in? %>
   <%= current_user.username %>
+  <form action="<%= session_url %>" method="post">
+    <%= render 'shared/auth_token' %>
+    <input type="hidden"
+           name="_method"
+           value="delete">
+   <input type="submit" value="log out">
+  </form>
   <% else %>
   You are not logged in.
   <% end %>
