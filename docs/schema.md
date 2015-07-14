@@ -9,12 +9,15 @@ email           | string    | not null, unique
 username        | string    | not null, unique
 password_digest | string    | not null
 session_token   | string    | not null, unique
+image_url       | string    |
 
 ## artists
 column name     | data type | details
 ----------------|-----------|-----------------------
 id              | integer   | not null, primary key
 name            | string    | not null, unique
+image_url       | string    |
+
 
 ## artist trackings (join table)
 column name     | data type | details
