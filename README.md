@@ -2,7 +2,7 @@
 
 [Heroku link][heroku]
 
-[heroku]: #
+[heroku]: https://encoreapp.herokuapp.com/
 
 ## Minimum Viable Product
 Encore is a clone of SongKick built on Rails. Users can:
