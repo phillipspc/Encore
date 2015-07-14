@@ -2,14 +2,15 @@
 <html>
 <head>
   <title>Encore</title>
-  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <!-- <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
-  <%= csrf_meta_tags %>
+  <%= csrf_meta_tags %> -->
 </head>
 <body>
+
   <%= flash[:errors].join("<br>") if flash[:errors] %><br>
   <% if logged_in? %>
-  <%= current_user.username %>
+  logged in as <%= current_user.username %>
   <form action="<%= session_url %>" method="post">
     <%= render 'shared/auth_token' %>
     <input type="hidden"
@@ -19,8 +20,8 @@
   </form>
   <% else %>
   You are not logged in.
-  <% end %>
-
+  <% end %><br>
+  <a href="<%= root_url %>">ENCORE</a>
 <%= yield %>
 
 </body>

@@ -4,18 +4,13 @@ class SessionsController < ApplicationController
   end
 
   def create
-    user = User.find_by_username_and_password(
+    user = User.find_by_username_or_email(
       params[:user][:username_or_email],
       params[:user][:password])
-    if !user
-      user = User.find_by_email_and_password(
-        params[:user][:username_or_email],
-        params[:user][:password])
-    end
 
     if user
       log_in(user)
-      redirect_to new_session_url
+      redirect_to dashboard_url
     else
       flash.now[:errors] = ['Sorry, that username or password is incorrect']
       render :new
@@ -30,5 +25,5 @@ class SessionsController < ApplicationController
   def index
 
   end
-  
+
 end

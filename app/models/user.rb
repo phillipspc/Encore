@@ -22,14 +22,9 @@ class User < ActiveRecord::Base
 
   attr_reader :password
 
-  def self.find_by_username_and_password(username, password)
-    user = User.find_by_username(username)
-    return nil unless user && user.valid_password?(password)
-    user
-  end
-
-  def self.find_by_email_and_password(email, password)
-    user = User.find_by_email(email)
+  def self.find_by_username_or_email(username_or_email, password)
+    input = username_or_email
+    user = User.find_by_username(input) || User.find_by_email(input)
     return nil unless user && user.valid_password?(password)
     user
   end
