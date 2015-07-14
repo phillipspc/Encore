@@ -4,7 +4,8 @@ window.Encore = {
   Views: {},
   Routers: {},
   initialize: function() {
-    alert('Hello from Backbone!');
+    new Encore.Routers.Router;
+    Backbone.history.start();
   }
 };
 

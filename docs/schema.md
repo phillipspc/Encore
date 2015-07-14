@@ -53,10 +53,3 @@ column name     | data type | details
 id              | integer   | not null, primary key
 user_id         | integer   | not null, foreign key (references users)
 location_id     | integer   | not null, foreign key (references locations)
-
-## event locations (join table)
-column name     | data type | details
-----------------|-----------|-----------------------
-id              | integer   | not null, primary key
-event_id        | integer   | not null, foreign key (references events)
-location_id     | integer   | not null, foreign key (references locations)
