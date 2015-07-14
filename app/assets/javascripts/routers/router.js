@@ -8,6 +8,10 @@ Encore.Routers.Router = Backbone.Router.extend({
     "": 'dashboard'
   },
 
+  dashboard: function () {
+
+  },
+
   _swapView: function (view) {
     this._currentView && this._currentView.remove();
     this._currentView = view;
