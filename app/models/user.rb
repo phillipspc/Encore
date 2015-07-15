@@ -20,6 +20,9 @@ class User < ActiveRecord::Base
 
   after_initialize :ensure_session_token
 
+  has_many :user_locations
+  has_many :locations, through: :user_locations
+
   attr_reader :password
 
   def self.find_by_username_or_email(username_or_email, password)
