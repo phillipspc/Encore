@@ -7,13 +7,7 @@
     <li>Locations</li>
     <li>Search</li>
     <li>
-       <form action="<%= session_url %>" method="post">
-        <%= render 'shared/auth_token' %>
-        <input type="hidden"
-               name="_method"
-               value="delete">
-        <input class='submit' type="submit" value="Log out">
-      </form>
+      <a href="#/session/show"><%= current_user.username %></a>
     </li>
   </ul>
 </nav>

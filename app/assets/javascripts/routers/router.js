@@ -2,14 +2,15 @@ Encore.Routers.Router = Backbone.Router.extend({
 
   initialize: function (options) {
     this.$rootEl = options.$rootEl;
+    window.current_user.fetch();
   },
 
   routes: {
-    "": 'show'
+    "": 'dashboard',
+    "session/show": 'show'
   },
 
   show: function () {
-    window.current_user.fetch();
     var sessionShow = new Encore.Views.SessionShow({
       model: window.current_user
     });
@@ -17,8 +18,10 @@ Encore.Routers.Router = Backbone.Router.extend({
   },
 
   dashboard: function () {
-    var dashboardView = new Encore.Views.UsersDashboard();
-    this._swapView(dashboardView);
+    var sessionDashboard = new Encore.Views.SessionDashboard({
+      model: window.current_user
+    });
+    this._swapView(sessionDashboard);
   },
 
   _swapView: function (view) {
