@@ -1,6 +1,6 @@
 Encore.Views.SessionShow = Backbone.View.extend({
   template: JST['session/show'],
-
+  
   initialize: function () {
     this.listenTo(this.model, 'sync', this.render)
   },

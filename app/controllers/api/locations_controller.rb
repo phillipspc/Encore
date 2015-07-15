@@ -1,5 +1,5 @@
 module Api
-  class LocationsController < ApiController
+  class SessionLocationsController < ApiController
 
   end
 end

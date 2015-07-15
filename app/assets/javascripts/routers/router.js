@@ -7,7 +7,8 @@ Encore.Routers.Router = Backbone.Router.extend({
 
   routes: {
     "": 'dashboard',
-    "session/show": 'show'
+    "session/show": 'show',
+    'session/locations': 'locations'
   },
 
   show: function () {
@@ -22,6 +23,13 @@ Encore.Routers.Router = Backbone.Router.extend({
       model: window.current_user
     });
     this._swapView(sessionDashboard);
+  },
+
+  locations: function () {
+    var sessionLocations = new Encore.Views.SessionLocations({
+      model: window.current_user
+    });
+    this._swapView(sessionLocations);
   },
 
   _swapView: function (view) {

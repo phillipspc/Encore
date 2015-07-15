@@ -3,7 +3,7 @@ Encore.Models.CurrentUser = Backbone.Model.extend({
 
   locations: function () {
     if (!this._locations) {
-      this._locations = new Encore.Collections.Locations([], {user: this});
+      this._locations = new Encore.Collections.SessionLocations([], {user: this});
     }
     return this._locations;
   },
