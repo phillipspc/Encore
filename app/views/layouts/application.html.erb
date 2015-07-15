@@ -9,9 +9,9 @@
 <body>
 <a href="<%= root_url %>">ENCORE</a>
 <% if logged_in? %>
-<%= render partial: 'layouts/header_logged_in' %>
+<%= render partial: 'layouts/navbar_logged_in' %>
 <% else %>
-<%= render partial: 'layouts/header_guest' %>
+<%= render partial: 'layouts/navbar_guest' %>
 <% end %>
 <%= yield %>
 
