@@ -5,7 +5,15 @@
     <li>Your Artists</li>
     <li>Your Plans</li>
     <li><a href="#/session/locations">Locations</a></li>
-    <li>Search</li>
+    <li>
+      <form action="<%= session_url %>" method="post">
+        <input type="hidden"
+               name="_method"
+               value="delete">
+        <%= render 'shared/auth_token' %>
+        <input type="submit" class="submit" value="Log Out">
+      </form>
+    </li>
     <li>
       <a href="#/session/show"><%= current_user.username %></a>
     </li>
