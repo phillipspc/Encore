@@ -3,6 +3,8 @@ class UsersController < ApplicationController
   before_action :require_log_in, only: :dashboard
   def new
     @user = User.new
+    @states = State.all
+    @locations = Location.all
   end
 
   def create

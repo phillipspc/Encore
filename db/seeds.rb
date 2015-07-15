@@ -20,3 +20,16 @@ end
 ["Philadelphia", "Lancaster", "Pittsburgh"].each do |city|
   Location.create({city: city, state: "PA"})
 end
+
+['AL','AK','AZ','AR','CA','CO','CT','DE','FL','GA','HI','ID','IL','IN','IA',
+'KS','KY','LA','ME','MD','MA','MI','MN','MS','MO','MT','NE','NV','NH','NJ',
+'NM','NY','NC','ND','OH','OK','OR','PA','RI','SC','SD','TN','TX','UT','VT',
+'VA','WA','WV','WI','WY'].each do |abbrev|
+  State.create({abbrev: abbrev})
+end
+
+User.create({username: 'phillipspc', email: 'phillipspc@gmail.com',
+            password: 'password'})
+
+UserLocation.create({user_id: 1, location_id: 1})
+UserLocation.create({user_id: 1, location_id: 10})

@@ -13,7 +13,11 @@ class Location < ActiveRecord::Base
 
   validates :city, :state, presence: true
   validates :city, uniqueness: true
-  
+
   has_many :user_locations
   has_many :users, through: :user_locations
+
+  def self.states
+    Location.all.select("state").uniq
+  end
 end

@@ -3,12 +3,17 @@
   <h2>Sign up with your email address.</h2>
   <form action="<%= users_url %>" method="post">
     <%= render 'shared/auth_token' %>
-    Email <input type="email"
+    Email: <input type="email"
                  name="user[email]"><br>
-    Username <input type="text"
+    Username: <input type="text"
                     name="user[username]"></br>
-    Password <input type="password"
+    Password: <input type="password"
                     name="user[password]"></br>
+    State: <select name="userlocation[location]">
+            <% @locations.each do |location| %>
+            <option><%= location.city %>, <%= location.state %></option>
+            <% end %>
+          </select>
     <button>Sign up for free</button>
   </form>
 
