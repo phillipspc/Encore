@@ -4,11 +4,11 @@ window.Encore = {
   Views: {},
   Routers: {},
   initialize: function() {
-    new Encore.Routers.Router;
+    // alert('hello from Backbone');
+    window.current_user = new Encore.Models.CurrentUser();
+    new Encore.Routers.Router({
+      $rootEl: $('.main')
+    });
     Backbone.history.start();
   }
 };
-
-$(document).ready(function(){
-  Encore.initialize();
-});

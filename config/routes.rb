@@ -1,6 +1,11 @@
 Rails.application.routes.draw do
-  root to: 'users#dashboard'
-  get 'users/dashboard', to: 'users#dashboard'
+  root to: 'static_pages#root'
   resources :users
   resource :session
+
+  namespace :api, defaults: {format: :json} do
+    resource :session
+    # resources :locations
+  end
+
 end
