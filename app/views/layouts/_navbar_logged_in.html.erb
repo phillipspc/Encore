@@ -1,9 +1,19 @@
-<nav>
-  <form action="<%= session_url %>" method="post">
-    <%= render 'shared/auth_token' %>
-    <input type="hidden"
-           name="_method"
-           value="delete">
-    <input type="submit" value="log out">
-  </form>
+<nav id="logged-in">
+
+  <ul>
+    <li>LOGO</li>
+    <li>Your Artists</li>
+    <li>Your Plans</li>
+    <li>Locations</li>
+    <li>Search</li>
+    <li>
+       <form action="<%= session_url %>" method="post">
+        <%= render 'shared/auth_token' %>
+        <input type="hidden"
+               name="_method"
+               value="delete">
+        <input type="submit" value="log out">
+      </form>
+    </li>
+  </ul>
 </nav>

@@ -29,3 +29,42 @@ body, html, p, ul, li, nav, div, h1, h2, span, figure {
   box-sizing: inherit;
   background: transparent;
   }
+.main {
+  width: 900px;
+  margin: 0 auto;
+
+}
+
+nav {
+  margin: auto;
+  width: 900px;
+  background: #1e2126;
+  font-family: helvetica;
+  font-weight: bold;
+
+}
+nav a:visited {
+  color: white;
+  text-decoration: none;
+}
+
+nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+nav li {
+  width: 130px;
+  padding: 20px 10px;
+  float: left;
+  font-family: helvetica;
+  display: block;
+  color: white;
+  text-align: center;
+}
+
+nav li:hover{
+  color: #0277ad;
+}

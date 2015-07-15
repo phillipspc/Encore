@@ -7,7 +7,6 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-<a href="<%= root_url %>">ENCORE</a>
 <% if logged_in? %>
 <%= render partial: 'layouts/navbar_logged_in' %>
 <% else %>

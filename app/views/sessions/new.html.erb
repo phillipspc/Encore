@@ -1,11 +1,13 @@
-<h1>Log in with your username and password</h1>
-<form action="<%= session_url %>" method="post">
-  <%= render 'shared/auth_token' %>
-  Username/email <input type="text" name="user[username_or_email]" value="">
-  Password <input type="password" name="user[password]">
-<button>Log in</button>
-</form>
+<div class='main'>
+  <h1>Log in with your username and password</h1>
+  <form action="<%= session_url %>" method="post">
+    <%= render 'shared/auth_token' %>
+    Username/email <input type="text" name="user[username_or_email]" value="">
+    Password <input type="password" name="user[password]">
+  <button>Log in</button>
+  </form>
 
-<p>Don't have an Encore account yet?
-  <a href="<%= new_user_url %>">Sign up</a>
-</p>
+  <p>Don't have an Encore account yet?
+    <a href="<%= new_user_url %>">Sign up</a>
+  </p>
+</div>

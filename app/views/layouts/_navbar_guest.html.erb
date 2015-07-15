@@ -1,6 +1,13 @@
-<nav>
-  <form action="<%= new_session_url %>" method="get">
-    <%= render 'shared/auth_token' %>
-    <input type="submit" value="log in">
-  </form>
+<nav id="guest">
+  <ul>
+    <li><a href="/">LOGO</a></li>
+    <li>Your Artists</li>
+    <li>Your Plans</li>
+    <li>Locations</li>
+    <li>Search</li>
+    <li>  <form action="<%= new_session_url %>" method="get">
+      <%= render 'shared/auth_token' %>
+      <input type="submit" value="log in">
+    </form></li>
+  </ul>
 </nav>

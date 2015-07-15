@@ -1,14 +1,16 @@
-<h1>Track your favorite artists and never miss them live.</h1>
-<h2>Sign up with your email address.</h2>
-<form action="<%= users_url %>" method="post">
-  <%= render 'shared/auth_token' %>
-  Email <input type="email"
-               name="user[email]"><br>
-  Username <input type="text"
-                  name="user[username]"></br>
-  Password <input type="password"
-                  name="user[password]"></br>
-  <button>Sign up for free</button>
-</form>
+<div class="main">
+  <h1>Track your favorite artists and never miss them live.</h1>
+  <h2>Sign up with your email address.</h2>
+  <form action="<%= users_url %>" method="post">
+    <%= render 'shared/auth_token' %>
+    Email <input type="email"
+                 name="user[email]"><br>
+    Username <input type="text"
+                    name="user[username]"></br>
+    Password <input type="password"
+                    name="user[password]"></br>
+    <button>Sign up for free</button>
+  </form>
 
-<p>Already signed up? <a href="<%= new_session_url %>">Log in here</a></p>
+  <p>Already signed up? <a href="<%= new_session_url %>">Log in here</a></p>
+</div>
