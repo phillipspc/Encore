@@ -41,6 +41,7 @@ nav {
   background: #1e2126;
   font-family: helvetica;
   font-weight: bold;
+  border-top: 5px solid #f80046;
 
 }
 nav a:visited {
