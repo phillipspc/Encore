@@ -44,7 +44,7 @@ UserLocation.create({user_id: 2, location_id: 1})
 UserLocation.create({user_id: 2, location_id: 10})
 
 
-['Taylor swift', 'Kanye', 'The War On Drugs', 'Radiohead',
+['Taylor swift', 'Kanye West', 'The War On Drugs', 'Radiohead',
   'Arctic Monkeys', 'Lana Del Rey', 'The Weeknd',
   'Katy Perry', 'Tame Impala', 'The Strokes'].each do |name|
     Artist.create({name: name})

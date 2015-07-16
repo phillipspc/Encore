@@ -1,7 +1,7 @@
 Encore.Collections.Artists = Backbone.Collection.extend({
   url: '/api/artists',
 
-  model: Encore.Models.Artst,
+  model: Encore.Models.Artist,
 
   getOrFetch: function (id) {
     var artist = this.get(id);
