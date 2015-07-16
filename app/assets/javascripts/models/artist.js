@@ -1,12 +1,25 @@
 Encore.Models.Artist = Backbone.Model.extend({
-  urlRoot: '/api/artists'
+  urlRoot: '/api/artists',
 
+  track: function () {
+    var that = this;
+    $.ajax({
+      url: '/api/artists/' + that.id + '/artist_tracking',
+      type: 'POST',
+      success: function () {
+        console.log('successful tracking');      }
+    });
+  },
 
-  // urlRoot: function () {
-  //   var id = this.model.id;
-  //   var route = '/api/artists/';
-  //   debugger
-  //   return route.concat(id);
-  // }
+  untrack: function () {
+    var that = this;
+    $.ajax({
+      url: '/api/artists/' + that.id + '/artist_tracking',
+      type: 'DELETE',
+      success: function () {
+        console.log('successful untracking');
+      }
+    });
 
+  }
 });

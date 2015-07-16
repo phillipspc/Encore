@@ -1,2 +1,3 @@
-Encore.Models.SessionArtist = Backbone.Model.extend({
+Encore.Models.SessionArtist = Encore.Models.Artist.extend({
+  urlRoot: '/api/artists'
 });

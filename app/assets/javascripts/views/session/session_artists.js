@@ -8,7 +8,7 @@ Encore.Views.SessionArtists = Backbone.View.extend({
   initialize: function () {
     var artists = this.model.artists();
     this.listenTo(this.model, 'sync', this.render);
-    this.listenTo(artists, 'remove', this.render);
+    this.listenTo(artists, 'sync remove', this.render);
   },
 
   untrack: function (event) {
@@ -16,7 +16,7 @@ Encore.Views.SessionArtists = Backbone.View.extend({
     $target = $(event.currentTarget);
     var artists = this.model.artists();
     var artist = artists.get($target.attr('data-id'));
-    artist.destroy({url: '/api/artists/' + artist.id});
+    artist.untrack();
   },
 
   render: function () {

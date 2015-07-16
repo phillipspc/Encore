@@ -5,7 +5,9 @@ Rails.application.routes.draw do
 
   namespace :api, defaults: {format: :json} do
     resource :session
-    resources :artists
+    resources :artists do
+      resource :artist_tracking
+    end
   end
 
 end

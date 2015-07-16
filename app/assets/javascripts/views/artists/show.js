@@ -2,7 +2,8 @@ Encore.Views.ArtistsShow = Backbone.View.extend({
   template: JST['artists/show'],
 
   events: {
-    'click .track': 'track'
+    'click .track': 'track',
+    'click .untrack': 'untrack'
   },
 
   initialize: function (){
@@ -11,6 +12,7 @@ Encore.Views.ArtistsShow = Backbone.View.extend({
   },
 
   render: function () {
+    console.log('rendering');
     var ids = this.collection.pluck('id');
     var content = this.template({
       artist: this.model,
@@ -22,9 +24,14 @@ Encore.Views.ArtistsShow = Backbone.View.extend({
 
   track: function (event) {
     event.preventDefault();
-    this.model.save({},{
-      url: '/api/artists/' + this.model.id + '/edit'
-    });
+    this.model.track();
+    this.model.fetch();
+  },
+
+  untrack: function (event) {
+    event.preventDefault();
+    this.model.untrack();
+    this.model.fetch();
   }
 
 });
