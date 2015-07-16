@@ -47,7 +47,8 @@ Encore.Routers.Router = Backbone.Router.extend({
   artistsShow: function (id) {
     var artist = this.artists.getOrFetch(id);
     var artistsShow = new Encore.Views.ArtistsShow({
-      model: artist
+      model: artist,
+      collection: window.current_user.artists()
     });
     this._swapView(artistsShow);
   },
