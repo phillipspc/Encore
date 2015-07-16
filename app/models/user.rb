@@ -23,6 +23,9 @@ class User < ActiveRecord::Base
   has_many :user_locations
   has_many :locations, through: :user_locations
 
+  has_many :artist_trackings
+  has_many :artists, through: :artist_trackings
+
   attr_reader :password
 
   def self.find_by_username_or_email(username_or_email, password)

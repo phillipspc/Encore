@@ -44,6 +44,15 @@ UserLocation.create({user_id: 2, location_id: 1})
 UserLocation.create({user_id: 2, location_id: 10})
 
 
+['Taylor swift', 'Kanye', 'The War On Drugs', 'Radiohead',
+  'Arctic Monkeys', 'Lana Del Rey', 'The Weeknd',
+  'Katy Perry', 'Tame Impala', 'The Strokes'].each do |name|
+    Artist.create({name: name})
+  end
+10.times do |id|
+  ArtistTracking.create({user_id: 2, artist_id: (id+1)})
+end
+
 # ['Birmingham','Hoover','Montgomery','Dothan','Mobile','Decatur','Huntsville',
 # 'Auburn','Tuscaloosa','Gadsden'].each do |city|
 #   Location.create({city: city, state: "AL"})
