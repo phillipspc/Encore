@@ -5,6 +5,9 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
+
+
+
 ["New York", "Buffalo"].each do |city|
   Location.create({city: city, state: "NY"})
 end
@@ -28,8 +31,62 @@ end
   State.create({abbrev: abbrev})
 end
 
-User.create({username: 'phillipspc', email: 'phillipspc@gmail.com',
+User.create!({username: 'phillipspc', email: 'phillipspc@gmail.com',
+            password: 'password'})
+
+User.create!({username: 'guest', email: 'guest@gmail.com',
             password: 'password'})
 
 UserLocation.create({user_id: 1, location_id: 1})
 UserLocation.create({user_id: 1, location_id: 10})
+
+UserLocation.create({user_id: 2, location_id: 1})
+UserLocation.create({user_id: 2, location_id: 10})
+
+
+# ['Birmingham','Hoover','Montgomery','Dothan','Mobile','Decatur','Huntsville',
+# 'Auburn','Tuscaloosa','Gadsden'].each do |city|
+#   Location.create({city: city, state: "AL"})
+# end
+#
+# ["Anchorage", "Kenai", "Juneau", "Kodiak", "Fairbanks", "Bethel", "Sitka",
+#   "Wasilla", "Ketchikan", "Barrow"].each do |city|
+#   Location.create({city: city, state: "AK"})
+# end
+#
+# ["Phoenix", "Chandler", "Tucson", "Tempe", "Mesa", "Gilbert", "Glendale", "Peoria", "Scottsdale", "Yuma"].each do |city|
+# Location.create({city: city, state: "AZ"})
+# end
+#
+# ["Little Rock", "Pine Bluff", "Fort Smith", "Springdale", "North Little Rock", "Conway", "Fayetteville", "Rogers", "Jonesboro", "Hot Springs"].each do |city|
+# Location.create({city: city, state: "AR"})
+# end
+#
+# ["Los Angeles", "Fresno", "San Diego", "Sacramento", "San Jose", "Oakland", "San Francisco", "Santa Ana", "Long Beach", "Anaheim"].each do |city|
+# Location.create({city: city, state: "CA"})
+# end
+#
+#
+# ["Denver", "Arvada", "Colorado Springs", "Pueblo", "Aurora", "Westminster", "Lakewood", "Boulder", "Fort Collins", "Thornton"].each do |city|
+# Location.create({city: city, state: "CO"})
+# end
+#
+#
+# ["Bridgeport", "Norwalk", "New Haven", "Danbury", "Hartford", "New Britain", "Stamford", "West Hartford", "Waterbury", "Greenwich"].each do |city|
+# Location.create({city: city, state: "CT"})
+# end
+#
+#
+# ["Wilmington", "Middletown", "Dover", "Elsmere", "Newark", "Smyrna", "Milford", "New Castle", "Seaford", "Georgetown"].each do |city|
+# Location.create({city: city, state: "DE"})
+# end
+#
+# ["Jacksonville", "Orlando", "Miami", "Fort Lauderdale", "Tampa", "Tallahassee", "St. Petersburg", "Hollywood", "Hialeah", "Pembroke Pines"].each do |city|
+# Location.create({city: city, state: "FL"})
+# end
+#
+#
+# ["Atlanta", "Macon", "Augusta-Richmond County", "Roswell", "Columbus", "Albany",
+#   "Savannah", "Marietta", "Athens-Clarke County", "Warner Robins"].each do |city|
+# Location.create({city: city, state: "GA"})
+# end
