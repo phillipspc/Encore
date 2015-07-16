@@ -3,20 +3,14 @@ Encore.Routers.Router = Backbone.Router.extend({
   initialize: function (options) {
     this.$rootEl = options.$rootEl;
     window.current_user.fetch();
+    this.artists = new Encore.Collections.Artists();
   },
 
   routes: {
     "": 'dashboard',
-    "session/show": 'show',
-    'session/locations': 'locations',
-    'session/artists': 'artists'
-  },
-
-  show: function () {
-    var sessionShow = new Encore.Views.SessionShow({
-      model: window.current_user
-    });
-    this._swapView(sessionShow);
+    "session/show": 'sessionShow',
+    'session/locations': 'sessionLocations',
+    'session/artists': 'sessionArtists'
   },
 
   dashboard: function () {
@@ -26,14 +20,21 @@ Encore.Routers.Router = Backbone.Router.extend({
     this._swapView(sessionDashboard);
   },
 
-  locations: function () {
+  sessionShow: function () {
+    var sessionShow = new Encore.Views.SessionShow({
+      model: window.current_user
+    });
+    this._swapView(sessionShow);
+  },
+
+  sessionLocations: function () {
     var sessionLocations = new Encore.Views.SessionLocations({
       model: window.current_user
     });
     this._swapView(sessionLocations);
   },
 
-  artists: function () {
+  sessionArtists: function () {
     var sessionArtists = new Encore.Views.SessionArtists({
       model: window.current_user
     });

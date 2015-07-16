@@ -10,7 +10,7 @@ Encore.Models.CurrentUser = Backbone.Model.extend({
 
   artists: function () {
     if (!this._artists) {
-      this._artists = new Encore.Collections.SessionArtists()
+      this._artists = new Encore.Collections.SessionArtists();
     }
     return this._artists;
   },
