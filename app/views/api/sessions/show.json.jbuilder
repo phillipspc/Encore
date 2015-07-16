@@ -4,3 +4,10 @@ json.locations @user.locations do |location|
   json.city location.city
   json.state location.state
 end
+
+json.artists @user.artists do |artist|
+  json.id artist.id
+  json.name artist.name
+  json.description artist.description
+  json.image_url artist.image_url
+end

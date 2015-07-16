@@ -11,7 +11,7 @@ Encore is a clone of SongKick built on Rails. Users can:
 
 - [X] Create accounts
 - [X] Create sessions (log in)
-- [ ] See their Dashboard upon logging in
+- [X] See their Dashboard upon logging in
 - [ ] Track artists, set a location/multiple locations
 - [ ] Search for an artist
 - [ ] See 'Your Concerts' page which displays upcoming shows
