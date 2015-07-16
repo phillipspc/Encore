@@ -12,6 +12,8 @@
 <% else %>
 <%= render partial: 'layouts/navbar_guest' %>
 <% end %>
+<%= flash[:errors] if flash[:errors] %>
+
 <%= yield %>
 
 </body>
