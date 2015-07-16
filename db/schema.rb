@@ -11,10 +11,25 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150715211345) do
+ActiveRecord::Schema.define(version: 20150716011946) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "artist_trackings", force: :cascade do |t|
+    t.integer  "user_id",    null: false
+    t.integer  "artist_id",  null: false
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "artists", force: :cascade do |t|
+    t.string "name",        null: false
+    t.string "image_url"
+    t.text   "description"
+  end
+
+  add_index "artists", ["name"], name: "index_artists_on_name", unique: true, using: :btree
 
   create_table "locations", force: :cascade do |t|
     t.string   "city",       null: false
