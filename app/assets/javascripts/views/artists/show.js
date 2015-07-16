@@ -12,7 +12,6 @@ Encore.Views.ArtistsShow = Backbone.View.extend({
   },
 
   render: function () {
-    console.log('rendering');
     var ids = this.collection.pluck('id');
     var content = this.template({
       artist: this.model,
@@ -24,14 +23,12 @@ Encore.Views.ArtistsShow = Backbone.View.extend({
 
   track: function (event) {
     event.preventDefault();
-    this.model.track();
-    this.model.fetch();
+    this.model.track(this.collection);
   },
 
   untrack: function (event) {
     event.preventDefault();
-    this.model.untrack();
-    this.model.fetch();
+    this.model.untrack(this.collection);
   }
 
 });

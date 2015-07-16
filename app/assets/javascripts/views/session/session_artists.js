@@ -16,7 +16,7 @@ Encore.Views.SessionArtists = Backbone.View.extend({
     $target = $(event.currentTarget);
     var artists = this.model.artists();
     var artist = artists.get($target.attr('data-id'));
-    artist.untrack();
+    artist.untrack(artists);
   },
 
   render: function () {
