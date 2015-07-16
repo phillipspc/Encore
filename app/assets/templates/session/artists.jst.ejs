@@ -2,5 +2,7 @@
 <% var artists = user.artists() %>
 <h2>You are currently following these artists: (<%= artists.length %>)</h2>
 <% artists.each( function (artist) { %>
-  Artist: <%= artist.attributes.name %><br>
+  Artist: <a href="#/artists/<%= artist.id %>">
+    <%= artist.attributes.name %></a>
+  <br>
 <% }); %>
