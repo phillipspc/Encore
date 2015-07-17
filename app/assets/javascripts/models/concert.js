@@ -26,6 +26,17 @@ Encore.Models.Concert = Backbone.Model.extend({
       delete response.arist;
     }
     return response;
+  },
+
+  track: function (collection) {
+
+
+
+  },
+
+  untrack: function (collection) {
+
+
   }
 
 })
