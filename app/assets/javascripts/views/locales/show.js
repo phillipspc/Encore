@@ -19,6 +19,16 @@ Encore.Views.LocaleShow = Backbone.View.extend({
       ids: ids
     });
     this.$el.html(content);
+
+    var that = this;
+    var concerts = this.model.concerts();
+    concerts.each( function (concert) {
+      concerts.getOrFetch(concert.id);
+      var view = new Encore.Views.LocaleShowConcert({
+        model: concert
+      });
+      that.$el.append(view.render().$el);
+    });
     return this;
   },
 

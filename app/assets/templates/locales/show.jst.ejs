@@ -1,6 +1,7 @@
-<%= locale.escape('city') %>, <%= locale.escape('state') %><br>
+<h1><%= locale.escape('city') %>, <%= locale.escape('state') %></h1>
 <% if (ids && (ids.indexOf(locale.id) === -1)) { %>
 <button class="track">Track Location</button>
 <% } else { %>
 <button class="untrack" data-id="<%= locale.id %>">Stop tracking</button>
 <% } %>
+<h2>Upcoming Concerts: </h2>

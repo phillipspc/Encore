@@ -2,6 +2,8 @@ Encore.Collections.Concerts = Backbone.Collection.extend({
   url: '/api/concerts',
   model: Encore.Models.Concert,
 
+  comparator: 'date',
+
   getOrFetch: function (id) {
     var concert = this.get(id);
     var that = this;
