@@ -9,7 +9,9 @@ Rails.application.routes.draw do
       resource :artist_tracking
     end
     resources :concerts
-    resources :locales
+    resources :locales do
+      resource :user_locale
+    end
   end
 
 end
