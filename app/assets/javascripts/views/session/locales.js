@@ -19,6 +19,7 @@ Encore.Views.SessionLocales = Backbone.View.extend({
         var view = new Encore.Views.SessionLocale({
           model: locale
         });
+        that.$el.append(view.render().$el);
       });
       return this;
   }
