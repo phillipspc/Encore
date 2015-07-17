@@ -8,6 +8,7 @@ Rails.application.routes.draw do
     resources :artists do
       resource :artist_tracking
     end
+    resources :concerts
   end
 
 end

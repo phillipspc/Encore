@@ -1,6 +1,6 @@
 # == Schema Information
 #
-# Table name: events
+# Table name: concerts
 #
 #  id          :integer          not null, primary key
 #  artist_id   :integer          not null
@@ -10,7 +10,7 @@
 #  updated_at  :datetime
 #
 
-class Event < ActiveRecord::Base
+class Concert < ActiveRecord::Base
 
   validates :artist_id, :location_id, :date, presence: true
 

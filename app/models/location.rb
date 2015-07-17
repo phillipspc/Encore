@@ -17,8 +17,8 @@ class Location < ActiveRecord::Base
   has_many :user_locations
   has_many :users, through: :user_locations
 
-  has_many :events
-  has_many :artists, through: :events
+  has_many :concerts
+  has_many :artists, through: :concerts
 
   def self.states
     Location.all.select("state").uniq

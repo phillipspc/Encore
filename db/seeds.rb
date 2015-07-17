@@ -63,7 +63,7 @@ end
   artist = 1 + rand(artist_count)
   location = 1 + rand(location_count)
 
-  Event.create({artist_id: artist, location_id: location, 
+  Concert.create({artist_id: artist, location_id: location, 
                 date: date_rand})
 end
 

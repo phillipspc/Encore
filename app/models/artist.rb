@@ -15,6 +15,6 @@ class Artist < ActiveRecord::Base
   has_many :artist_trackings
   has_many :users, through: :artist_trackings
 
-  has_many :events
-  has_many :locations, through: :events
+  has_many :concerts
+  has_many :locations, through: :concerts
 end
