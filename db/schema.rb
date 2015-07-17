@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150717140840) do
+ActiveRecord::Schema.define(version: 20150717154630) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -32,22 +32,22 @@ ActiveRecord::Schema.define(version: 20150717140840) do
   add_index "artists", ["name"], name: "index_artists_on_name", unique: true, using: :btree
 
   create_table "concerts", force: :cascade do |t|
-    t.integer  "artist_id",   null: false
-    t.integer  "location_id", null: false
-    t.date     "date",        null: false
+    t.integer  "artist_id",  null: false
+    t.integer  "locale_id",  null: false
+    t.date     "date",       null: false
     t.datetime "created_at"
     t.datetime "updated_at"
   end
 
-  create_table "locations", force: :cascade do |t|
+  create_table "locales", force: :cascade do |t|
     t.string   "city",       null: false
     t.string   "state",      null: false
     t.datetime "created_at"
     t.datetime "updated_at"
   end
 
-  add_index "locations", ["city"], name: "index_locations_on_city", unique: true, using: :btree
-  add_index "locations", ["state"], name: "index_locations_on_state", using: :btree
+  add_index "locales", ["city"], name: "index_locales_on_city", unique: true, using: :btree
+  add_index "locales", ["state"], name: "index_locales_on_state", using: :btree
 
   create_table "states", force: :cascade do |t|
     t.string "abbrev", null: false
@@ -55,9 +55,9 @@ ActiveRecord::Schema.define(version: 20150717140840) do
 
   add_index "states", ["abbrev"], name: "index_states_on_abbrev", unique: true, using: :btree
 
-  create_table "user_locations", force: :cascade do |t|
-    t.integer  "user_id",     null: false
-    t.integer  "location_id", null: false
+  create_table "user_locales", force: :cascade do |t|
+    t.integer  "user_id",    null: false
+    t.integer  "locale_id",  null: false
     t.datetime "created_at"
     t.datetime "updated_at"
   end

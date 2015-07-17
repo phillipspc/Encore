@@ -20,8 +20,8 @@ class User < ActiveRecord::Base
 
   after_initialize :ensure_session_token
 
-  has_many :user_locations
-  has_many :locations, through: :user_locations
+  has_many :user_locales
+  has_many :locales, through: :user_locales
 
   has_many :artist_trackings
   has_many :artists, through: :artist_trackings

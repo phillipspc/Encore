@@ -1,7 +1,0 @@
-<h1>Locations page</h1>
-<% var locations = user.locations() %>
-<h2>You are currently associated with these locations: (<%= locations.length %>)</h2>
-<% locations.each( function (location) { %>
-  City: <%= location.attributes.city %><br>
-  State: <%= location.attributes.state %><br>
-<% }); %>

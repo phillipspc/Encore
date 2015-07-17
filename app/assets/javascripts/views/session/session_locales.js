@@ -1,13 +1,14 @@
-Encore.Views.SessionLocations = Backbone.View.extend({
-  template: JST['session/locations'],
+Encore.Views.SessionLocales = Backbone.View.extend({
+  template: JST['session/locales'],
 
   initialize: function () {
+    this.locales = this.model.locales();
     this.listenTo(this.model, 'sync', this.render);
   },
 
   render: function () {
       var content = this.template({
-        user: this.model
+        locales: this.locales
       });
       this.$el.html(content);
       return this;

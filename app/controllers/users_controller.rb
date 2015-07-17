@@ -4,7 +4,7 @@ class UsersController < ApplicationController
   def new
     @user = User.new
     @states = State.all
-    @locations = Location.all
+    @locales = Locale.all
   end
 
   def create

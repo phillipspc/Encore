@@ -1,11 +1,11 @@
 Encore.Models.CurrentUser = Backbone.Model.extend({
   urlRoot: '/api/session',
 
-  locations: function () {
-    if (!this._locations) {
-      this._locations = new Encore.Collections.SessionLocations();
+  locales: function () {
+    if (!this._locales) {
+      this._locales = new Encore.Collections.SessionLocales();
     }
-    return this._locations;
+    return this._locales;
   },
 
   artists: function () {
@@ -16,9 +16,9 @@ Encore.Models.CurrentUser = Backbone.Model.extend({
   },
 
   parse: function (response) {
-    if (response.locations) {
-      this.locations().set(response.locations);
-      delete response.locations;
+    if (response.locales) {
+      this.locales().set(response.locales);
+      delete response.locales;
     }
     if (response.artists) {
       this.artists().set(response.artists);

@@ -1,1 +1,1 @@
-json.extract! @concert, :id, :artist_id, :location_id, :date
+json.extract! @concert, :id, :artist_id, :locale_id, :date

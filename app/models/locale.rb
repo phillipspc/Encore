@@ -1,6 +1,6 @@
 # == Schema Information
 #
-# Table name: locations
+# Table name: locales
 #
 #  id         :integer          not null, primary key
 #  city       :string           not null
@@ -9,18 +9,18 @@
 #  updated_at :datetime
 #
 
-class Location < ActiveRecord::Base
+class Locale < ActiveRecord::Base
 
   validates :city, :state, presence: true
   validates :city, uniqueness: true
 
-  has_many :user_locations
-  has_many :users, through: :user_locations
+  has_many :user_locales
+  has_many :users, through: :user_locales
 
   has_many :concerts
   has_many :artists, through: :concerts
 
   def self.states
-    Location.all.select("state").uniq
+    Locale.all.select("state").uniq
   end
 end

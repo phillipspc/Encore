@@ -1,8 +1,8 @@
 json.extract! @user, :id, :username, :created_at, :updated_at
-json.locations @user.locations do |location|
-  json.id location.id
-  json.city location.city
-  json.state location.state
+json.locales @user.locales do |locale|
+  json.id locale.id
+  json.city locale.city
+  json.state locale.state
 end
 
 json.artists @user.artists do |artist|
