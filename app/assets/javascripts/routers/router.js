@@ -5,6 +5,8 @@ Encore.Routers.Router = Backbone.Router.extend({
     window.current_user.fetch();
     this.artists = new Encore.Collections.Artists();
     this.artists.fetch();
+    this.locales = new Encore.Collections.Locales();
+    this.locales.fetch();
   },
 
   routes: {
@@ -12,7 +14,8 @@ Encore.Routers.Router = Backbone.Router.extend({
     "session/show": 'sessionShow',
     'session/locales': 'sessionLocales',
     'session/artists': 'sessionArtists',
-    'artists/:id': 'artistShow'
+    'artists/:id': 'artistShow',
+    'locales/:id': 'localeShow'
   },
 
   dashboard: function () {
@@ -51,6 +54,15 @@ Encore.Routers.Router = Backbone.Router.extend({
       collection: window.current_user.artists()
     });
     this._swapView(artistShow);
+  },
+
+  localeShow: function (id) {
+    var locale = this.locales.getOrFetch(id);
+    var localeShow = new Encore.Views.LocaleShow({
+      model: locale,
+      collection: window.current_user.locales()
+    });
+    this._swapView(localeShow);
   },
 
   _swapView: function (view) {
