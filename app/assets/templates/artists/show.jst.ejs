@@ -7,7 +7,3 @@ Description: <%= artist.escape('description') %><br>
 <button class="untrack" data-id="<%= artist.id %>">stop tracking</button>
 <% } %>
 <h2>Upcoming Concerts</h2>
-<% concerts.each( function (concert) { %>
-  <% concert.escape('location_id') %>
-  <%= concert.escape('date') %><br>
-<% }) %>
