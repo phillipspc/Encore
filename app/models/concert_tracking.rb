@@ -7,19 +7,19 @@
 #  concert_id :integer          not null
 #  created_at :datetime
 #  updated_at :datetime
-#  attending  :boolean
+#  attending  :boolean          default(FALSE)
 #
 
 class ConcertTracking < ActiveRecord::Base
 
-  validates :user_id, :concert_id, :attending, presence: true
+  validates :user_id, :concert_id, presence: true
   belongs_to :user
   belongs_to :concert
 
-  after_initialize :ensure_attending
+  # after_initialize :ensure_attending
 
-  private
-  def ensure_attending
-    self.attending ||= false
-  end
+  # private
+  # def ensure_attending
+  #   self.attending ||= false
+  # end
 end
