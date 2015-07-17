@@ -16,4 +16,7 @@ class Concert < ActiveRecord::Base
 
   belongs_to :artist
   belongs_to :locale
+
+  has_many :concert_trackings
+  has_many :users through: :concert_trackings
 end

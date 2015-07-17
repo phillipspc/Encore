@@ -26,6 +26,9 @@ class User < ActiveRecord::Base
   has_many :artist_trackings
   has_many :artists, through: :artist_trackings
 
+  has_many :concert_trackings
+  has_many :concerts, through: :concert_trackings
+
   attr_reader :password
 
   def self.find_by_username_or_email(username_or_email, password)
