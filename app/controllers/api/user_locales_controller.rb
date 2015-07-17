@@ -9,7 +9,7 @@ module Api
     end
 
     def destroy
-      ArtistTracking.find_by!({
+      UserLocale.find_by!({
         locale_id: params[:locale_id], user_id: current_user.id
       }).destroy!
       render json: {}
