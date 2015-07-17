@@ -1,6 +1,21 @@
 Encore.Models.Artist = Backbone.Model.extend({
   urlRoot: '/api/artists',
 
+  events: function () {
+    if (!this._events) {
+      this._events = new Encore.Collections.Events();
+    }
+    return this._events;
+  },
+
+  parse: function (response) {
+    if (response.events) {
+      this.events().set(response.events);
+      delete response.events;
+    }
+    return response;
+  },
+
   track: function (collection) {
     var that = this;
     $.ajax({

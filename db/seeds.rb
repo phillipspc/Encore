@@ -24,12 +24,6 @@ end
   Location.create({city: city, state: "PA"})
 end
 
-['AL','AK','AZ','AR','CA','CO','CT','DE','FL','GA','HI','ID','IL','IN','IA',
-'KS','KY','LA','ME','MD','MA','MI','MN','MS','MO','MT','NE','NV','NH','NJ',
-'NM','NY','NC','ND','OH','OK','OR','PA','RI','SC','SD','TN','TX','UT','VT',
-'VA','WA','WV','WI','WY'].each do |abbrev|
-  State.create({abbrev: abbrev})
-end
 
 User.create!({username: 'phillipspc', email: 'phillipspc@gmail.com',
             password: 'password'})
@@ -49,10 +43,37 @@ UserLocation.create({user_id: 2, location_id: 10})
   'Katy Perry', 'Tame Impala', 'The Strokes'].each do |name|
     Artist.create({name: name})
   end
+
+
 10.times do |id|
   ArtistTracking.create({user_id: 2, artist_id: (id+1)})
 end
 
+artist_count = Artist.all.length
+location_count = Location.all.length
+
+def date_rand
+  from = Date.today.to_time.to_f
+  to = Date.today.next_year.to_time.to_f
+  diff = to - from
+  Time.at(from + rand(diff)).to_date
+end
+
+50.times do
+  artist = 1 + rand(artist_count)
+  location = 1 + rand(location_count)
+
+  Event.create({artist_id: artist, location_id: location, 
+                date: date_rand})
+end
+
+
+# ['AL','AK','AZ','AR','CA','CO','CT','DE','FL','GA','HI','ID','IL','IN','IA',
+# 'KS','KY','LA','ME','MD','MA','MI','MN','MS','MO','MT','NE','NV','NH','NJ',
+# 'NM','NY','NC','ND','OH','OK','OR','PA','RI','SC','SD','TN','TX','UT','VT',
+# 'VA','WA','WV','WI','WY'].each do |abbrev|
+#   State.create({abbrev: abbrev})
+# end
 # ['Birmingham','Hoover','Montgomery','Dothan','Mobile','Decatur','Huntsville',
 # 'Auburn','Tuscaloosa','Gadsden'].each do |city|
 #   Location.create({city: city, state: "AL"})
