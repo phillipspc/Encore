@@ -3,14 +3,14 @@ Encore.Models.CurrentUser = Backbone.Model.extend({
 
   locales: function () {
     if (!this._locales) {
-      this._locales = new Encore.Collections.SessionLocales();
+      this._locales = new Encore.Collections.Locales();
     }
     return this._locales;
   },
 
   artists: function () {
     if (!this._artists) {
-      this._artists = new Encore.Collections.SessionArtists();
+      this._artists = new Encore.Collections.Artists();
     }
     return this._artists;
   },

@@ -12,7 +12,7 @@ Encore.Routers.Router = Backbone.Router.extend({
     "session/show": 'sessionShow',
     'session/locales': 'sessionLocales',
     'session/artists': 'sessionArtists',
-    'artists/:id': 'artistsShow'
+    'artists/:id': 'artistShow'
   },
 
   dashboard: function () {
@@ -44,13 +44,13 @@ Encore.Routers.Router = Backbone.Router.extend({
 
   },
 
-  artistsShow: function (id) {
+  artistShow: function (id) {
     var artist = this.artists.getOrFetch(id);
-    var artistsShow = new Encore.Views.ArtistsShow({
+    var artistShow = new Encore.Views.ArtistShow({
       model: artist,
       collection: window.current_user.artists()
     });
-    this._swapView(artistsShow);
+    this._swapView(artistShow);
   },
 
   _swapView: function (view) {

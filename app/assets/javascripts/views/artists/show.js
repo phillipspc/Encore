@@ -1,4 +1,4 @@
-Encore.Views.ArtistsShow = Backbone.View.extend({
+Encore.Views.ArtistShow = Backbone.View.extend({
   template: JST['artists/show'],
 
   events: {
@@ -21,7 +21,7 @@ Encore.Views.ArtistsShow = Backbone.View.extend({
 
     var that = this;
     var concerts = this.model.concerts();
-    this.model.concerts().each( function (concert) {
+    concerts.each( function (concert) {
       concerts.getOrFetch(concert.id);
       var view = new Encore.Views.ArtistShowConcert({
         model: concert
