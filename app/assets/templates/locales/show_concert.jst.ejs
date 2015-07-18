@@ -1,5 +1,4 @@
 Concert info:
-<a href="#/artists/<%= artist.id %>">
-  <%= artist.escape('name') %>
+<a href="#/concerts/<%= concert.id %>">
+  <%= artist.escape('name') %> <%= concert.escape('date') %>
 </a>
-<%= concert.escape('date') %>
