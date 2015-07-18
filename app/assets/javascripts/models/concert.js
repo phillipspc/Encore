@@ -29,14 +29,27 @@ Encore.Models.Concert = Backbone.Model.extend({
   },
 
   track: function (collection) {
-
-
-
+    var that = this;
+    $.ajax({
+      url: '/api/concerts/' + that.id + '/concert_tracking',
+      type: 'POST',
+      success: function () {
+        collection.add(that);
+        that.trigger('sync');
+      }
+    });
   },
 
   untrack: function (collection) {
-
-
+    var that = this;
+    $.ajax({
+      url: '/api/concerts/' + that.id + '/concert_tracking',
+      type: 'DELETE',
+      success: function () {
+        collection.remove(that);
+        that.trigger('sync');
+      }
+    });
   }
 
 })

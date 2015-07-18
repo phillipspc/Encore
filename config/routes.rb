@@ -1,16 +1,18 @@
 Rails.application.routes.draw do
   root to: 'static_pages#root'
-  resources :users
-  resource :session
+  resources :users, only: [:new, :create]
+  resource :session, only: [:new, :create, :destroy]
 
   namespace :api, defaults: {format: :json} do
-    resource :session
-    resources :artists do
-      resource :artist_tracking
+    resource :session, only: :show
+    resources :artists, only: [:index, :show] do
+      resource :artist_tracking, only: [:create, :destroy]
     end
-    resources :concerts
-    resources :locales do
-      resource :user_locale
+    resources :concerts, only: [:index, :show] do
+      resource :concert_tracking, only: [:create, :destroy]
+    end
+    resources :locales, only: [:index, :show] do
+      resource :user_locale, only: [:create, :destroy]
     end
   end
 

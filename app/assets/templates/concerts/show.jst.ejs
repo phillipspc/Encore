@@ -5,3 +5,8 @@
 <a href="/#/locales/<%= locale.id %>">
   <%= locale.escape('city') %>, <%= locale.escape('state') %>
 </a>
+<% if (ids && ids.indexOf(concert.id) === -1) { %>
+  <button class="track">Track event</button>
+<% } else { %>
+  <button class="untrack">Stop tracking</button>
+<% } %>

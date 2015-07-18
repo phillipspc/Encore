@@ -1,6 +1,5 @@
 class UsersController < ApplicationController
 
-  before_action :require_log_in, only: :dashboard
   def new
     @user = User.new
     @states = State.all
@@ -16,9 +15,6 @@ class UsersController < ApplicationController
       flash.now[:errors] = @user.errors.full_messages
       render :new
     end
-  end
-
-  def dashboard
   end
 
   def edit

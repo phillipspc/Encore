@@ -4,6 +4,6 @@ Description: <%= artist.escape('description') %><br>
 <% if (ids && (ids.indexOf(artist.id) === -1)) { %>
 <button class="track">track artist</button>
 <% } else { %>
-<button class="untrack" data-id="<%= artist.id %>">stop tracking</button>
+<button class="untrack">stop tracking</button>
 <% } %>
 <h2>Upcoming Concerts</h2>
