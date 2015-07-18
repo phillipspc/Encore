@@ -3,8 +3,8 @@ Encore.Views.LocaleShow = Backbone.View.extend({
   template: JST['locales/show'],
 
   events: {
-    'click .track': 'track',
-    'click .untrack': 'untrack'
+    'click .track-locale': 'trackLocale',
+    'click .untrack-locale': 'untrackLocale'
   },
 
   initialize: function () {
@@ -25,19 +25,20 @@ Encore.Views.LocaleShow = Backbone.View.extend({
     concerts.each( function (concert) {
       concerts.getOrFetch(concert.id);
       var view = new Encore.Views.LocaleShowConcert({
-        model: concert
+        model: concert,
+        collection: window.current_user.concerts()
       });
       that.$el.append(view.render().$el);
     });
     return this;
   },
 
-  track: function () {
+  trackLocale: function () {
     event.preventDefault();
     this.model.track(this.collection);
   },
 
-  untrack: function () {
+  untrackLocale: function () {
     event.preventDefault();
     this.model.untrack(this.collection);
   }

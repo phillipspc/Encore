@@ -2,8 +2,8 @@ Encore.Views.ArtistShow = Backbone.View.extend({
   template: JST['artists/show'],
 
   events: {
-    'click .track': 'track',
-    'click .untrack': 'untrack'
+    'click .track-artist': 'trackArtist',
+    'click .untrack-artist': 'untrackArtist'
   },
 
   initialize: function (){
@@ -32,12 +32,12 @@ Encore.Views.ArtistShow = Backbone.View.extend({
     return this;
   },
 
-  track: function (event) {
+  trackArtist: function (event) {
     event.preventDefault();
     this.model.track(this.collection);
   },
 
-  untrack: function (event) {
+  untrackArtist: function (event) {
     event.preventDefault();
     this.model.untrack(this.collection);
   }
