@@ -15,6 +15,13 @@ Encore.Models.CurrentUser = Backbone.Model.extend({
     return this._artists;
   },
 
+  concerts: function () {
+    if (!this._concerts) {
+      this._concerts = new Encore.Collections.Concerts();
+    }
+    return this._concerts;
+  },
+
   parse: function (response) {
     if (response.locales) {
       this.locales().set(response.locales);
@@ -23,6 +30,10 @@ Encore.Models.CurrentUser = Backbone.Model.extend({
     if (response.artists) {
       this.artists().set(response.artists);
       delete response.artists;
+    }
+    if (response.concerts) {
+      this.concerts().set(response.concerts);
+      delete response.concerts
     }
     return response;
   }
