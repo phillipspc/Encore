@@ -24,7 +24,8 @@ Encore.Views.ArtistShow = Backbone.View.extend({
     concerts.each( function (concert) {
       concerts.getOrFetch(concert.id);
       var view = new Encore.Views.ArtistShowConcert({
-        model: concert
+        model: concert,
+        collection: window.current_user.concerts()
       });
       that.$el.append(view.render().$el);
     });

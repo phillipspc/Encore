@@ -3,3 +3,8 @@ Concert info:
   <%= locale.escape('city') %>, <%= locale.escape('state') %>
 <%= concert.escape('date') %>
 </a>
+<% if (ids && ids.indexOf(concert.id) === -1) { %>
+  <button class="track">Track event</button>
+<% } else { %>
+  <button class="untrack">Stop tracking</button>
+<% } %>
