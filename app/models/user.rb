@@ -26,11 +26,11 @@ class User < ActiveRecord::Base
   has_many :artist_trackings
   has_many :artists, through: :artist_trackings
 
+  has_many :concert_trackings
+  has_many :tracked_concerts, through: :concert_trackings, source: :concert
   has_many :artist_concerts, through: :artists, source: :concerts
   has_many :locale_concerts, through: :locales, source: :concerts
 
-  has_many :concert_trackings
-  has_many :tracked_concerts, through: :concert_trackings, source: :concert
 
   attr_reader :password
 

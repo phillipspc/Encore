@@ -26,7 +26,7 @@ Encore.Views.LocaleShow = Backbone.View.extend({
       concerts.getOrFetch(concert.id);
       var view = new Encore.Views.LocaleShowConcert({
         model: concert,
-        collection: window.current_user.concerts()
+        collection: window.current_user.trackedConcerts()
       });
       that.$el.append(view.render().$el);
     });

@@ -1,0 +1,10 @@
+<h3><%= concert.escape('date') %></h3>
+<a href="#/concerts/<%= concert.id %>">
+  <%= artist.escape('name') %>
+  <%= locale.escape('city') %>, <%= locale.escape('state') %>
+</a>
+<% if (ids && ids.indexOf(concert.id) === -1) { %>
+  <button class="track-concert">Track event</button>
+<% } else { %>
+  <button class="untrack-concert">Stop tracking</button>
+<% } %>

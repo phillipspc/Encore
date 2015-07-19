@@ -12,7 +12,19 @@ json.artists @user.artists do |artist|
   json.image_url artist.image_url
 end
 
-json.concerts @user.tracked_concerts do |concert|
+json.artist_concerts @user.artist_concerts do |concert|
+  json.id concert.id
+  json.artist_id concert.artist_id
+  json.locale_id concert.locale_id
+end
+
+json.tracked_concerts @user.tracked_concerts do |concert|
+  json.id concert.id
+  json.artist_id concert.artist_id
+  json.locale_id concert.locale_id
+end
+
+json.locale_concerts @user.locale_concerts do |concert|
   json.id concert.id
   json.artist_id concert.artist_id
   json.locale_id concert.locale_id

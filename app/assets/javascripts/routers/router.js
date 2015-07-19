@@ -23,7 +23,8 @@ Encore.Routers.Router = Backbone.Router.extend({
 
   dashboard: function () {
     var sessionDashboard = new Encore.Views.SessionDashboard({
-      model: window.current_user
+      model: window.current_user,
+      collection: window.current_user.trackedConcerts()
     });
     this._swapView(sessionDashboard);
   },
@@ -72,7 +73,7 @@ Encore.Routers.Router = Backbone.Router.extend({
     var concert = this.concerts.getOrFetch(id);
     var concertShow = new Encore.Views.ConcertShow({
       model: concert,
-      collection: window.current_user.concerts()
+      collection: window.current_user.trackedConcerts()
     });
     this._swapView(concertShow);
 
