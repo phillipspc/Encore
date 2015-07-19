@@ -40,6 +40,10 @@ article, footer, small {
   display: block;
 }
 
+button {
+  border: inherit;
+}
+
 
 body {
   font-family: helvetica,arial,sans-serif;
@@ -71,12 +75,6 @@ h2 {
 h3 {
   font-size: 20px;
 }
-button {
-  /*background-color: #f2f2f2;
-  border: 1px solid #666;
-  color: #666;
-  padding: 3px 10px;*/
-}
 
 a {
   color: #0277ad;
@@ -93,7 +91,7 @@ a:hover {
 
 .main .log-in {
   width: 400px;
-  margin: auto;
+  margin: 50px auto;
 }
 
 nav {
@@ -142,4 +140,27 @@ nav .submit {
   cursor: pointer;
   color: inherit;
 
+}
+
+
+
+.untrack-artist, .untrack, .untrack-concert {
+  background: #f80046;
+  color: white;
+  border-radius: 5px;
+  font-weight: bold;
+  border: 1px solid white;
+}
+
+.track-artist, .track, .track-concert {
+  background: #007298;
+  color: white;
+  border-radius: 5px;
+  font-weight: bold;
+  border: 1px solid white;
+}
+
+.untrack-artist:hover, .untrack:hover, .untrack-concert:hover,
+.track-artist:hover, .track:hover, .track-concert:hover {
+  border: 1px solid black;
 }
