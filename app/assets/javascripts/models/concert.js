@@ -15,6 +15,13 @@ Encore.Models.Concert = Backbone.Model.extend({
     return this._artist;
   },
 
+  date: function () {
+    if (this.escape('date')) {
+    var date = Date.parse(this.escape('date')).toString("dddd, MMMM d, yyyy");
+    return date;
+    }
+  },
+
 
   parse: function (response) {
     if (response.locale) {
