@@ -1,5 +1,6 @@
 <div class='main'>
-  <h1>Log in with your username and password</h1>
+  <div class="log-in">
+  <h3>Log in with your username and password</h3>
   <form action="<%= session_url %>" method="post">
     <%= render 'shared/auth_token' %>
     Username/email <input type="text" name="user[username_or_email]" value=""><br>
@@ -11,4 +12,5 @@
     <a href="<%= new_user_url %>">Sign up</a>
   </p>
   <p><strong>Guest account</strong> = username: 'guest', password: 'password'</p>
+  <div>
 </div>

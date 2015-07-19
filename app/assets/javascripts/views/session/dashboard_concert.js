@@ -1,4 +1,7 @@
 Encore.Views.DashboardConcert = Backbone.View.extend({
+  tagName: 'ul',
+  className: 'concert group',
+
   template: JST['session/concert'],
 
   events: {

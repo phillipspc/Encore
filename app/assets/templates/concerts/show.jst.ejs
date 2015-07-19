@@ -1,10 +1,10 @@
 <% var artist = concert.artist() %>
 <% var locale = concert.locale() %>
-<a href="/#/artists/<%= artist.id %>"><%= artist.escape('name') %></a>
-<%= concert.escape('date') %>
+<h1><a href="/#/artists/<%= artist.id %>"><%= artist.escape('name') %></a><h1>
+<h2><%= concert.escape('date') %>
 <a href="/#/locales/<%= locale.id %>">
   <%= locale.escape('city') %>, <%= locale.escape('state') %>
-</a>
+</a></h2>
 <% if (ids && ids.indexOf(concert.id) === -1) { %>
   <button class="track">Track event</button>
 <% } else { %>
