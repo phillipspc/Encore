@@ -34,6 +34,7 @@ Encore.Models.Concert = Backbone.Model.extend({
       url: '/api/concerts/' + that.id + '/concert_tracking',
       type: 'POST',
       success: function () {
+        console.log('successfully tracked a concert');
         collection.add(that);
         that.trigger('sync');
       }
@@ -46,6 +47,7 @@ Encore.Models.Concert = Backbone.Model.extend({
       url: '/api/concerts/' + that.id + '/concert_tracking',
       type: 'DELETE',
       success: function () {
+        console.log('successfully untracked a concert');
         collection.remove(that);
         that.trigger('sync');
       }

@@ -22,6 +22,7 @@ Encore.Models.Artist = Backbone.Model.extend({
       url: '/api/artists/' + that.id + '/artist_tracking',
       type: 'POST',
       success: function () {
+        console.log('successfully tracked an artist');
         collection.add(that);
         that.trigger('sync');
       }
@@ -34,6 +35,7 @@ Encore.Models.Artist = Backbone.Model.extend({
       url: '/api/artists/' + that.id + '/artist_tracking',
       type: 'DELETE',
       success: function () {
+        console.log('successfully untracked an artist');
         collection.remove(that);
         that.trigger('sync');
       }

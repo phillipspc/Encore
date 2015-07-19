@@ -1,5 +1,5 @@
 Encore.Views.DashboardConcert = Backbone.View.extend({
-  template: JST['locales/show_concert'],
+  template: JST['session/concert'],
 
   events: {
     'click .track-concert': 'trackConcert',
