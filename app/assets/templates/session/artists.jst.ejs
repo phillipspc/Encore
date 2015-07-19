@@ -4,6 +4,6 @@
 <% artists.each( function (artist) { %>
   Artist: <a href="#/artists/<%= artist.id %>">
     <%= artist.attributes.name %></a>
-    <button class="untrack" data-id="<%= artist.id %>">stop tracking</button>
+    <button class="untrack untrack-artist" data-id="<%= artist.id %>">stop tracking</button>
   <br>
 <% }); %>

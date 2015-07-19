@@ -2,7 +2,7 @@ Encore.Views.SessionArtists = Backbone.View.extend({
   template: JST['session/artists'],
 
   events: {
-    'click .untrack': 'untrack'
+    'click .untrack-artist': 'untrack'
   },
 
   initialize: function () {

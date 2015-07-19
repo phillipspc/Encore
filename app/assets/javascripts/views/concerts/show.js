@@ -2,8 +2,8 @@ Encore.Views.ConcertShow = Backbone.View.extend({
   template: JST['concerts/show'],
 
   events: {
-    'click .track': 'track',
-    'click .untrack': 'untrack'
+    'click .track-concert': 'track',
+    'click .untrack-concert': 'untrack'
   },
 
   initialize: function () {

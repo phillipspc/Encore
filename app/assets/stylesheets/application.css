@@ -144,7 +144,7 @@ nav .submit {
 
 
 
-.untrack-artist, .untrack, .untrack-concert {
+.untrack {
   background: #f80046;
   color: white;
   border-radius: 5px;
@@ -152,7 +152,7 @@ nav .submit {
   border: 1px solid white;
 }
 
-.track-artist, .track, .track-concert {
+.track {
   background: #007298;
   color: white;
   border-radius: 5px;
@@ -160,7 +160,6 @@ nav .submit {
   border: 1px solid white;
 }
 
-.untrack-artist:hover, .untrack:hover, .untrack-concert:hover,
-.track-artist:hover, .track:hover, .track-concert:hover {
+.untrack:hover, .track:hover {
   border: 1px solid black;
 }

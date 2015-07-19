@@ -2,7 +2,7 @@ Encore.Views.SessionLocales = Backbone.View.extend({
   template: JST['session/locales'],
 
   events: {
-    'click .untrack': 'untrack'
+    'click .untrack-locale': 'untrack'
   },
 
   initialize: function () {

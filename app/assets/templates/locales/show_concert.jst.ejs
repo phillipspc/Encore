@@ -3,7 +3,7 @@ Concert info:
   <%= artist.escape('name') %> <%= concert.escape('date') %>
 </a>
 <% if (ids && ids.indexOf(concert.id) === -1) { %>
-  <button class="track-concert">Track event</button>
+  <button class="track track-concert">Track event</button>
 <% } else { %>
-  <button class="untrack-concert">Stop tracking</button>
+  <button class="untrack untrack-concert">Stop tracking</button>
 <% } %>
