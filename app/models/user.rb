@@ -26,8 +26,11 @@ class User < ActiveRecord::Base
   has_many :artist_trackings
   has_many :artists, through: :artist_trackings
 
+  has_many :artist_concerts, through: :artists, source: :concerts
+  has_many :locale_concerts, through: :locales, source: :concerts
+
   has_many :concert_trackings
-  has_many :concerts, through: :concert_trackings
+  has_many :tracked_concerts, through: :concert_trackings, source: :concert
 
   attr_reader :password
 
@@ -36,6 +39,10 @@ class User < ActiveRecord::Base
     user = User.find_by_username(input) || User.find_by_email(input)
     return nil unless user && user.valid_password?(password)
     user
+  end
+
+  def locale_concerts
+    self.artist_concerts.where(locale_id: self.locale_ids)
   end
 
   def password=(password)
@@ -52,6 +59,7 @@ class User < ActiveRecord::Base
     self.save
     self.session_token
   end
+
 
   private
   def ensure_session_token
