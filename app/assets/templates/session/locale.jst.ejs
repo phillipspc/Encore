@@ -1,4 +1,8 @@
 <a href="#/locales/<%= locale.id %>">
   <%= locale.escape('city') %>, <%= locale.escape('state') %>
 </a>
-<button class="untrack untrack-locale" data-id="<%= locale.id %>">Stop tracking</button>
+<% if (ids && ids.indexOf(locale.id) === -1) { %>
+  <button class="track track-locale">Track location</button>
+<% } else { %>
+  <button class="untrack untrack-locale">Stop tracking</button>
+<% } %>
