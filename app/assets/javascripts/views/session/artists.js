@@ -1,22 +1,8 @@
 Encore.Views.SessionArtists = Backbone.View.extend({
   template: JST['session/artists'],
 
-  events: {
-    'click .untrack-artist': 'untrack'
-  },
-
   initialize: function () {
-    var artists = this.model.artists();
     this.listenTo(this.model, 'sync', this.render);
-    this.listenTo(artists, 'sync remove', this.render);
-  },
-
-  untrack: function (event) {
-    event.preventDefault();
-    $target = $(event.currentTarget);
-    var artists = this.model.artists();
-    var artist = artists.get($target.attr('data-id'));
-    artist.untrack(artists);
   },
 
   render: function () {
@@ -24,6 +10,16 @@ Encore.Views.SessionArtists = Backbone.View.extend({
       user: this.model
     });
     this.$el.html(content);
+
+    var that = this;
+    var artists = this.model.artists();
+    artists.each( function (artist) {
+      var view = new Encore.Views.SessionArtist({
+        model: artist,
+        collection: artists
+      });
+      that.$el.append(view.render().$el);
+    });
     return this;
   }
 });
