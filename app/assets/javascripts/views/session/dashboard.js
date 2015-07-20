@@ -6,16 +6,17 @@ Encore.Views.SessionDashboard = Backbone.View.extend({
   },
 
   render: function () {
-    var content = this.template();
+    var numLocaleConcerts = this.model.localeConcerts().length;
+    var content = this.template({
+      numLocaleConcerts: numLocaleConcerts
+    });
     this.$el.html(content);
 
     var that = this;
-    var concerts = this.model.trackedConcerts();
     this.model.localeConcerts().each( function(concert) {
-      that.model.localeConcerts().getOrFetch(concert.id);
       var view = new Encore.Views.SessionConcert({
         model: concert,
-        collection: concerts
+        collection: that.model.trackedConcerts()
       });
       that.$el.append(view.render().$el);
     });

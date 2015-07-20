@@ -1,4 +1,7 @@
 Encore.Views.SessionConcert = Backbone.View.extend({
+
+  // this.collection should be trackedConcerts.
+
   tagName: 'ul',
   className: 'concert group',
 
