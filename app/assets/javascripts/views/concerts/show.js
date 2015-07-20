@@ -2,13 +2,12 @@ Encore.Views.ConcertShow = Backbone.View.extend({
   template: JST['concerts/show'],
 
   events: {
-    'click .track-concert': 'track',
-    'click .untrack-concert': 'untrack'
+    'click .track-concert': 'trackConcert',
+    'click .untrack-concert': 'untrackConcert'
   },
 
   initialize: function () {
     this.listenTo(this.model, 'sync', this.render);
-    this.listenTo(this.collection, 'sync', this.render);
   },
 
   render: function () {
@@ -21,12 +20,12 @@ Encore.Views.ConcertShow = Backbone.View.extend({
     return this;
   },
 
-  track: function (event) {
+  trackConcert: function (event) {
     event.preventDefault();
     this.model.track(this.collection);
   },
 
-  untrack: function (event) {
+  untrackConcert: function (event) {
     event.preventDefault();
     this.model.untrack(this.collection);
   }

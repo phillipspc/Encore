@@ -8,7 +8,6 @@ Encore.Views.ArtistShow = Backbone.View.extend({
 
   initialize: function (){
     this.listenTo(this.model, 'sync', this.render);
-    this.listenTo(this.collection, 'sync', this.render);
   },
 
   render: function () {
