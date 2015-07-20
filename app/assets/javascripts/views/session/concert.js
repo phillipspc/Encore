@@ -1,4 +1,4 @@
-Encore.Views.DashboardConcert = Backbone.View.extend({
+Encore.Views.SessionConcert = Backbone.View.extend({
   tagName: 'ul',
   className: 'concert group',
 

@@ -16,6 +16,7 @@ Encore.Routers.Router = Backbone.Router.extend({
     "session/show": 'sessionShow',
     'session/locales': 'sessionLocales',
     'session/artists': 'sessionArtists',
+    'session/plans': 'sessionPlans',
     'artists/:id': 'artistShow',
     'locales/:id': 'localeShow',
     'concerts/:id': 'concertShow'
@@ -31,7 +32,8 @@ Encore.Routers.Router = Backbone.Router.extend({
 
   sessionShow: function () {
     var sessionShow = new Encore.Views.SessionShow({
-      model: window.current_user
+      model: window.current_user,
+      collection: window.current_user.trackedConcerts()
     });
     this._swapView(sessionShow);
   },
@@ -49,6 +51,13 @@ Encore.Routers.Router = Backbone.Router.extend({
     });
     this._swapView(sessionArtists);
 
+  },
+
+  sessionPlans: function () {
+    var sessionPlans = new Encore.Views.SessionPlans({
+      model: window.current_user
+    });
+    this._swapView(sessionPlans);
   },
 
   artistShow: function (id) {
