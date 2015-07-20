@@ -12,7 +12,6 @@ Encore.Views.SessionPlans = Backbone.View.extend({
     var that = this;
     var concerts = this.model.trackedConcerts();
     concerts.each( function (concert) {
-      concerts.getOrFetch(concert.id);
       var view = new Encore.Views.SessionConcert({
         model: concert,
         collection: concerts

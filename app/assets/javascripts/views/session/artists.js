@@ -6,9 +6,7 @@ Encore.Views.SessionArtists = Backbone.View.extend({
   },
 
   render: function () {
-    var content = this.template({
-      user: this.model
-    });
+    var content = this.template();
     this.$el.html(content);
 
     var that = this;
