@@ -4,7 +4,7 @@ window.Encore = {
   Views: {},
   Routers: {},
   initialize: function() {
-    window.current_user = new Encore.Models.CurrentUser();
+    Encore.current_user = new Encore.Models.CurrentUser();
     new Encore.Routers.Router({
       $rootEl: $('.main')
     });

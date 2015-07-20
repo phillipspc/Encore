@@ -14,6 +14,7 @@ Encore.Views.SessionConcert = Backbone.View.extend({
 
   initialize: function () {
     this.listenTo(this.model, 'sync', this.render);
+    this.listenTo(this.collection, 'sync', this.render);
   },
 
   trackConcert: function (event) {

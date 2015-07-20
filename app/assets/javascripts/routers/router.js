@@ -2,13 +2,10 @@ Encore.Routers.Router = Backbone.Router.extend({
 
   initialize: function (options) {
     this.$rootEl = options.$rootEl;
-    window.current_user.fetch();
+    Encore.current_user.fetch();
     this.artists = new Encore.Collections.Artists();
-    this.artists.fetch();
     this.locales = new Encore.Collections.Locales();
-    this.locales.fetch();
     this.concerts = new Encore.Collections.Concerts();
-    this.concerts.fetch();
   },
 
   routes: {
@@ -24,30 +21,30 @@ Encore.Routers.Router = Backbone.Router.extend({
 
   dashboard: function () {
     var sessionDashboard = new Encore.Views.SessionDashboard({
-      model: window.current_user,
-      collection: window.current_user.trackedConcerts()
+      model: Encore.current_user,
+      collection: Encore.current_user.localeConcerts()
     });
     this._swapView(sessionDashboard);
   },
 
   sessionShow: function () {
     var sessionShow = new Encore.Views.SessionShow({
-      model: window.current_user,
-      collection: window.current_user.trackedConcerts()
+      model: Encore.current_user,
+      collection: Encore.current_user.trackedConcerts()
     });
     this._swapView(sessionShow);
   },
 
   sessionLocales: function () {
     var sessionLocales = new Encore.Views.SessionLocales({
-      model: window.current_user
+      model: Encore.current_user
     });
     this._swapView(sessionLocales);
   },
 
   sessionArtists: function () {
     var sessionArtists = new Encore.Views.SessionArtists({
-      model: window.current_user
+      model: Encore.current_user
     });
     this._swapView(sessionArtists);
 
@@ -55,7 +52,7 @@ Encore.Routers.Router = Backbone.Router.extend({
 
   sessionPlans: function () {
     var sessionPlans = new Encore.Views.SessionPlans({
-      model: window.current_user
+      model: Encore.current_user
     });
     this._swapView(sessionPlans);
   },
@@ -64,7 +61,7 @@ Encore.Routers.Router = Backbone.Router.extend({
     var artist = this.artists.getOrFetch(id);
     var artistShow = new Encore.Views.ArtistShow({
       model: artist,
-      collection: window.current_user.artists()
+      collection: Encore.current_user.artists()
     });
     this._swapView(artistShow);
   },
@@ -73,7 +70,7 @@ Encore.Routers.Router = Backbone.Router.extend({
     var locale = this.locales.getOrFetch(id);
     var localeShow = new Encore.Views.LocaleShow({
       model: locale,
-      collection: window.current_user.locales()
+      collection: Encore.current_user.locales()
     });
     this._swapView(localeShow);
   },
@@ -82,7 +79,7 @@ Encore.Routers.Router = Backbone.Router.extend({
     var concert = this.concerts.getOrFetch(id);
     var concertShow = new Encore.Views.ConcertShow({
       model: concert,
-      collection: window.current_user.trackedConcerts()
+      collection: Encore.current_user.trackedConcerts()
     });
     this._swapView(concertShow);
 

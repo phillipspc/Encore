@@ -99,12 +99,13 @@ nav {
   font-family: helvetica;
   font-weight: bold;
   border-top: 5px solid #f80046;
-
 }
+
 nav a {
   color: white;
   text-decoration: none;
 }
+
 nav a:hover {
   color: #0277ad;
   text-decoration: none;
@@ -139,10 +140,26 @@ nav .submit {
   font: inherit;
   cursor: pointer;
   color: inherit;
-
 }
 
+.user-nav-item {
+  position: relative;
+  display: block;
+  z-index: 1;
+}
 
+.user-dropdown {
+  display: none;
+  position: absolute;
+  bottom: 10;
+  overflow: hidden;
+  border-top: 1px solid white;
+}
+
+.user-nav-item:hover .user-dropdown {
+  /*display: block;
+  z-index: 1000;*/
+}
 
 .untrack {
   background: #f80046;

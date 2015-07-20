@@ -11,11 +11,22 @@
                name="_method"
                value="delete">
         <%= render 'shared/auth_token' %>
-        <input type="submit" class="submit" value="Log Out">
+        <input type="submit" class="submit" value="Log out">
       </form>
     </li>
-    <li>
+    <li class="user-nav-item group">
       <a href="#/session/show"><%= current_user.username %></a>
+      <ul class="user-dropdown">
+        <li>
+          <form action="<%= session_url %>" method="post">
+          <input type="hidden"
+                 name="_method"
+                 value="delete">
+          <%= render 'shared/auth_token' %>
+          <input type="submit" class="submit" value="Log out">
+          </form>
+        </li>
+      </ul>
     </li>
   </ul>
 </nav>

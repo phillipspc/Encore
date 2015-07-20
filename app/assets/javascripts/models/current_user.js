@@ -1,5 +1,5 @@
 Encore.Models.CurrentUser = Backbone.Model.extend({
-  urlRoot: '/api/session',
+  url: '/api/session',
 
   locales: function () {
     if (!this._locales) {
