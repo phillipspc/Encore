@@ -14,10 +14,8 @@ Encore.Views.ArtistShowConcert = Backbone.View.extend({
 
   render: function () {
     var ids = this.collection.pluck('id');
-    var locale = this.model.locale();
     var content = this.template({
       concert: this.model,
-      locale: locale,
       ids: ids
     });
     this.$el.html(content);

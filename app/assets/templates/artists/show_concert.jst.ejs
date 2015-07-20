@@ -1,6 +1,6 @@
 Concert info:
 <a href="#/concerts/<%= concert.id %>">
-  <%= locale.escape('city') %>, <%= locale.escape('state') %>
+  <%= concert.escape('locale_city') %>, <%= concert.escape('locale_state') %>
 <%= concert.date() %>
 </a>
 <% if (ids && ids.indexOf(concert.id) === -1) { %>
