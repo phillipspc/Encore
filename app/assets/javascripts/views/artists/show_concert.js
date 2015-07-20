@@ -1,5 +1,4 @@
 Encore.Views.ArtistShowConcert = Backbone.View.extend({
-
   template: JST['artists/show_concert'],
 
   events: {

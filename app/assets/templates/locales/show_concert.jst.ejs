@@ -1,6 +1,6 @@
 Concert info:
 <a href="#/concerts/<%= concert.id %>">
-  <%= artist.escape('name') %> <%= concert.date() %>
+  <%= concert.escape('artist_name') %> <%= concert.date() %>
 </a>
 <% if (ids && ids.indexOf(concert.id) === -1) { %>
   <button class="track track-concert">Track event</button>

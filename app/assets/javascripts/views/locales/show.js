@@ -1,5 +1,4 @@
 Encore.Views.LocaleShow = Backbone.View.extend({
-
   template: JST['locales/show'],
 
   events: {
@@ -9,7 +8,6 @@ Encore.Views.LocaleShow = Backbone.View.extend({
 
   initialize: function () {
     this.listenTo(this.model, 'sync', this.render);
-    this.listenTo(this.collection, 'sync', this.render);
   },
 
   render: function () {
@@ -23,7 +21,6 @@ Encore.Views.LocaleShow = Backbone.View.extend({
     var that = this;
     var concerts = this.model.concerts();
     concerts.each( function (concert) {
-      concerts.getOrFetch(concert.id);
       var view = new Encore.Views.LocaleShowConcert({
         model: concert,
         collection: window.current_user.trackedConcerts()

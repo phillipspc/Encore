@@ -6,7 +6,7 @@ Encore.Views.ArtistShow = Backbone.View.extend({
     'click .untrack-artist': 'untrackArtist'
   },
 
-  initialize: function (){
+  initialize: function () {
     this.listenTo(this.model, 'sync', this.render);
   },
 

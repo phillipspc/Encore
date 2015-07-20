@@ -38,7 +38,7 @@ UserLocale.create({user_id: 2, locale_id: 1})
 UserLocale.create({user_id: 2, locale_id: 10})
 
 
-['Taylor swift', 'Kanye West', 'The War On Drugs', 'Radiohead',
+['Taylor Swift', 'Kanye West', 'The War On Drugs', 'Radiohead',
   'Arctic Monkeys', 'Lana Del Rey', 'The Weeknd',
   'Katy Perry', 'Tame Impala', 'The Strokes'].each do |name|
     Artist.create({name: name})

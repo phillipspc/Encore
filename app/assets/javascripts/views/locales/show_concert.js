@@ -6,16 +6,6 @@ Encore.Views.LocaleShowConcert = Backbone.View.extend({
     'click .untrack-concert': 'untrackConcert'
   },
 
-  trackConcert: function (event) {
-    event.preventDefault();
-    this.model.track(this.collection);
-  },
-
-  untrackConcert: function (event) {
-    event.preventDefault();
-    this.model.untrack(this.collection);
-  },
-
   initialize: function () {
     this.listenTo(this.model, 'sync', this.render);
     this.listenTo(this.collection, 'sync', this.render);
@@ -31,6 +21,15 @@ Encore.Views.LocaleShowConcert = Backbone.View.extend({
     });
     this.$el.html(content);
     return this;
-  }
+  },
 
+  trackConcert: function (event) {
+    event.preventDefault();
+    this.model.track(this.collection);
+  },
+
+  untrackConcert: function (event) {
+    event.preventDefault();
+    this.model.untrack(this.collection);
+  }
 });
