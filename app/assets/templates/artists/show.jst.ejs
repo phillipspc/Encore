@@ -1,6 +1,6 @@
 <h1><%= artist.escape('name') %></h1>
-<p>Description: <%= artist.escape('description') %></p>
 <img src="<%= artist.escape('image_url') %>">
+<p>Description: <%= artist.escape('description') %></p>
 <% if (ids && (ids.indexOf(artist.id) === -1)) { %>
 <button class="track track-artist">track artist</button>
 <% } else { %>

@@ -25,28 +25,33 @@ end
 end
 
 
-User.create!({username: 'phillipspc', email: 'phillipspc@gmail.com',
-            password: 'password'})
 
 User.create!({username: 'guest', email: 'guest@gmail.com',
             password: 'password'})
 
-UserLocale.create({user_id: 1, locale_id: 1})
-UserLocale.create({user_id: 1, locale_id: 10})
 
-UserLocale.create({user_id: 2, locale_id: 1})
-UserLocale.create({user_id: 2, locale_id: 10})
+def locale_rand
+  1 + rand(Locale.all.length)
+end
+
+2.times do |id|
+  UserLocale.create({user_id: 1, locale_id: locale_rand})
+end
 
 
 ['Taylor Swift', 'Kanye West', 'The War On Drugs', 'Radiohead',
   'Arctic Monkeys', 'Lana Del Rey', 'The Weeknd',
-  'Katy Perry', 'Tame Impala', 'The Strokes'].each do |name|
+  'Katy Perry', 'Tame Impala', 'The Strokes', 'Jamie XX', 'Godspeed You Black Emperor', 'Explosions In The Sky', 'Mogwai', 'Sigur Ros', 'Wilco'].each do |name|
     Artist.create({name: name})
   end
 
 
+def artist_rand
+  return (1 + rand(Artist.all.length))
+end
+
 10.times do |id|
-  ArtistTracking.create({user_id: 2, artist_id: (id+1)})
+  ArtistTracking.create({user_id: 1, artist_id: artist_rand})
 end
 
 artist_count = Artist.all.length
@@ -59,7 +64,7 @@ def date_rand
   Time.at(from + rand(diff)).to_date
 end
 
-50.times do
+75.times do
   artist = 1 + rand(artist_count)
   locale = 1 + rand(locale_count)
 

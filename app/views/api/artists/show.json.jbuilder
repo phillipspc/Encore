@@ -1,4 +1,4 @@
-json.extract! @artist, :id, :name, :description, :image_url
+json.extract! @artist, :id, :name, :description, :image_url, :small_image_url
 json.concerts @artist.concerts do |concert|
   json.id concert.id
   json.artist_name Artist.find(concert.artist_id).name

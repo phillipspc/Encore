@@ -2,10 +2,11 @@
 #
 # Table name: artists
 #
-#  id          :integer          not null, primary key
-#  name        :string           not null
-#  image_url   :string
-#  description :text
+#  id              :integer          not null, primary key
+#  name            :string           not null
+#  image_url       :string
+#  description     :text
+#  small_image_url :string
 #
 
 class Artist < ActiveRecord::Base
