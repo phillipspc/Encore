@@ -416,3 +416,33 @@ img.thumb {
   float: left;
   display: block;
 }
+
+/* Concert Mini-View */
+ul.concert h3 {
+  margin: 5px 0;
+}
+
+.info-box {
+  padding: 5px;
+  width: 500px;
+  background: #ECE9E9;
+  position: relative;
+}
+
+.info-box button {
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+}
+
+.info-box li {
+  float: left;
+  font-size: 18px;
+}
+
+.info-box img {
+  float: right;
+  display: block;
+  height: 80px;
+  width: auto;
+}

@@ -14,9 +14,6 @@ Encore.Views.SessionDashboard = Backbone.View.extend({
     this.$el.html(content);
 
     var that = this;
-    if (this.collection.length > 0) {
-      debugger
-    }
     this.collection.each( function(concert) {
       var view = new Encore.Views.SessionConcert({
         model: concert,

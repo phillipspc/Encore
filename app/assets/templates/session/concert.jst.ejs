@@ -1,5 +1,5 @@
 <li class="date"><h3><%= concert.date() %></h3></li>
-<div class="info-box">
+<div class="info-box group">
   <li><a href="#/concerts/<%= concert.id %>">
     <%= concert.artist().escape('name') %> -
     <%= concert.locale().escape('city') %>, <%= concert.locale().escape('state') %>

@@ -8,7 +8,6 @@ module Api
 
     def show
       @concert = Concert.find(params[:id])
-      debugger
       render :show
     end
 
