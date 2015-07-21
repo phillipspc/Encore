@@ -6,6 +6,7 @@ class StaticPagesController < ApplicationController
   end
 
   def home
+    render :home, {layout: 'home'}
   end
 
 end

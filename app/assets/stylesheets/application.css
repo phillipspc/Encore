@@ -46,8 +46,6 @@ img {
   height: auto;
 }
 
-button {
-}
 
 input {
   border: 1px solid #ccc;
@@ -59,11 +57,12 @@ body {
   color: #3a3a3a;
 }
 
-strong {
-  font-weight: bold;
+body.black-home {
+  background: #1e2126;
 }
 
-div {
+strong {
+  font-weight: bold;
 }
 
 
@@ -84,12 +83,11 @@ h3 {
   font-size: 20px;
 }
 
-footer{
+footer {
   width: 900px;
   margin: 30px auto;
   color: white;
   font-size: 14px;
-  /*font-weight: normal;*/
 }
 
 a {
@@ -103,59 +101,16 @@ a:hover {
 .main {
   width: 900px;
   margin: 0 auto;
-  background: white;
 }
 
-.log-in {
-  width: 360px;
-  margin: 100px auto;
-  font-weight: bold;
-}
 
-.log-in p {
-  width: 150px;
-  float: left;
-  display: block;
-  padding: 2px 0 10px 0;
-  margin: 0 0 15px 0;
-}
 
-.log-in input {
-  float: right;
-  display: block;
-  margin: 0 0 15px 0;
-  padding: 5px 0;
-}
-
-.log-in-button {
-  border: 1px solid #aaa;
-  border-radius: 3px;
-  display: block;
-  margin: 20px auto;
-  padding: 6px 35px;
-  background: #ccc;
-  cursor: pointer;
-
-}
-
-.log-in .guest {
-  font-weight: normal;
-  color: #0277ad;
-  border: none;
-  cursor: pointer;
-}
-
-.log-in aside {
-  float: left;
-  font-weight: normal;
-}
+/* Splash Page */
 
 .home {
   background: #1e2126;
-  display: block;
-}
-
-.home .content {
+  position: relative;
+  height: auto;
   width: 900px;
   margin: 0 auto;
 }
@@ -196,6 +151,11 @@ a.banner {
   text-transform: uppercase;
   cursor: pointer;
 }
+
+
+
+
+/* Nav Bar */
 
 nav {
   background: #1e2126;
@@ -264,12 +224,137 @@ nav .submit {
   z-index: 1000;*/
 }
 
+
+/* Log In Page*/
+
+.log-in {
+  width: 360px;
+  margin: 80px auto;
+  font-weight: bold;
+}
+
+.log-in p {
+  width: 150px;
+  float: left;
+  display: block;
+  padding: 2px 0 10px 0;
+  margin: 0 0 15px 0;
+}
+
+.log-in input {
+  float: right;
+  display: block;
+  margin: 0 0 15px 0;
+  padding: 5px 0;
+}
+
+.log-in-button {
+  border: 1px solid #aaa;
+  border-radius: 3px;
+  display: block;
+  margin: 20px auto;
+  padding: 6px 35px;
+  background: #ccc;
+  cursor: pointer;
+}
+
+.log-in-button:hover {
+  border: 1px solid black;
+}
+
+.log-in .guest {
+  font-weight: normal;
+  color: #0277ad;
+  border: none;
+  cursor: pointer;
+}
+
+.log-in aside {
+  float: left;
+  font-weight: normal;
+}
+
+
+
+/* Sign Up Page */
+
+.sign-up {
+  background: #ECE9E9;
+
+}
+
+.sidebar {
+  float: left;
+  width: 245px;
+  padding: 20px;
+  display: block;
+  margin: 0 0 0 15px;
+}
+
+.benefits li{
+  list-style: disc;
+  margin: 20px 0 20px 5px;
+}
+
+.sign-up-content {
+  float: right;
+  width: 560px;
+  padding: 20px;
+  background: white;
+}
+
+.sign-up-content h2 {
+  margin: 10px 0 20px;
+}
+
+.sign-up-content form {
+  width: 360px;
+  font-weight: bold;
+}
+
+.sign-up-content input {
+  padding: 5px 2px;
+  border-radius: 3px;
+  font-weight: normal;
+  width: 200px;
+}
+
+.sign-up-content form div {
+  margin: 30px auto;
+}
+
+.sign-up-content .field p {
+  float: left;
+  display: block;
+  padding: 6px 0px;
+}
+
+.sign-up-content .field input {
+  float: right;
+  display: block;
+}
+
+.sign-up-content .field button {
+  border: 1px solid #aaa;
+  border-radius: 3px;
+  display: block;
+  margin: 20px auto;
+  padding: 6px 35px;
+  background: #ccc;
+  cursor: pointer;
+}
+
+
+/* General */
+
 .untrack {
   background: #f80046;
   color: white;
   border-radius: 5px;
   font-weight: bold;
   border: 1px solid white;
+  font-size: 14px;
+  padding: 3px 10px;
 }
 
 .track {
@@ -278,12 +363,17 @@ nav .submit {
   border-radius: 5px;
   font-weight: bold;
   border: 1px solid white;
+  font-size: 14px;
+  padding: 3px 10px;
 }
 
 .untrack:hover, .track:hover {
   border: 1px solid black;
 }
 
+
+
+/* Artist Page */
 
 .artist-bio{
   margin: 30px 0;

@@ -1,17 +1,29 @@
-<div class="main">
-  <h1>Track your favorite artists and never miss them live.</h1>
-  <h2>Sign up with your email address.</h2>
-  <form action="<%= users_url %>" method="post">
-    <%= render 'shared/auth_token' %>
-    Email: <input type="email"
-                 name="user[email]"><br>
-    Username: <input type="text"
-                    name="user[username]"></br>
-    Password: <input type="password"
-                    name="user[password]"></br>
-    <button>Sign up for free</button>
-  </form>
+<div class="main group sign-up">
+  <div class="sidebar">
+    <ul class="benefits">
+      <li>Track concerts for your favorite bands in one convenient place.</li>
+      <li>See when they play shows near you.</li>
+      <li>Find new artists playing locally.</li>
+    </ul>
+    <p>Already signed up? <a href="<%= new_session_url %>">Log in here</a></p>
+  </div>
 
-  <p>Already signed up? <a href="<%= new_session_url %>">Log in here</a></p>
-  <p>Guest account = username: 'guest', password: 'password'</p>
+  <div class="sign-up-content">
+    <h1>Track your favorite artists and never miss them live.</h1>
+    <h2>Sign up with your email address.</h2>
+      <form action="<%= users_url %>" method="post">
+        <%= render 'shared/auth_token' %>
+        <div class="field group">
+          <p>Email: </p><input type="email"
+                     name="user[email]"></div>
+        <div class="field group">
+        <p>Username: </p><input type="text"
+                        name="user[username]"></div>
+        <div class="field group">
+          <p>Password: </p><input type="password"
+                        name="user[password]"></div>
+        <div class="field group"><button>Sign up for free</button>
+        </div>
+      </form>
+  </div>
 </div>
