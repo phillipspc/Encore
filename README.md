@@ -1,6 +1,6 @@
 # Encore
 
-[Live link](www.encore.audio)
+[Live link](http://www.encore.audio)
 
 Encore is a clone of [SongKick](http://www.songkick.com), and allows a user to pick some
 locations of interest, track their favorite artists, and see when they're coming
@@ -20,4 +20,4 @@ plans' for future reference. Currently no search feature is enabled, so try not
 to 'untrack' all artists or locations. ;)
 
 ## Questions
-Send Encore feedback or questions to: [phillipspc@gmail.com](phillipspc@gmail.com)
+Send Encore feedback or questions to: [phillipspc@gmail.com](mailto:phillipspc@gmail.com)
