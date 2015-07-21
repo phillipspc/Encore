@@ -1,8 +1,5 @@
-json.extract! @artist, :id, :name, :description, :image_url, :small_image_url
+json.partial! 'api/artists/artist', artist: @artist
+
 json.concerts @artist.concerts do |concert|
-  json.id concert.id
-  json.artist_name Artist.find(concert.artist_id).name
-  json.locale_city Locale.find(concert.locale_id).city
-  json.locale_state Locale.find(concert.locale_id).state
-  json.date concert.date
+  json.partial! 'api/concerts/concert', concert: concert
 end

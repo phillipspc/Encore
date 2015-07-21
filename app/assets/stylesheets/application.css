@@ -347,6 +347,13 @@ nav .submit {
 
 /* General */
 
+img.thumb {
+  display: block;
+  width: 80px;
+  height: 80px;
+
+}
+
 .untrack {
   background: #f80046;
   color: white;

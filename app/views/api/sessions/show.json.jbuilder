@@ -1,35 +1,50 @@
-json.extract! @user, :id, :username, :created_at, :updated_at
+json.partial! 'api/sessions/user', user: @user
+
 json.locales @user.locales do |locale|
-  json.id locale.id
-  json.city locale.city
-  json.state locale.state
+  json.partial! 'api/locales/locale', locale: locale
+
+  # json.concerts locale.concerts do |concert|
+  #   json.partial! 'api/concerts/concert', concert: concert
+  # end
 end
 
 json.artists @user.artists do |artist|
-  json.id artist.id
-  json.name artist.name
-  json.description artist.description
-  json.image_url artist.image_url
+  json.partial! 'api/artists/artist', artist: artist
+
+  # json.concerts artist.concerts do |concert|
+  #   json.partial! 'api/concerts/concert', concert: concert
+  # end
 end
 
-json.artist_concerts @user.artist_concerts do |concert|
-  json.id concert.id
-  json.artist_id concert.artist_id
-  json.locale_id concert.locale_id
-end
+# json.artist_concerts @user.artist_concerts do |concert|
+#   json.partial! 'api/concerts/concert', concert: concert
+#   json.locale do
+#     json.partial! 'api/locales/locale', locale: concert.locale
+#   end
+#
+#   json.artist do
+#     json.artist json.partial! 'api/artists/artist', artist: concert.artist
+#   end
+# end
 
 json.tracked_concerts @user.tracked_concerts do |concert|
-  json.id concert.id
-  json.artist_name Artist.find(concert.artist_id).name
-  json.locale_city Locale.find(concert.locale_id).city
-  json.locale_state Locale.find(concert.locale_id).state
-  json.date concert.date
+  json.partial! 'api/concerts/concert', concert: concert
+  json.locale do
+    json.partial! 'api/locales/locale', locale: concert.locale
+  end
+
+  json.artist do
+    json.artist json.partial! 'api/artists/artist', artist: concert.artist
+  end
 end
 
 json.locale_concerts @user.locale_concerts do |concert|
-  json.id concert.id
-  json.artist_name Artist.find(concert.artist_id).name
-  json.locale_city Locale.find(concert.locale_id).city
-  json.locale_state Locale.find(concert.locale_id).state
-  json.date concert.date
+  json.partial! 'api/concerts/concert', concert: concert
+  json.locale do
+    json.partial! 'api/locales/locale', locale: concert.locale
+  end
+
+  json.artist do
+    json.artist json.partial! 'api/artists/artist', artist: concert.artist
+  end
 end

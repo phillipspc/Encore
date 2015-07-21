@@ -1,6 +1,6 @@
 Encore.Models.Artist = Backbone.Model.extend({
   urlRoot: '/api/artists',
-
+  
   concerts: function () {
     if (!this._concerts) {
       this._concerts = new Encore.Collections.Concerts();
@@ -68,7 +68,7 @@ Encore.Models.Artist = Backbone.Model.extend({
             type: 'artist'
         },
         success: function (response) {
-            that.set({image_url: response.artists.items[0].images[2].url});
+            that.set({small_image_url: response.artists.items[0].images[2].url});
             that.trigger('sync');
         }
       });

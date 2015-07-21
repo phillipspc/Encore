@@ -1,4 +1,3 @@
 json.concerts @concerts.each do |concert|
-  json.extract! concert,:id, :artist_id, :locale_id, :date
-  # json.locale concert.locale, :id, :city, :state
+  json.partial! 'api/concerts/concert', concert: concert
 end

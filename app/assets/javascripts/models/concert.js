@@ -57,6 +57,25 @@ Encore.Models.Concert = Backbone.Model.extend({
         that.trigger('sync');
       }
     });
+  },
+
+  getSmallImage: function () {
+    var that = this;
+    console.log('artist name' + this.artist().get('name'));
+    if (this.artist().get('name')) {
+      $.ajax({
+        url: 'https://api.spotify.com/v1/search',
+        data: {
+            q: that.artist().get('name'),
+            type: 'artist'
+        },
+        success: function (response) {
+            debugger
+            that.set({small_image_url: response.artists.items[0].images[2].url});
+            that.trigger('sync');
+        }
+      });
+    }
   }
 
 })

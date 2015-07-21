@@ -2,6 +2,11 @@ Encore.Collections.Concerts = Backbone.Collection.extend({
   url: '/api/concerts',
   model: Encore.Models.Concert,
 
+  initialize: function (models, options) {
+    // this.locale = options.locale;
+    // 
+  },
+
   comparator: 'date',
 
   getOrFetch: function (id) {

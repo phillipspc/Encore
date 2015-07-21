@@ -1,3 +1,3 @@
 json.locales @locales.each do |locale|
-  json.extract! locale, :id, :city, :state
+  json.partial! 'api/locales/locale', locale: locale
 end

@@ -1,12 +1,13 @@
 <li class="date"><h3><%= concert.date() %></h3></li>
-<span class="info-box">
+<div class="info-box">
   <li><a href="#/concerts/<%= concert.id %>">
-    <%= concert.escape('artist_name') %> -
-    <%= concert.escape('locale_city') %>, <%= concert.escape('locale_state') %>
+    <%= concert.artist().escape('name') %> -
+    <%= concert.locale().escape('city') %>, <%= concert.locale().escape('state') %>
   </a></li>
   <% if (ids && ids.indexOf(concert.id) === -1) { %>
     <button class="track track-concert">Track event</button>
   <% } else { %>
     <button class="untrack untrack-concert">Stop tracking</button>
   <% } %>
-</span>
+  <img src="<%= concert.escape('small_image_url') %>">
+</div>

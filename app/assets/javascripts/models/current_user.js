@@ -15,13 +15,6 @@ Encore.Models.CurrentUser = Backbone.Model.extend({
     return this._artists;
   },
 
-  artistConcerts: function () {
-    if (!this._artistConcerts) {
-      this._artistConcerts = new Encore.Collections.Concerts();
-    }
-    return this._artistConcerts;
-  },
-
   localeConcerts: function () {
     if (!this._localeConcerts) {
       this._localeConcerts = new Encore.Collections.Concerts();
@@ -38,23 +31,19 @@ Encore.Models.CurrentUser = Backbone.Model.extend({
 
   parse: function (response) {
     if (response.locales) {
-      this.locales().set(response.locales);
+      this.locales().set(response.locales, {parse: true});
       delete response.locales;
     }
     if (response.artists) {
-      this.artists().set(response.artists);
+      this.artists().set(response.artists, {parse: true});
       delete response.artists;
     }
-    if (response.artist_concerts) {
-      this.artistConcerts().set(response.artist_concerts);
-      delete response.artist_concerts;
-    }
-    if (response.locale_concerts){
-      this.localeConcerts().set(response.locale_concerts);
+    if (response.locale_concerts) {
+      this.localeConcerts().set(response.locale_concerts, {parse: true});
       delete response.locale_concerts;
     }
-    if (response.tracked_concerts){
-      this.trackedConcerts().set(response.tracked_concerts);
+    if (response.tracked_concerts) {
+      this.trackedConcerts().set(response.tracked_concerts, {parse: true});
       delete response.tracked_concerts;
     }
     return response;

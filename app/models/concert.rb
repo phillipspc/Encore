@@ -2,12 +2,13 @@
 #
 # Table name: concerts
 #
-#  id         :integer          not null, primary key
-#  artist_id  :integer          not null
-#  locale_id  :integer          not null
-#  date       :date             not null
-#  created_at :datetime
-#  updated_at :datetime
+#  id              :integer          not null, primary key
+#  artist_id       :integer          not null
+#  locale_id       :integer          not null
+#  date            :date             not null
+#  created_at      :datetime
+#  updated_at      :datetime
+#  small_image_url :string
 #
 
 class Concert < ActiveRecord::Base
