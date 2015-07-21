@@ -236,3 +236,9 @@ nav .submit {
 .untrack:hover, .track:hover {
   border: 1px solid black;
 }
+
+.artist-bio img{
+  display: block;
+  width: 200px;
+  height: auto;
+}

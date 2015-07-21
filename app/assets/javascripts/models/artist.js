@@ -39,5 +39,39 @@ Encore.Models.Artist = Backbone.Model.extend({
       }
     });
 
+  },
+
+  getLargeImage: function () {
+    var that = this;
+    if (this.get('name')) {
+      $.ajax({
+        url: 'https://api.spotify.com/v1/search',
+        data: {
+            q: that.get('name'),
+            type: 'artist'
+        },
+        success: function (response) {
+            that.set({image_url: response.artists.items[0].images[1].url});
+            that.trigger('sync');
+        }
+      });
+    }
+  },
+
+  getSmallImage: function () {
+    var that = this;
+    if (this.get('name')) {
+      $.ajax({
+        url: 'https://api.spotify.com/v1/search',
+        data: {
+            q: that.get('name'),
+            type: 'artist'
+        },
+        success: function (response) {
+            that.set({image_url: response.artists.items[0].images[2].url});
+            that.trigger('sync');
+        }
+      });
+    }
   }
 });
