@@ -3,9 +3,9 @@ Encore.Routers.Router = Backbone.Router.extend({
   initialize: function (options) {
     this.$rootEl = options.$rootEl;
     Encore.current_user.fetch();
-    this.artists = new Encore.Collections.Artists();
-    this.locales = new Encore.Collections.Locales();
-    this.concerts = new Encore.Collections.Concerts();
+    Encore.artists = new Encore.Collections.Artists();
+    Encore.locales = new Encore.Collections.Locales();
+    Encore.concerts = new Encore.Collections.Concerts();
   },
 
   routes: {
@@ -58,7 +58,7 @@ Encore.Routers.Router = Backbone.Router.extend({
   },
 
   artistShow: function (id) {
-    var artist = this.artists.getOrFetch(id);
+    var artist = Encore.artists.getOrFetch(id);
     var artistShow = new Encore.Views.ArtistShow({
       model: artist,
       collection: Encore.current_user.artists()
@@ -67,7 +67,7 @@ Encore.Routers.Router = Backbone.Router.extend({
   },
 
   localeShow: function (id) {
-    var locale = this.locales.getOrFetch(id);
+    var locale = Encore.locales.getOrFetch(id);
     var localeShow = new Encore.Views.LocaleShow({
       model: locale,
       collection: Encore.current_user.locales()
@@ -76,7 +76,7 @@ Encore.Routers.Router = Backbone.Router.extend({
   },
 
   concertShow: function (id) {
-    var concert = this.concerts.getOrFetch(id);
+    var concert = Encore.concerts.getOrFetch(id);
     var concertShow = new Encore.Views.ConcertShow({
       model: concert,
       collection: Encore.current_user.trackedConcerts()

@@ -1,9 +1,6 @@
 Encore.Views.ArtistShow = Backbone.View.extend({
   template: JST['artists/show'],
 
-  tagName: 'article',
-  className: 'artist-bio group',
-
   events: {
     'click .track-artist': 'trackArtist',
     'click .untrack-artist': 'untrackArtist'
