@@ -1,4 +1,8 @@
 Encore.Views.SessionArtist = Backbone.View.extend({
+
+  tagName: 'ul',
+  className: 'session-artist',
+
   template: JST['session/artist'],
 
   events: {
@@ -7,6 +11,7 @@ Encore.Views.SessionArtist = Backbone.View.extend({
   },
 
   initialize: function () {
+    this.model.fetch();
     this.listenTo(this.model, 'sync', this.render)
   },
 
@@ -21,6 +26,14 @@ Encore.Views.SessionArtist = Backbone.View.extend({
   },
 
   render: function () {
+    if (!this.model.concerts()){
+      return this;
+    }
+
+    if (!this.model.get('small_image_url')) {
+      this.model.getSmallImage();
+      return this;
+    }
     var content = this.template({
       artist: this.model,
       ids: this.collection.pluck('id')

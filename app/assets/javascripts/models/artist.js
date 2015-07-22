@@ -1,6 +1,6 @@
 Encore.Models.Artist = Backbone.Model.extend({
   urlRoot: '/api/artists',
-  
+
   concerts: function () {
     if (!this._concerts) {
       this._concerts = new Encore.Collections.Concerts();

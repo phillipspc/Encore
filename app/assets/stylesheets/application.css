@@ -170,12 +170,13 @@ nav a:hover {
   text-decoration: none;
 }
 
-nav ul {
+nav ul.nav {
   margin: auto;
   width: 900px;
   list-style-type: none;
   padding: 0;
   overflow: hidden;
+  position: relative;
 }
 
 nav li {
@@ -217,22 +218,19 @@ nav .submit {
 }
 
 .user-nav-item {
-  position: relative;
-  display: block;
-  z-index: 1;
 }
 
 .user-dropdown {
   display: none;
   position: absolute;
-  bottom: 10;
-  overflow: hidden;
   border-top: 1px solid white;
+  background: yellow;
 }
 
 .user-nav-item:hover .user-dropdown {
   /*display: block;
-  z-index: 1000;*/
+  background: red;
+  height: 100px;*/
 }
 
 
@@ -369,7 +367,7 @@ img.thumb {
   color: white;
   border-radius: 5px;
   font-weight: bold;
-  border: 1px solid white;
+  border: 1px solid #ECE9E9;
   font-size: 14px;
   padding: 3px 10px;
 }
@@ -379,7 +377,7 @@ img.thumb {
   color: white;
   border-radius: 5px;
   font-weight: bold;
-  border: 1px solid white;
+  border: 1px solid #ECE9E9;
   font-size: 14px;
   padding: 3px 10px;
 }
@@ -430,36 +428,39 @@ img.thumb {
 
 /* Concert Mini-View */
 
-ul.concert {
- margin: 30px 0;
+ul.session-concert {
+ margin: 30px 0px;
 
 }
 
-ul.concert h3 {
+ul.session-concert h3 {
   margin: 5px 0;
 }
 
-.info-box {
+ul.session-concert .info-box {
   padding: 5px;
   width: 500px;
   background: #ECE9E9;
   position: relative;
 }
 
-.info-box button {
+ul.session-concert .info-box button {
   position: absolute;
   bottom: 10px;
   left: 10px;
 }
 
-.info-box li {
+ul.session-concert .info-box li {
   float: left;
   font-size: 18px;
 }
 
-.info-box img {
+ul.session-concert .info-box img {
   float: right;
   display: block;
   height: 70px;
   width: auto;
 }
+
+
+/* Artist mini-view */
