@@ -3,6 +3,8 @@ Encore.Collections.Artists = Backbone.Collection.extend({
 
   model: Encore.Models.Artist,
 
+  comparator: 'name',
+
   getOrFetch: function (id) {
     var artist = this.get(id);
     var that = this;

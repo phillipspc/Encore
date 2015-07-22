@@ -1,6 +1,6 @@
 <div class="info-box group">
-  <li><a href="#/artists/<%= artist.id %>"><%= artist.escape('name') %></a></li>
-  <li><%= artist.concerts().length %> Upcoming shows</li>
+  <li><a href="#/artists/<%= artist.id %>"><%= artist.escape('name') %></a>
+    <br><%= artist.concerts().length %> Upcoming shows</li>
   <% if (ids && (ids.indexOf(artist.id) === -1)) { %>
   <button class="track track-artist">Track artist</button>
   <% } else { %>

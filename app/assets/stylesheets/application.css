@@ -428,34 +428,35 @@ img.thumb {
 
 /* Concert Mini-View */
 
-ul.session-concert {
+ul.session-concert, ul.session-artist {
  margin: 30px 0px;
 
 }
 
-ul.session-concert h3 {
+ul.session-concert, ul.session-artist h3 {
   margin: 5px 0;
 }
 
-ul.session-concert .info-box {
+ul .info-box {
   padding: 5px;
   width: 500px;
   background: #ECE9E9;
   position: relative;
 }
 
-ul.session-concert .info-box button {
+ul .info-box button {
   position: absolute;
   bottom: 10px;
   left: 10px;
 }
 
-ul.session-concert .info-box li {
+ul .info-box li {
+  margin: 0 0 0 8px;
   float: left;
   font-size: 18px;
 }
 
-ul.session-concert .info-box img {
+ul .info-box img {
   float: right;
   display: block;
   height: 70px;
@@ -464,3 +465,7 @@ ul.session-concert .info-box img {
 
 
 /* Artist mini-view */
+
+ul.session-artist li {
+
+}
