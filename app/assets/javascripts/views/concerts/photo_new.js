@@ -28,9 +28,8 @@ Encore.Views.ConcertPhotoNew = Backbone.View.extend({
     var that = this;
     this.model.saveFormData(formData, {
       success: function(){
-        debugger
         that.collection.add(that.model);
-        Backbone.history.navigate("concerts/" + concert_id + "/photos", 
+        Backbone.history.navigate("concerts/" + concert_id,
         { trigger: true });
       }
     });

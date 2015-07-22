@@ -22,6 +22,12 @@ Encore.Views.ConcertShow = Backbone.View.extend({
       ids: ids
     });
     this.$el.html(content);
+
+    var concertPhotos = new Encore.Views.ConcertPhotos({
+      model: this.model,
+      collection: this.model.photos()
+    });
+    this.$el.append(concertPhotos.render().$el)
     return this;
   },
 

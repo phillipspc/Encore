@@ -1,1 +1,1 @@
-json.extract! @concert_photo, :id, :concert_id, :photo
+json.partial! 'api/concert_photos/concert_photo', concert_photo: @concert_photo

@@ -1,1 +1,6 @@
-<h1>Concert Photos</h1>
+<h3>Concert Photos</h3>
+<ul class="concert-photos">
+  <% photos.each( function (photo) { %>
+  <li><img src="<%= photo.escape('photo') %>" class="concert-photo"></li>
+  <% }) %>
+</ul>

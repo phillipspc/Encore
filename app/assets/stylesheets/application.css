@@ -486,7 +486,7 @@ ul.session-concert h3, ul.session-artist h3 {
 }
 
 ul .info-box {
-  padding: 5px;
+  padding: 10px;
   width: 500px;
   background: #ECE9E9;
   position: relative;
@@ -494,7 +494,7 @@ ul .info-box {
 
 ul .info-box button {
   position: absolute;
-  bottom: 6px;
+  bottom: 10px;
   left: 10px;
 }
 
@@ -587,3 +587,14 @@ section.locale-concert {
 /*.info-box:hover {
   background: #aaa;
 }*/
+
+ul.concert-photos li {
+  float: left;
+}
+
+img.concert-photo {
+  margin: 20px;
+  width: 260px;
+  height: auto;
+
+}
