@@ -12,5 +12,16 @@ module Api
       render :show
     end
 
+
+    def update
+      @artist = Artist.find(params[:id])
+      @artist.update(artist_params)
+      render :show
+    end
+
+    private
+    def artist_params
+      params.require(:artist).permit(:name, :description, :image_url, :small_image_url)
+    end
   end
 end

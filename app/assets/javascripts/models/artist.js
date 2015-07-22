@@ -52,6 +52,7 @@ Encore.Models.Artist = Backbone.Model.extend({
         },
         success: function (response) {
             that.set({image_url: response.artists.items[0].images[1].url});
+            that.save();
             that.trigger('sync');
         }
       });
@@ -69,6 +70,7 @@ Encore.Models.Artist = Backbone.Model.extend({
         },
         success: function (response) {
             that.set({small_image_url: response.artists.items[0].images[2].url});
+            that.save();
             that.trigger('sync');
         }
       });

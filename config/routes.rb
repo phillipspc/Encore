@@ -7,10 +7,10 @@ Rails.application.routes.draw do
   namespace :api, defaults: {format: :json} do
     get "/search", to: "search#search"
     resource :session, only: :show
-    resources :artists, only: [:index, :show] do
+    resources :artists, only: [:index, :show, :update] do
       resource :artist_tracking, only: [:create, :destroy]
     end
-    resources :concerts, only: [:index, :show] do
+    resources :concerts, only: [:index, :show, :update] do
       resource :concert_tracking, only: [:create, :destroy]
     end
     resources :locales, only: [:index, :show] do

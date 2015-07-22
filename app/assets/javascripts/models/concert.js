@@ -70,6 +70,7 @@ Encore.Models.Concert = Backbone.Model.extend({
         },
         success: function (response) {
             that.set({small_image_url: response.artists.items[0].images[2].url});
+            that.save();
             that.trigger('sync');
         }
       });
