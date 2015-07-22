@@ -164,10 +164,6 @@ nav {
   border-top: 5px solid #f80046;
 }
 
-nav a {
-  color: white;
-  text-decoration: none;
-}
 
 nav a:hover {
   color: #0277ad;
@@ -188,12 +184,27 @@ nav li {
   float: left;
   font-family: helvetica;
   display: block;
-  color: white;
   text-align: center;
+  color: white;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+}
+
+nav #last {
+  color: #6E6E6E;
+  font-size: 14px;
+  font-weight: normal;
 }
 
 nav .submit:hover{
   color: #0277ad;
+}
+
+nav .logo:hover {
+  color: #f80046;
 }
 
 nav .submit {
@@ -280,7 +291,6 @@ nav .submit {
 
 .sign-up {
   background: #ECE9E9;
-
 }
 
 .sidebar {
@@ -417,7 +427,14 @@ img.thumb {
   display: block;
 }
 
+
 /* Concert Mini-View */
+
+ul.concert {
+ margin: 30px 0;
+
+}
+
 ul.concert h3 {
   margin: 5px 0;
 }
@@ -443,6 +460,6 @@ ul.concert h3 {
 .info-box img {
   float: right;
   display: block;
-  height: 80px;
+  height: 70px;
   width: auto;
 }

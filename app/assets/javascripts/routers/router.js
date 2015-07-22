@@ -16,7 +16,8 @@ Encore.Routers.Router = Backbone.Router.extend({
     'session/plans': 'sessionPlans',
     'artists/:id': 'artistShow',
     'locales/:id': 'localeShow',
-    'concerts/:id': 'concertShow'
+    'concerts/:id': 'concertShow',
+    'search/:query': 'search'
   },
 
   dashboard: function () {
@@ -83,6 +84,20 @@ Encore.Routers.Router = Backbone.Router.extend({
     });
     this._swapView(concertShow);
 
+  },
+
+  search: function (query) {
+    this.searchResults = new Encore.Collections.SearchResults();
+    this.searchResults.fetch({
+			data: {
+				query: query
+			}
+    });
+    var searchShow = new Encore.Views.SearchShow({
+      model: Encore.current_user,
+      collection: this.searchResults
+    });
+    this._swapView(searchShow);
   },
 
   _swapView: function (view) {

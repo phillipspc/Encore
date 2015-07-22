@@ -1,13 +1,11 @@
 <nav id="guest">
   <ul>
-    <li><a href="/">ENCORE</a></li>
+    <li><a class="logo" href="/">ENCORE</a></li>
     <li>Your Artists</li>
     <li>Your Plans</li>
     <li>Locations</li>
     <li>Search</li>
-    <li>  <form action="<%= new_session_url %>" method="get">
-      <%= render 'shared/auth_token' %>
-      <input class="submit" type="submit" value="Log in">
-    </form></li>
+    <li id="last"><a href="<%= new_user_url %>">Sign up</a> or
+      <a href="<%= new_session_url %>">Log in</a></li>
   </ul>
 </nav>

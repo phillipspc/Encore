@@ -10,6 +10,7 @@
 #
 
 class Artist < ActiveRecord::Base
+  include PgSearch
 
   validates :name, presence: true
 
@@ -18,4 +19,6 @@ class Artist < ActiveRecord::Base
 
   has_many :concerts
   has_many :locales, through: :concerts
+
+  pg_search_scope :search_by_name, against: :name, using: {tsearch: {any_word: :true } }
 end
