@@ -479,7 +479,6 @@ img.profile {
 
 ul.session-concert, ul.session-artist {
  margin: 20px 0px;
-
 }
 
 ul.session-concert h3, ul.session-artist h3 {
@@ -534,5 +533,53 @@ section.artist-concert {
 }
 
 .artist-concert button {
+  float: right;
+}
+
+
+/* Locale Concert mini-view */
+
+section.locale-concert {
+  width: 500px;
+  background: #ECE9E9;
+  padding: 5px;
+  margin: 0 0 10px;
+  position: relative;
+}
+
+.locale-concert a {
+  float: left;
+  margin: 4px 0 0 0;
+}
+
+.locale-concert button {
+  position: absolute;
+  bottom: 6px;
+  left: 10px;
+}
+
+.locale-concert img {
+  float: right;
+  display: block;
+  height: 70px;
+  width: auto;
+}
+
+
+/* User Locales sub view */
+
+.session-locale {
+  width: 370px;
+  background: #ECE9E9;
+  margin: 5px 0 10px;
+  padding: 5px;
+}
+
+.session-locale a {
+  float: left;
+  margin: 4px 0 0 0;
+}
+
+.session-locale button {
   float: right;
 }
