@@ -1,10 +1,11 @@
-Concert info:
-<a href="#/concerts/<%= concert.id %>">
-  <%= concert.escape('locale_city') %> - <%= concert.escape('locale_state') %>
-<%= concert.date() %>
-</a>
-<% if (ids && ids.indexOf(concert.id) === -1) { %>
-  <button class="track track-concert">Track event</button>
-<% } else { %>
-  <button class="untrack untrack-concert">Stop tracking</button>
-<% } %>
+<section class="artist-concert group">
+  <a href="#/concerts/<%= concert.id %>">
+    <%= concert.locale().escape('city') %> - <%= concert.locale().escape('state') %>
+  <%= concert.date() %>
+  </a>
+  <% if (ids && ids.indexOf(concert.id) === -1) { %>
+    <button class="track track-concert">Track event</button>
+  <% } else { %>
+    <button class="untrack untrack-concert">Stop tracking</button>
+  <% } %>
+</section>

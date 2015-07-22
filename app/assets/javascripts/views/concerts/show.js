@@ -8,11 +8,13 @@ Encore.Views.ConcertShow = Backbone.View.extend({
 
   initialize: function () {
     this.listenTo(this.model, 'sync', this.render);
+    this.listenTo(this.model.artist(), 'sync', this.render)
   },
 
   render: function () {
-    if (!this.model.get('small_image_url')){
-      this.model.getSmallImage();
+    if (!this.model.artist().get('image_url')){
+      this.model.artist().getLargeImage();
+      return this;
     }
     var ids = this.collection.pluck('id');
     var content = this.template({

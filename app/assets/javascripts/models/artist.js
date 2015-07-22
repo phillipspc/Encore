@@ -10,7 +10,7 @@ Encore.Models.Artist = Backbone.Model.extend({
 
   parse: function (response) {
     if (response.concerts) {
-      this.concerts().set(response.concerts);
+      this.concerts().set(response.concerts, {parse: true});
       delete response.concerts;
     }
     return response;

@@ -400,7 +400,7 @@ img.thumb {
   float: left;
 }
 
-.artist-bio img{
+img.profile {
   float: right;
   display: block;
   width: 300px;
@@ -426,15 +426,64 @@ img.thumb {
 }
 
 
+/* Event Show Page */
+
+.concert-info {
+  margin: 30px 0;
+  border-bottom: 2px solid #eee;
+  position: relative;
+}
+
+.concert-text {
+  width: 500px;
+  float: left;
+}
+
+.concert-info img.profile {
+  float: right;
+  display: block;
+  width: auto;
+  height: 200px;
+  margin: 0 20px 20px 0;
+  border: 1px solid #aaa;
+}
+
+.concert-text h1 {
+  text-align: left;
+  border-bottom: 1px solid #eee;
+  margin: 0;
+}
+
+.concert-text h1 a {
+  border-bottom: none;
+}
+
+
+
+.concert-text h2 {
+  text-align: left;
+  margin: 20px 0;
+}
+
+.concert-info button {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  margin: 20px 0;
+}
+
+
+
+
 /* Concert Mini-View */
 
 ul.session-concert, ul.session-artist {
- margin: 30px 0px;
+ margin: 20px 0px;
 
 }
 
-ul.session-concert, ul.session-artist h3 {
-  margin: 5px 0;
+ul.session-concert h3, ul.session-artist h3 {
+  margin: 0px 0 0 10px;
 }
 
 ul .info-box {
@@ -446,7 +495,7 @@ ul .info-box {
 
 ul .info-box button {
   position: absolute;
-  bottom: 10px;
+  bottom: 6px;
   left: 10px;
 }
 
@@ -468,4 +517,22 @@ ul .info-box img {
 
 ul.session-artist li {
 
+}
+
+/* Artist concert mini-view */
+
+section.artist-concert {
+  width: 500px;
+  background: #ECE9E9;
+  padding: 5px;
+  margin: 0 0 10px;
+}
+
+.artist-concert a {
+  float: left;
+  margin: 4px 0 0 0;
+}
+
+.artist-concert button {
+  float: right;
 }

@@ -1,13 +1,17 @@
-<% var artist = concert.artist() %>
-<% var locale = concert.locale() %>
-<h1><a href="/#/artists/<%= artist.id %>"><%= artist.escape('name') %></a><h1>
-<h2><%= concert.date() %>
-<a href="/#/locales/<%= locale.id %>">
-  <%= locale.escape('city') %>, <%= locale.escape('state') %>
-</a></h2>
-<% if (ids && ids.indexOf(concert.id) === -1) { %>
-  <button class="track track-concert">Track event</button>
-<% } else { %>
-  <button class="untrack untrack-concert">Stop tracking</button>
-<% } %>
-<img src="<%= concert.escape('small_image_url') %>" class="thumb">
+<section class="concert-info group">
+  <section class="concert-text">
+    <% var artist = concert.artist() %>
+    <% var locale = concert.locale() %>
+    <h1><a href="/#/artists/<%= artist.id %>"><%= artist.escape('name') %></a><h1>
+    <h2><%= concert.date() %></h2>
+    <h2><a href="/#/locales/<%= locale.id %>">
+      <%= locale.escape('city') %>, <%= locale.escape('state') %>
+    </a></h2>
+  </section>
+  <img src="<%= concert.artist().escape('image_url') %>" class="profile">
+    <% if (ids && ids.indexOf(concert.id) === -1) { %>
+      <button class="track track-concert">Track event</button>
+    <% } else { %>
+      <button class="untrack untrack-concert">Stop tracking</button>
+    <% } %>
+</section>
