@@ -17,7 +17,9 @@ Encore.Routers.Router = Backbone.Router.extend({
     'artists/:id': 'artistShow',
     'locales/:id': 'localeShow',
     'concerts/:id': 'concertShow',
-    'search/:query': 'search'
+    'search/:query': 'search',
+    'concerts/:id/new_photo': 'concertPhotoNew',
+    'concerts/:id/photos': 'concertPhotos'
   },
 
   dashboard: function () {
@@ -98,6 +100,25 @@ Encore.Routers.Router = Backbone.Router.extend({
       collection: this.searchResults
     });
     this._swapView(searchShow);
+  },
+
+  concertPhotoNew: function (id) {
+    var concert = Encore.concerts.getOrFetch(id);
+    var concertPhotoNew = new Encore.Views.ConcertPhotoNew({
+      model: new Encore.Models.ConcertPhoto({ concert_id: id }),
+      collection: concert.photos()
+    });
+    this._swapView(concertPhotoNew)
+
+  },
+
+  concertPhotos: function (id) {
+    var concert = Encore.concerts.getOrFetch(id);
+    var concertPhotos = new Encore.Views.ConcertPhotos({
+      model: concert,
+      collection: concert.photos()
+    });
+    this._swapView(concertPhotos);
   },
 
   _swapView: function (view) {

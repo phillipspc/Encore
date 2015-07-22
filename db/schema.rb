@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150721181420) do
+ActiveRecord::Schema.define(version: 20150722191711) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -31,6 +31,16 @@ ActiveRecord::Schema.define(version: 20150721181420) do
   end
 
   add_index "artists", ["name"], name: "index_artists_on_name", unique: true, using: :btree
+
+  create_table "concert_photos", force: :cascade do |t|
+    t.integer  "concert_id",         null: false
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.string   "photo_file_name"
+    t.string   "photo_content_type"
+    t.integer  "photo_file_size"
+    t.datetime "photo_updated_at"
+  end
 
   create_table "concert_trackings", force: :cascade do |t|
     t.integer  "user_id",                    null: false

@@ -20,4 +20,6 @@ class Concert < ActiveRecord::Base
 
   has_many :concert_trackings
   has_many :users, through: :concert_trackings
+
+  has_many :concert_photos
 end

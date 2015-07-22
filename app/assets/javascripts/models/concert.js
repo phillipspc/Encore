@@ -22,6 +22,13 @@ Encore.Models.Concert = Backbone.Model.extend({
     }
   },
 
+  photos: function () {
+    if (!this._photos) {
+      this._photos = new Encore.Collections.ConcertPhotos();
+    }
+    return this._photos;
+  },
+
 
   parse: function (response) {
     if (response.locale) {
@@ -31,6 +38,10 @@ Encore.Models.Concert = Backbone.Model.extend({
     if (response.artist) {
       this.artist().set(response.artist);
       delete response.arist;
+    }
+    if (response.photos) {
+      this.photos().set(response.photos);
+      delete response.photos;
     }
     return response;
   },

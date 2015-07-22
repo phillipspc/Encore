@@ -14,7 +14,7 @@ module Api
     def update
       @concert = Concert.find(params[:id])
       @concert.update(concert_params)
-      render :show  
+      render :show
     end
 
     private

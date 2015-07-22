@@ -10,6 +10,7 @@ Rails.application.routes.draw do
     resources :artists, only: [:index, :show, :update] do
       resource :artist_tracking, only: [:create, :destroy]
     end
+    resources :concert_photos, only: :create
     resources :concerts, only: [:index, :show, :update] do
       resource :concert_tracking, only: [:create, :destroy]
     end
