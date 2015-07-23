@@ -1,4 +1,11 @@
-<h3>Concert Photos</h3>
+<div class='concert-photos-header group'>
+  <h3>Concert Photos</h3>
+  <a href='#/concerts/<%= id %>/new_photo' class="upload-photo">upload photo</a>
+</div>
+
+<div class='uploader-view'>
+</div>
+
 <ul class="concert-photos">
   <% photos.each( function (photo) { %>
   <li><img src="<%= photo.escape('photo') %>" class="concert-photo"></li>

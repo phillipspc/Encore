@@ -1,5 +1,8 @@
 Encore.Views.ConcertPhotoNew = Backbone.View.extend({
 
+  // model: new ConcertPhoto({ concert_id: id })
+  // collection: concert.photos();
+
   template: JST['concerts/photo_new'],
 
   events: {
@@ -27,10 +30,9 @@ Encore.Views.ConcertPhotoNew = Backbone.View.extend({
     formData.append('concert_photo[concert_id]', concert_id);
     var that = this;
     this.model.saveFormData(formData, {
-      success: function(){
+      success: function() {
         that.collection.add(that.model);
-        Backbone.history.navigate("concerts/" + concert_id,
-        { trigger: true });
+        Backbone.history.navigate("#/concerts/" + concert_id, { trigger: true });
       }
     });
   },

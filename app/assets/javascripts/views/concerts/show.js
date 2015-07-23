@@ -1,4 +1,6 @@
 Encore.Views.ConcertShow = Backbone.View.extend({
+
+  // model: concert   collection: conert.photos()
   template: JST['concerts/show'],
 
   events: {
@@ -8,7 +10,8 @@ Encore.Views.ConcertShow = Backbone.View.extend({
 
   initialize: function () {
     this.listenTo(this.model, 'sync', this.render);
-    this.listenTo(this.model.artist(), 'sync', this.render)
+    this.listenTo(this.model.artist(), 'sync', this.render);
+
   },
 
   render: function () {
