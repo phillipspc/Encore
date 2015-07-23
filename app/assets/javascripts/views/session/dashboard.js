@@ -4,7 +4,6 @@ Encore.Views.SessionDashboard = Backbone.View.extend({
   initialize: function () {
     this.model.fetch();
     this.listenTo(this.model, 'sync', this.render);
-    // this.listenTo(this.collection, 'sync', this.render);
   },
 
   render: function () {

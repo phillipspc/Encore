@@ -3,9 +3,7 @@ json.partial! 'api/sessions/user', user: @user
 json.locales @user.locales do |locale|
   json.partial! 'api/locales/locale', locale: locale
 
-  # json.concerts locale.concerts do |concert|
-  #   json.partial! 'api/concerts/concert', concert: concert
-  # end
+  json.num_concerts locale.concerts.count
 end
 
 json.artists @user.artists do |artist|
