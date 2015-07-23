@@ -51,9 +51,15 @@ Encore.Models.Artist = Backbone.Model.extend({
             type: 'artist'
         },
         success: function (response) {
+          if (!response.artists.items[0]) {
+            that.set({image_url: "/assets/images/default.jpg"});
+            that.save();
+            that.trigger('sync');
+          } else {
             that.set({image_url: response.artists.items[0].images[1].url});
             that.save();
             that.trigger('sync');
+          }
         }
       });
     }
@@ -69,9 +75,15 @@ Encore.Models.Artist = Backbone.Model.extend({
             type: 'artist'
         },
         success: function (response) {
+          if (!response.artists.items[0]) {
+            that.set({small_image_url: "/assets/images/default_small.jpg"});
+            that.save();
+            that.trigger('sync');
+          } else {
             that.set({small_image_url: response.artists.items[0].images[2].url});
             that.save();
             that.trigger('sync');
+          }
         }
       });
     }
@@ -86,9 +98,15 @@ Encore.Models.Artist = Backbone.Model.extend({
         '&format=json&results=1&start=0&license=cc-by-sa',
 
         success: function (response) {
+          if (!response.response.biographies[0]) {
+            that.set({description: 'No bio available for this artist.'});
+            that.save();
+            that.trigger('sync');
+          } else {
             that.set({description: response.response.biographies[0].text});
             that.save();
             that.trigger('sync');
+          }
         }
       });
     }
