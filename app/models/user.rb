@@ -10,6 +10,8 @@
 #  image_url       :string
 #  created_at      :datetime
 #  updated_at      :datetime
+#  provider        :string
+#  uid             :string
 #
 
 class User < ActiveRecord::Base
@@ -39,6 +41,17 @@ class User < ActiveRecord::Base
     user = User.find_by_username(input) || User.find_by_email(input)
     return nil unless user && user.valid_password?(password)
     user
+  end
+
+  def self.create_with_omniauth(auth)
+    create! do |user|
+      user.provider = auth['provider']
+      user.uid = auth['uid']
+      user.username = auth['info']['nickname']
+      user.email = ("#{auth['info']['nickname']}@default.com")
+      user.password = Faker::Internet.password(8)
+      user.image_url = auth['info']['image']
+    end
   end
 
   def locale_concerts

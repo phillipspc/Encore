@@ -43,7 +43,7 @@ Encore.Models.CurrentUser = Backbone.Model.extend({
       delete response.locale_concerts;
     }
     if (response.tracked_concerts) {
-      this.trackedConcerts().set(response.tracked_concerts, {parse: true});
+      this.trackedConcerts().set(response.tracked_concerts, { parse: true });
       delete response.tracked_concerts;
     }
     return response;
@@ -51,7 +51,7 @@ Encore.Models.CurrentUser = Backbone.Model.extend({
 
   signOut: function (options) {
     var model = this;
-    
+
     $.ajax({
       url: this.url,
       type: "DELETE",
@@ -61,7 +61,6 @@ Encore.Models.CurrentUser = Backbone.Model.extend({
         options.success && options.success();
       }
     });
-  },
-
   }
+  
 });

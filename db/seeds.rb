@@ -96,7 +96,8 @@ User.create!({username: 'guest', email: 'guest@gmail.com',
 100.times do
   User.create!({username: Faker::Internet.user_name,
                 email: Faker::Internet.email,
-                password: Faker::Internet.password(8)})
+                password: Faker::Internet.password(8),
+                image_url: Faker::Avatar.image})
 end
 
 

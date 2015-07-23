@@ -23,7 +23,11 @@
           <p>Password: </p><input type="password"
                         name="user[password]"></div>
         <div class="field group"><button>Sign up for free</button>
+          </form>
+          <form action="/auth/twitter" method="get" >
+            <%= render 'shared/auth_token' %>
+            <input value="sign up with twitter" type="submit" class="twitter">
+          </form>
         </div>
-      </form>
   </div>
 </div>
