@@ -8,51 +8,152 @@
 
 
 
-["New York", "Buffalo"].each do |city|
-  Locale.create({city: city, state: "NY"})
-end
+Locale.create({city: 'New York', state: "NY"})
 
-["Los Angeles", "San Diego", "San Jose", "San Francisco"].each do |city|
+
+["Los Angeles", "San Diego", "San Jose", "San Francisco", "Fresno", "Sacramento", "Long Beach", "Oakland"].each do |city|
   Locale.create({city: city, state: "CA"})
 end
 
-["Richmond", "Harrisonburg", "Virginia Beach"].each do |city|
-  Locale.create({city: city, state: "VA"})
+Locale.create({city: 'Chicago', state: "IL"})
+
+["Houston", "San Antonio", "Dallas", "Austin", "Fort Worth", 'El Paso', 'Arlington'].each do |city|
+  Locale.create({city: city, state: "TX"})
 end
 
-["Philadelphia", "Lancaster", "Pittsburgh"].each do |city|
-  Locale.create({city: city, state: "PA"})
+Locale.create({city: "Philadelphia", state: "PA"})
+
+["Phoenix", "Tuscon", "Mesa"].each do |city|
+  Locale.create({city: city, state: "AZ"})
 end
+
+["Jacksonville", "Miami"].each do |city|
+  Locale.create({city: city, state: "FL"})
+end
+
+Locale.create({city: "Indianapolis", state: "IN"})
+
+["Columbus", "Cleveland"].each do |city|
+  Locale.create({city: city, state: "OH"})
+end
+
+["Charlotte", "Raleigh"].each do |city|
+  Locale.create({city: city, state: "NC"})
+end
+
+Locale.create({city: "Detroit", state: "MI"})
+
+Locale.create({city: "Seattle", state: "WA"})
+
+["Denver", "Colorado Springs"].each do |city|
+  Locale.create({city: city, state: "CO"})
+end
+
+Locale.create({city: "Washington", state: "DC"})
+
+["Memphis", "Nashville-Davidson"].each do |city|
+  Locale.create({city: city, state: "TN"})
+end
+
+Locale.create({city: "Baltimore", state: "MD"})
+
+["Oklahoma City", "Tulsa"].each do |city|
+  Locale.create({city: city, state: "TN"})
+end
+
+Locale.create({city: "Portland", state: "OR"})
+
+Locale.create({city: "Las Vegas", state: "NV"})
+
+Locale.create({city: "Louisville", state: "KY"})
+
+Locale.create({city: "Milwaukee", state: "WI"})
+
+Locale.create({city: "Albuquerque", state: "NM"})
+
+Locale.create({city: "Kansas City", state: "MO"})
+
+Locale.create({city: "Atlanta", state: "GA"})
+
+Locale.create({city: "Virginia Beach", state: "VA"})
+
+Locale.create({city: "Omaha", state: "NE"})
+
+Locale.create({city: "Minneapolis", state: "MN"})
+
+Locale.create({city: "Wichita", state: "KS"})
+
+Locale.create({city: "New Orleans", state: "LA"})
+
+
+
 
 
 
 User.create!({username: 'guest', email: 'guest@gmail.com',
             password: 'password'})
 
+100.times do
+  User.create!({username: Faker::Internet.user_name,
+                email: Faker::Internet.email,
+                password: Faker::Internet.password(8)})
+end
+
 
 def locale_rand
   1 + rand(Locale.all.length)
 end
 
-2.times do |id|
-  UserLocale.create({user_id: 1, locale_id: locale_rand})
+User.count.times do |id|
+  2.times do
+    UserLocale.create({user_id: (id+1), locale_id: locale_rand})
+  end
 end
 
 
 ['Taylor Swift', 'Kanye West', 'The War On Drugs', 'Radiohead',
   'Arctic Monkeys', 'Lana Del Rey', 'The Weeknd',
-  'Katy Perry', 'Tame Impala', 'The Strokes', 'Jamie XX', 'Godspeed You Black Emperor', 'Explosions In The Sky', 'Mogwai', 'Sigur Ros', 'Wilco'].each do |name|
+  'Katy Perry', 'Tame Impala', 'The Strokes', 'Jamie XX',
+  'Godspeed You Black Emperor', 'Explosions In The Sky', 'Mogwai', 'Sigur Ros',
+  'Fetty Wap', 'Wilco', 'Sam Hunt', 'Drake', 'Nicki Minaj', 'Rachel Platten',
+  'Fall Out Boy', 'Walk The Moon', 'Meghan Trainor', 'Silento', 'Luke Bryan',
+  'Wiz Khalifa', 'Jason Derulo', 'Andy Grammer', 'Zac Brown Band', 'Little Big Town',
+  'Sam Smith', 'Fifth Harmony', 'Kendrick Lamar', 'Selena Gomez', 'Justin Bieber',
+  'R5', 'Blake Shelton', 'Rihanna', 'Demi Lovato', 'Shawn Mendes', 'Eminem',
+  'Joan Sebastian', 'Bruno Mars', 'Florida Georgia Line', 'Eric Church', 'Sia',
+  'Tove Lo', 'Imagine Dragons', 'Chris Brown', 'David Guetta', 'Ariana Grande',
+  'Jason Aldean', 'DJ Snake', 'twenty one pilots', 'Big Sean', 'Pitbull',
+  'Ellie Goulding', 'Charlie Puth', 'Brantley Gilbert', 'J. Cole', 'Kid Rock',
+  'Mark Ronson', '5 Seconds Of Summer', 'Rae Sremmurd', 'One Direction', 'Trey Songz',
+  'James Taylor', 'Between The Buried And Me', 'Kid Ink', 'Thomas Rhett', 'Owl City',
+  'Beyonce', 'X Ambassadors', 'Mumford & Sons', 'Major Lazer', 'Flo Rida',
+  'Kenny Chesney', 'Hozier', 'Miguel', 'Skrillex', 'Canaan Smith', 'Echosmith',
+  'Metallica', 'Omarion', 'Breaking Benjamin', 'Keith Urban', 'Jeremith', 'Diplo',
+  'Nick Jonas', 'The Beatles', 'Tori Kelly', 'Carrie Underwood', 'Kelly Clarkson',
+  'George Ezra', 'Chris Janson', 'Kacey Musgraves', 'Jidenna', 'T-Wanye',
+  'Amy Winehouse', 'Easton Corbin', 'Journey', 'Tyrese', "Meek Mill",
+  "Ed Sheeran", "OMI", "Maroon 5"].each do |name|
     Artist.create({name: name})
   end
+
+
+
+
+
+
+
 
 
 def artist_rand
   return (1 + rand(Artist.all.length))
 end
 
-10.times do |id|
-  ArtistTracking.create({user_id: 1, artist_id: artist_rand})
+User.count.times do |artist_id|
+  10.times do
+    ArtistTracking.create({user_id: (artist_id+1), artist_id: artist_rand})
+  end
 end
+
 
 artist_count = Artist.all.length
 locale_count = Locale.all.length
@@ -64,64 +165,10 @@ def date_rand
   Time.at(from + rand(diff)).to_date
 end
 
-75.times do
+1000.times do
   artist = 1 + rand(artist_count)
   locale = 1 + rand(locale_count)
 
   Concert.create({artist_id: artist, locale_id: locale,
                 date: date_rand})
 end
-
-
-# ['AL','AK','AZ','AR','CA','CO','CT','DE','FL','GA','HI','ID','IL','IN','IA',
-# 'KS','KY','LA','ME','MD','MA','MI','MN','MS','MO','MT','NE','NV','NH','NJ',
-# 'NM','NY','NC','ND','OH','OK','OR','PA','RI','SC','SD','TN','TX','UT','VT',
-# 'VA','WA','WV','WI','WY'].each do |abbrev|
-#   State.create({abbrev: abbrev})
-# end
-# ['Birmingham','Hoover','Montgomery','Dothan','Mobile','Decatur','Huntsville',
-# 'Auburn','Tuscaloosa','Gadsden'].each do |city|
-#   Locale.create({city: city, state: "AL"})
-# end
-#
-# ["Anchorage", "Kenai", "Juneau", "Kodiak", "Fairbanks", "Bethel", "Sitka",
-#   "Wasilla", "Ketchikan", "Barrow"].each do |city|
-#   Locale.create({city: city, state: "AK"})
-# end
-#
-# ["Phoenix", "Chandler", "Tucson", "Tempe", "Mesa", "Gilbert", "Glendale", "Peoria", "Scottsdale", "Yuma"].each do |city|
-# Locale.create({city: city, state: "AZ"})
-# end
-#
-# ["Little Rock", "Pine Bluff", "Fort Smith", "Springdale", "North Little Rock", "Conway", "Fayetteville", "Rogers", "Jonesboro", "Hot Springs"].each do |city|
-# Locale.create({city: city, state: "AR"})
-# end
-#
-# ["Los Angeles", "Fresno", "San Diego", "Sacramento", "San Jose", "Oakland", "San Francisco", "Santa Ana", "Long Beach", "Anaheim"].each do |city|
-# Locale.create({city: city, state: "CA"})
-# end
-#
-#
-# ["Denver", "Arvada", "Colorado Springs", "Pueblo", "Aurora", "Westminster", "Lakewood", "Boulder", "Fort Collins", "Thornton"].each do |city|
-# Locale.create({city: city, state: "CO"})
-# end
-#
-#
-# ["Bridgeport", "Norwalk", "New Haven", "Danbury", "Hartford", "New Britain", "Stamford", "West Hartford", "Waterbury", "Greenwich"].each do |city|
-# Locale.create({city: city, state: "CT"})
-# end
-#
-#
-# ["Wilmington", "Middletown", "Dover", "Elsmere", "Newark", "Smyrna", "Milford", "New Castle", "Seaford", "Georgetown"].each do |city|
-# Locale.create({city: city, state: "DE"})
-# end
-#
-# ["Jacksonville", "Orlando", "Miami", "Fort Lauderdale", "Tampa", "Tallahassee", "St. Petersburg", "Hollywood", "Hialeah", "Pembroke Pines"].each do |city|
-# Locale.create({city: city, state: "FL"})
-# end
-#
-#
-# ["Atlanta", "Macon", "Augusta-Richmond County", "Roswell", "Columbus", "Albany",
-#   "Savannah", "Marietta", "Athens-Clarke County", "Warner Robins"].each do |city|
-# Locale.create({city: city, state: "GA"})
-# end
