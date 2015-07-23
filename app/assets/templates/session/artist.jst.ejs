@@ -6,5 +6,7 @@
   <% } else { %>
   <button class="untrack untrack-artist">Stop tracking</button>
   <% } %>
-  <img src="<%= artist.escape('small_image_url') %>">
+  <a href="#/artists/<%= artist.id %>">
+    <img src="<%= artist.escape('small_image_url') %>">
+  </a>
 </div>

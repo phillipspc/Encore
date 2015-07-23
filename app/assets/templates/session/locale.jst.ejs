@@ -1,6 +1,6 @@
 <li class="session-locale group"><a href="#/locales/<%= locale.id %>">
     <%= locale.escape('city') %>, <%= locale.escape('state') %> :
-    <%= locale.escape('num_concerts') %> upcoming events.
+    <%= locale.escape('num_concerts') %> upcoming events
   </a>
   <% if (ids && ids.indexOf(locale.id) === -1) { %>
     <button class="track track-locale">Track location</button>

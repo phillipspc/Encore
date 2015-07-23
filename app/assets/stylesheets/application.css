@@ -381,7 +381,7 @@ img.thumb {
   color: white;
   border-radius: 5px;
   font-weight: bold;
-  border: 1px solid #ECE9E9;
+  border: 1px solid transparent;
   font-size: 14px;
   padding: 3px 10px;
 }
@@ -391,7 +391,7 @@ img.thumb {
   color: white;
   border-radius: 5px;
   font-weight: bold;
-  border: 1px solid #ECE9E9;
+  border: 1px solid transparent;
   font-size: 14px;
   padding: 3px 10px;
 }
@@ -460,6 +460,8 @@ img.profile {
   float: left;
 }
 
+
+
 .concert-info img.profile {
   float: right;
   display: block;
@@ -513,6 +515,10 @@ ul .info-box {
   position: relative;
 }
 
+ul .info-box:hover {
+  background: #DADADA;
+}
+
 ul .info-box button {
   position: absolute;
   bottom: 10px;
@@ -548,6 +554,10 @@ section.artist-concert {
   margin: 0 0 10px;
 }
 
+section.artist-concert:hover {
+  background: #DADADA;
+}
+
 .artist-concert a {
   float: left;
   margin: 4px 0 0 0;
@@ -568,6 +578,10 @@ section.locale-concert {
   position: relative;
 }
 
+section.locale-concert:hover {
+  background: #DADADA;
+}
+
 .locale-concert a {
   float: left;
   margin: 4px 0 0 0;
@@ -579,21 +593,28 @@ section.locale-concert {
   left: 10px;
 }
 
-.locale-concert img {
+.locale-concert a.image {
   float: right;
-  display: block;
+}
+
+.locale-concert a.image img {
   height: 70px;
   width: auto;
+  display: block;
 }
 
 
 /* User Locales sub view */
 
 .session-locale {
-  width: 400px;
+  width: 500px;
   background: #ECE9E9;
   margin: 5px 0 10px;
   padding: 5px;
+}
+
+.session-locale:hover {
+  background: #DADADA;
 }
 
 .session-locale a {
@@ -639,9 +660,14 @@ div.header input.search {
   border-radius: 3px;
 }
 
-div.header input:focus {
+div.header input.search:focus {
   color: black;
 }
+
+div.header input.search:hover {
+  border: 1px solid #0277AD;
+}
+
 
 div.header input.submit {
   border: 1px solid #aaa;

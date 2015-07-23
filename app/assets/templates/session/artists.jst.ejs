@@ -1,6 +1,10 @@
 <div class="header group">
   <h1>Your Artists</h1>
-  <p>Currently tracking <%= artists.length %> bands.</p>
+  <% if (artists.length !== 1) { %>
+    <p>Currently tracking <%= artists.length %> artist</p>
+  <% } else { %>
+    <p>Currently tracking 1 artist</p>
+  <% } %>
   <form action="">
     <input class='search' type="search" placeholder="find more artists">
     <input type="submit" value="search" class="submit">

@@ -1,4 +1,5 @@
 <li class="date"><h3><%= concert.date() %></h3></li>
+
 <div class="info-box group">
   <li><a href="#/concerts/<%= concert.id %>">
     <%= concert.artist().escape('name') %> -
@@ -9,5 +10,7 @@
   <% } else { %>
     <button class="untrack untrack-concert">Stop tracking</button>
   <% } %>
-  <img src="<%= concert.escape('small_image_url') %>">
+  <a href="#/concerts/<%= concert.id %>">
+    <img src="<%= concert.escape('small_image_url') %>">
+  </a>
 </div>

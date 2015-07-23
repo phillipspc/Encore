@@ -7,5 +7,7 @@
   <% } else { %>
     <button class="untrack untrack-concert">Stop tracking</button>
   <% } %>
-    <img src="<%= concert.escape('small_image_url') %>">
+    <a href="#/concerts/<%= concert.id %>" class="image">
+      <img src="<%= concert.escape('small_image_url') %>">
+    </a>
 </section>
