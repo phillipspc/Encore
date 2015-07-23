@@ -620,19 +620,38 @@ img.concert-photo {
 }
 
 /* Your Artists Page */
-div.your-artists-header h1 {
-  float: left;
+
+div.header {
+  width: 520px;
 }
 
-div.your-artists-header input {
+div.header h1, input, p {
+  text-align: left;
+}
+
+div.header input.search {
+  display: block;
   float: left;
   width: 223px;
   padding: 5px 2px;
-  margin: 16px 0 0 100px;
+  margin: 10px 0 0 0;
   color: #C1B6AE;
   border-radius: 3px;
 }
 
-div.your-artists-header input:focus {
+div.header input:focus {
   color: black;
+}
+
+div.header input.submit {
+  border: 1px solid #aaa;
+  border-radius: 3px;
+  margin: 10px 0 0 30px;
+  padding: 5px 30px;
+  background: #EEEEEE;
+  cursor: pointer;
+}
+
+div.header input.submit:hover {
+  background: #ccc;
 }

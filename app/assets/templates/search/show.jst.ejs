@@ -1,7 +1,14 @@
-<div class='search-header group'>
+<div class='header group'>
   <h1>Search Results</h1>
-  <input class='search' type="search" placeholder="find more artists">
-  <button class="search">submit</button>
+  <% if (results.length !== 1) { %>
+    <p>Found <%= results.length %> results.</p>
+  <% } else { %>
+    <p>Found 1 result.</p>
+  <% } %>
+  <form action="">
+    <input class='search' type="search" placeholder="find more artists">
+    <input type="submit" value="search" class="submit">
+  </form>
 </div>
 <div class="results">
 </div>

@@ -2,7 +2,7 @@ Encore.Views.SearchShow = Backbone.View.extend({
   template: JST['search/show'],
 
   events: {
-    'click button.search': 'search'
+    'submit': 'search'
   },
 
   initialize: function () {
@@ -20,7 +20,9 @@ Encore.Views.SearchShow = Backbone.View.extend({
   },
 
   render: function () {
-    var content = this.template();
+    var content = this.template({
+      results: this.collection.artists()
+    });
     this.$el.html(content);
 
     if (!this.collection.artists()){
