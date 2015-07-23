@@ -75,5 +75,24 @@ Encore.Models.Artist = Backbone.Model.extend({
         }
       });
     }
+  },
+
+  getDescription: function () {
+    var that = this;
+    if (this.get('name')) {
+      $.ajax({
+        url: 'http://developer.echonest.com/api/v4/artist/biographies?api_key=P5IRNLNKLZHCK9XQP&name='
+        + that.get('name') +
+        '&format=json&results=1&start=0&license=cc-by-sa',
+
+        success: function (response) {
+            that.set({description: response.response.biographies[0].text});
+            that.save();
+            that.trigger('sync');
+        }
+      });
+    }
+
+
   }
 });
