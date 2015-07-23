@@ -502,7 +502,7 @@ ul .info-box {
 ul .info-box button {
   position: absolute;
   bottom: 10px;
-  left: 10px;
+  left: 15px;
 }
 
 ul .info-box li {
@@ -603,5 +603,22 @@ img.concert-photo {
   margin: 20px;
   width: 260px;
   height: auto;
+}
 
+/* Your Artists Page */
+div.your-artists-header h1 {
+  float: left;
+}
+
+div.your-artists-header input {
+  float: left;
+  width: 223px;
+  padding: 5px 2px;
+  margin: 16px 0 0 100px;
+  color: #C1B6AE;
+  border-radius: 3px;
+}
+
+div.your-artists-header input:focus {
+  color: black;
 }

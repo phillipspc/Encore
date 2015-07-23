@@ -46,7 +46,6 @@ Encore.Views.ArtistShow = Backbone.View.extend({
   untrackArtist: function (event) {
     event.preventDefault();
     this.model.untrack(this.collection);
-  },
-
+  }
 
 });
