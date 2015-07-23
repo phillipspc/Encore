@@ -2,13 +2,12 @@ class UsersController < ApplicationController
 
   def new
     @user = User.new
-    @states = State.all
-    @locales = Locale.all
   end
 
   def create
     @user = User.new(user_params)
     if @user.save
+      UserLocale.create!({user_id: @user.id, locale_id: 1})
       log_in(@user)
       redirect_to root_url
     else
