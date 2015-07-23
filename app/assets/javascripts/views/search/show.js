@@ -1,8 +1,22 @@
 Encore.Views.SearchShow = Backbone.View.extend({
   template: JST['search/show'],
 
+  events: {
+    'click button.search': 'search'
+  },
+
   initialize: function () {
     this.listenTo(this.collection, 'sync', this.render);
+  },
+
+  search: function () {
+    event.preventDefault();
+    var query = $('input.search').val();
+    this.collection.fetch({
+      data: {
+				query: query
+			}
+    });
   },
 
   render: function () {
@@ -12,6 +26,8 @@ Encore.Views.SearchShow = Backbone.View.extend({
     if (!this.collection.artists()){
       return this;
     }
+
+    this.$('.results').empty();
     var that = this;
     var artists = this.model.artists();
     this.collection.artists().each( function (artist) {
@@ -19,7 +35,8 @@ Encore.Views.SearchShow = Backbone.View.extend({
         model: artist,
         collection: artists
       });
-      that.$el.append(view.render().$el);
+      that.$('.results').append(view.render().$el);
+
     });
     return this;
   }

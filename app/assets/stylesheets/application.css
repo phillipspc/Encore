@@ -234,6 +234,13 @@ nav .submit {
 }
 
 
+img.twitter {
+  width: 190px;
+  height: auto;
+}
+
+
+
 /* Log In Page*/
 
 .log-in {
@@ -352,6 +359,13 @@ nav .submit {
   cursor: pointer;
 }
 
+.sign-up-content a {
+  display: block;
+}
+
+img.twitter {
+  margin: 20px auto;
+}
 
 /* General */
 

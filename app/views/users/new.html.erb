@@ -3,7 +3,7 @@
     <ul class="benefits">
       <li>Track concerts for your favorite bands in one convenient place.</li>
       <li>See when they play shows near you.</li>
-      <li>Find new artists playing locally.</li>
+      <li>See and upload photos from past concerts.</li>
     </ul>
     <p>Already signed up? <a href="<%= new_session_url %>">Log in here</a></p>
   </div>
@@ -14,20 +14,29 @@
       <form action="<%= users_url %>" method="post">
         <%= render 'shared/auth_token' %>
         <div class="field group">
-          <p>Email: </p><input type="email"
-                     name="user[email]"></div>
-        <div class="field group">
-        <p>Username: </p><input type="text"
-                        name="user[username]"></div>
-        <div class="field group">
-          <p>Password: </p><input type="password"
-                        name="user[password]"></div>
-        <div class="field group"><button>Sign up for free</button>
-          </form>
-          <form action="/auth/twitter" method="get" >
-            <%= render 'shared/auth_token' %>
-            <input value="sign up with twitter" type="submit" class="twitter">
-          </form>
+          <p>Email: </p>
+          <input type="email"
+                     name="user[email]">
         </div>
+
+        <div class="field group">
+          <p>Username: </p>
+          <input type="text"
+                 name="user[username]">
+        </div>
+
+        <div class="field group">
+          <p>Password: </p>
+          <input type="password"
+                        name="user[password]">
+        </div>
+
+        <div class="field group">
+          <button>Sign up for free</button>
+        <a href="/auth/twitter">
+          <img src="/assets/images/button.png" class="twitter">
+        </a>
+        </div>
+      </form>
   </div>
 </div>

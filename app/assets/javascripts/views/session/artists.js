@@ -2,7 +2,7 @@ Encore.Views.SessionArtists = Backbone.View.extend({
   template: JST['session/artists'],
 
   events: {
-    'keyup input.search': 'search'
+    'click button.search': 'search'
   },
 
   initialize: function () {
@@ -10,11 +10,13 @@ Encore.Views.SessionArtists = Backbone.View.extend({
   },
 
   render: function () {
-    var content = this.template();
+    var artists = this.model.artists();
+    var content = this.template({
+      artists: artists
+    });
     this.$el.html(content);
 
     var that = this;
-    var artists = this.model.artists();
     artists.each( function (artist) {
       var view = new Encore.Views.SessionArtist({
         model: artist,
@@ -27,25 +29,8 @@ Encore.Views.SessionArtists = Backbone.View.extend({
 
   search: function (event) {
     event.preventDefault();
-    $('.session-artist').html('');
-    var query = $(event.currentTarget).val();
-    this.searchResults = new Encore.Collections.SearchResults();
-    this.searchResults.fetch({
-      data: {
-        query: query
-      }
-    });
-    var searchShow = new Encore.Views.SearchShow({
-      model: Encore.current_user,
-      collection: this.searchResults
-    });
-    this._swapView(searchShow);
-  },
-
-  _swapView: function (view) {
-    this._currentView && this._currentView.remove();
-    this._currentView = view;
-    var $subView = $('.session-artist');
-    $subView.append(view.render().$el);
+    var query = $('input.search').val();
+    Backbone.history.navigate('search/' + query, {trigger: true})
   }
+
 });
