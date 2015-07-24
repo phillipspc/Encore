@@ -10,6 +10,8 @@
 #
 
 class Locale < ActiveRecord::Base
+  include PgSearch
+  pg_search_scope :search_by_city_or_state, against: [:city, :state]
 
   validates :city, :state, presence: true
   validates :city, uniqueness: true

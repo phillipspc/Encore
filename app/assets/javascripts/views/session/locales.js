@@ -1,18 +1,22 @@
 Encore.Views.SessionLocales = Backbone.View.extend({
   template: JST['session/locales'],
 
+  events: {
+    'submit': 'search'
+  },
+
   initialize: function () {
     this.listenTo(this.model, 'sync', this.render);
   },
 
   render: function () {
+    var locales = this.model.locales();
     var content = this.template({
-      locales: this.model.locales()
+      locales: locales
     });
     this.$el.html(content);
 
     var that = this;
-    var locales = this.model.locales();
     locales.each( function (locale){
       var view = new Encore.Views.SessionLocale({
         model: locale,
@@ -21,5 +25,11 @@ Encore.Views.SessionLocales = Backbone.View.extend({
       that.$el.append(view.render().$el);
     });
     return this;
+  },
+
+  search: function (event) {
+    event.preventDefault();
+    var query = $('input.search').val();
+    Backbone.history.navigate('locale_search/' + query, {trigger: true})
   }
 });

@@ -17,7 +17,8 @@ Encore.Routers.Router = Backbone.Router.extend({
     'artists/:id': 'artistShow',
     'locales/:id': 'localeShow',
     'concerts/:id': 'concertShow',
-    'search/:query': 'search'
+    'search/:query': 'search',
+    'locale_search/:query': 'localeSearch'
   },
 
   dashboard: function () {
@@ -101,6 +102,19 @@ Encore.Routers.Router = Backbone.Router.extend({
     this._swapView(searchShow);
   },
 
+  localeSearch: function (query) {
+    this.searchResults = new Encore.Collections.LocaleSearchResults();
+    this.searchResults.fetch({
+			data: {
+				query: query
+			}
+    });
+    var localeSearchShow = new Encore.Views.LocaleSearchShow({
+      model: Encore.current_user,
+      collection: this.searchResults
+    })
+    this._swapView(localeSearchShow);
+  },
 
   _swapView: function (view) {
     this._currentView && this._currentView.remove();

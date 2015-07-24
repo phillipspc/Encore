@@ -29,7 +29,6 @@ Encore.Views.SessionArtist = Backbone.View.extend({
     if (!this.model.concerts()){
       return this;
     }
-
     if (!this.model.get('small_image_url')) {
       this.model.getSmallImage();
       return this;

@@ -1,12 +1,14 @@
-<div class="header group">
-  <h1>Locations page</h1>
-  <% if (locales.length !== 1) { %>
-    <p>Currently tracking <%= locales.length %> locations</p>
+<div class='header group'>
+  <h1>Search Results</h1>
+  <% if (results.length !== 1) { %>
+    <p>Found <%= results.length %> results</p>
   <% } else { %>
-    <p>Currently tracking 1 location</p>
+    <p>Found 1 result</p>
   <% } %>
   <form action="">
     <input class='search' type="search" placeholder="find more locations">
     <input type="submit" value="search" class="submit">
   </form>
+</div>
+<div class="results">
 </div>

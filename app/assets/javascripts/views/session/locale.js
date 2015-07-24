@@ -9,6 +9,7 @@ Encore.Views.SessionLocale = Backbone.View.extend({
   },
 
   initialize: function () {
+    this.model.fetch();
     this.listenTo(this.model, 'sync', this.render);
   },
 
@@ -23,6 +24,9 @@ Encore.Views.SessionLocale = Backbone.View.extend({
   },
 
   render: function () {
+    if (!this.model.concerts()){
+      return this;
+    }
     var ids = this.collection.pluck('id');
     var content = this.template({
       locale: this.model,

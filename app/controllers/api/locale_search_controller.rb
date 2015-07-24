@@ -1,10 +1,5 @@
 module Api
-  class SearchController < ApiController
-
-    def search
-      @search_results = Artist.search_by_name(params[:query])
-      render :search
-    end
+  class LocaleSearchController < ApiController
 
     def locale_search
       @search_results = Locale.search_by_city_or_state(params[:query])
