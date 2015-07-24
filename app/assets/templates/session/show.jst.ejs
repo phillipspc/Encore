@@ -2,9 +2,18 @@
   <div class="user-info group">
     <h1><%= user.escape('username') %></h1>
     <h2>stats: </h2>
-    <p> following <%= user.artists().length %> artists <br>
-        tracking artists in <%= user.locales().length %> locations<br>
-        
+    <p> <% if (user.artists().length !== 1) { %>
+          Currently tracking <%= user.artists().length %> artists
+        <% } else { %>
+          Currently tracking 1 artist
+        <% } %> <br>
+
+        <% if (user.locales().length !== 1) { %>
+          Tracking artists in <%= user.locales().length %> locations
+        <% } else { %>
+          Tracking artists in 1 location
+        <% } %><br>
+
     </p>
     <form action="/session" method="post">
       <input type="hidden"
