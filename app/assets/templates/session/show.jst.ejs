@@ -1,1 +1,12 @@
-<h1>Show Page</h1>
+<div class="user-header group">
+  <div class="user-info group">
+    <h1><%= user.escape('username') %></h1>
+    <h2>stats: </h2>
+    <p> following <% %> artists <br>
+        has this many photos uploaded<br>
+        tracking artists in this many locations<br>
+    </p>
+    <button>sign out</button>
+  </div>
+  <img src="<%= user.escape('image_url') %>" class="profile">
+</div>

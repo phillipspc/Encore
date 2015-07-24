@@ -109,8 +109,8 @@ User.count.times do |id|
 end
 
 User.create!({username: 'guest', email: 'guest@gmail.com',
-            password: 'password'})
-            
+            password: 'password', image_url: '/assets/images/avatar.jpg'})
+
 UserLocale.create({user_id: User.last.id, locale_id: 1})
 
 ['Taylor Swift', 'Kanye West', 'The War On Drugs', 'Radiohead',
@@ -130,7 +130,7 @@ UserLocale.create({user_id: User.last.id, locale_id: 1})
   'James Taylor', 'Between The Buried And Me', 'Kid Ink', 'Thomas Rhett', 'Owl City',
   'Beyonce', 'X Ambassadors', 'Mumford & Sons', 'Major Lazer', 'Flo Rida',
   'Kenny Chesney', 'Hozier', 'Miguel', 'Skrillex', 'Canaan Smith', 'Echosmith',
-  'Metallica', 'Omarion', 'Breaking Benjamin', 'Keith Urban', 'Jeremih', 'Diplo',
+  'Metallica', 'Breaking Benjamin', 'Keith Urban', 'Jeremih', 'Diplo',
   'Nick Jonas', 'The Beatles', 'Tori Kelly', 'Carrie Underwood', 'Kelly Clarkson',
   'George Ezra', 'Chris Janson', 'Kacey Musgraves', 'Jidenna', 'T-Wayne',
   'Amy Winehouse', 'Easton Corbin', 'Journey', 'Tyrese', "Meek Mill",

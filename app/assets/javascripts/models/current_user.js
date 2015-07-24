@@ -53,14 +53,14 @@ Encore.Models.CurrentUser = Backbone.Model.extend({
     var model = this;
 
     $.ajax({
-      url: this.url,
+      url: '/session',
       type: "DELETE",
-      dataType: "json",
-      success: function(data){
-        model.clear();
-        options.success && options.success();
+      // dataType: "json",
+      success: function(){
+        // model.clear();
+        // options.success && options.success();
+        // Backbone.history.navigate("", {trigger: true});
       }
     });
   }
-  
 });

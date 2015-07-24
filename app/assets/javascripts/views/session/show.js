@@ -1,7 +1,12 @@
 Encore.Views.SessionShow = Backbone.View.extend({
   template: JST['session/show'],
-  
+
+  events: {
+    'click button': 'signOut'
+  },
+
   initialize: function () {
+    this.model.fetch();
     this.listenTo(this.model, 'sync', this.render)
   },
 
@@ -11,5 +16,10 @@ Encore.Views.SessionShow = Backbone.View.extend({
     });
     this.$el.html(content);
     return this;
+  },
+
+  signOut: function (event) {
+    event.preventDefault();
+    this.model.signOut();
   }
 });

@@ -8,7 +8,7 @@ Rails.application.routes.draw do
 
   namespace :api, defaults: {format: :json} do
     get "/search", to: "search#search"
-    resource :session, only: :show
+    resource :session, only: [:show, :destroy]
     resources :artists, only: [:index, :show, :update] do
       resource :artist_tracking, only: [:create, :destroy]
     end
