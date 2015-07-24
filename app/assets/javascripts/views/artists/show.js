@@ -11,14 +11,14 @@ Encore.Views.ArtistShow = Backbone.View.extend({
   },
 
   render: function () {
-    if (!this.model.get('image_url')) {
-      this.model.getLargeImage();
-      return this;
-    }
-    if (!this.model.get('description')) {
-      this.model.getDescription();
-      return this;
-    }
+    // if (!this.model.get('image_url')) {
+    //   this.model.getLargeImage();
+    //   return this;
+    // }
+    // if (!this.model.get('description')) {
+    //   this.model.getDescription();
+    //   return this;
+    // }
     var ids = this.collection.pluck('id');
     var content = this.template({
       artist: this.model,

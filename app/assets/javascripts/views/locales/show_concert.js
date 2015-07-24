@@ -12,11 +12,11 @@ Encore.Views.LocaleShowConcert = Backbone.View.extend({
   },
 
   render: function () {
-    if (!this.model.get('small_image_url')) {
-      this.model.getSmallImage();
-      return this;
-    }
-    
+    // if (!this.model.get('small_image_url')) {
+    //   this.model.getSmallImage();
+    //   return this;
+    // }
+
     var ids = this.collection.pluck('id');
     var artist = this.model.artist();
     var content = this.template({
