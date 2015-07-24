@@ -90,9 +90,6 @@ Locale.create({city: "New Orleans", state: "LA"})
 
 
 
-User.create!({username: 'guest', email: 'guest@gmail.com',
-            password: 'password'})
-
 100.times do
   User.create!({username: Faker::Internet.user_name,
                 email: Faker::Internet.email,
@@ -111,6 +108,10 @@ User.count.times do |id|
   end
 end
 
+User.create!({username: 'guest', email: 'guest@gmail.com',
+            password: 'password'})
+            
+UserLocale.create({user_id: User.last.id, locale_id: 1})
 
 ['Taylor Swift', 'Kanye West', 'The War On Drugs', 'Radiohead',
   'Arctic Monkeys', 'Lana Del Rey', 'The Weeknd',
@@ -129,9 +130,9 @@ end
   'James Taylor', 'Between The Buried And Me', 'Kid Ink', 'Thomas Rhett', 'Owl City',
   'Beyonce', 'X Ambassadors', 'Mumford & Sons', 'Major Lazer', 'Flo Rida',
   'Kenny Chesney', 'Hozier', 'Miguel', 'Skrillex', 'Canaan Smith', 'Echosmith',
-  'Metallica', 'Omarion', 'Breaking Benjamin', 'Keith Urban', 'Jeremith', 'Diplo',
+  'Metallica', 'Omarion', 'Breaking Benjamin', 'Keith Urban', 'Jeremih', 'Diplo',
   'Nick Jonas', 'The Beatles', 'Tori Kelly', 'Carrie Underwood', 'Kelly Clarkson',
-  'George Ezra', 'Chris Janson', 'Kacey Musgraves', 'Jidenna', 'T-Wanye',
+  'George Ezra', 'Chris Janson', 'Kacey Musgraves', 'Jidenna', 'T-Wayne',
   'Amy Winehouse', 'Easton Corbin', 'Journey', 'Tyrese', "Meek Mill",
   "Ed Sheeran", "OMI", "Maroon 5"].each do |name|
     Artist.create({name: name})

@@ -152,6 +152,23 @@ a.banner {
   cursor: pointer;
 }
 
+.footer p {
+  float: left;
+  margin: 10px 0 0 0;
+}
+
+.footer input.guest {
+    float: right;
+    padding: 5px 10px;
+    background: #007298;
+    color: white;
+    border-radius: 5px;
+    font-weight: bold;
+    border: 1px solid transparent;
+    font-size: 14px;
+    margin: 0 20px 0 0;
+    cursor: pointer;
+}
 
 
 
@@ -198,6 +215,7 @@ nav #last {
   color: #6E6E6E;
   font-size: 14px;
   font-weight: normal;
+  float: right;
 }
 
 nav .submit:hover{

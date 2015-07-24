@@ -15,6 +15,14 @@
 
   </div>
 </div>
-  <footer>Encore is for demonstration purposes only.
-    Not for commercial use.
+  <footer>
+    <div class="footer group">
+      <p>Encore is for demonstration purposes only. Not for commercial use.</p>
+      <form action="<%= session_url %>" method="post">
+      <%= render 'shared/auth_token' %>
+      <input type="hidden" name="user[username_or_email]" value="guest">
+      <input type="hidden" name="user[password]" value="password">
+      <input type="submit" class= "guest" value="Sign in as Guest user.">
+      </form>
+    </div>
   </footer>
