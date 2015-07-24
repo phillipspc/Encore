@@ -402,6 +402,7 @@ img.thumb {
   border: 1px solid transparent;
   font-size: 14px;
   padding: 3px 10px;
+  cursor: pointer;
 }
 
 .track {
@@ -412,6 +413,7 @@ img.thumb {
   border: 1px solid transparent;
   font-size: 14px;
   padding: 3px 10px;
+  cursor: pointer;
 }
 
 .untrack:hover, .track:hover {
@@ -523,6 +525,25 @@ img.profile {
   border: 1px solid #aaa;
   border-radius: 3px;
   margin: 0 0 0 30px;
+  padding: 5px 10px;
+  background: #EEEEEE;
+  cursor: pointer;
+  font-size: 12px;
+}
+
+.photo-upload {
+  margin: 10px 0;
+}
+
+img#preview-concert-photo {
+  width: 300px;
+  margin: 10px 0;
+}
+
+button.save-photo {
+  border: 1px solid #aaa;
+  border-radius: 3px;
+  margin: 0;
   padding: 5px 10px;
   background: #EEEEEE;
   cursor: pointer;

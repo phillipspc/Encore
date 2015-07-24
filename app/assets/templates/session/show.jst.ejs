@@ -2,9 +2,8 @@
   <div class="user-info group">
     <h1><%= user.escape('username') %></h1>
     <h2>stats: </h2>
-    <p> following <% %> artists <br>
-        has this many photos uploaded<br>
-        tracking artists in this many locations<br>
+    <p> following <%= user.artists().length %> artists <br>
+        tracking artists in <%= user.locales().length %> locations<br>
     </p>
     <button>sign out</button>
   </div>

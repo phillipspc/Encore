@@ -5,16 +5,22 @@ Encore.Views.ConcertPhotoNew = Backbone.View.extend({
 
   template: JST['concerts/photo_new'],
 
+  className: 'photo-upload group',
+
   events: {
     'submit': 'submit',
-    "change #input-concert-photo": "fileInputChange"
+    "change #input-concert-photo": "fileInputChange",
+    'click .cancel': 'cancel'
   },
 
   initialize: function(){
   },
 
   render: function(){
-    var html = this.template();
+    var concert_id = this.model.get('concert_id');
+    var html = this.template({
+      concert_id: concert_id
+    });
 
     this.$el.html(html);
     return this;
@@ -57,6 +63,13 @@ Encore.Views.ConcertPhotoNew = Backbone.View.extend({
 
   _updatePreview: function(src){
     this.$el.find("#preview-concert-photo").attr("src", src);
+  },
+
+
+  cancel: function (event) {
+    event.preventDefault();
+    var concert_id = this.model.get('concert_id');
+    Backbone.history.navigate("#/concerts/" + concert_id, { trigger: true });
   }
 
 });
