@@ -34,6 +34,7 @@ Encore.Routers.Router = Backbone.Router.extend({
       collection: Encore.current_user.trackedConcerts()
     });
     this._swapView(sessionShow);
+    $.rails.refreshCSRFTokens();
   },
 
   sessionLocales: function () {

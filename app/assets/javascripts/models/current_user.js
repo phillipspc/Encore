@@ -47,20 +47,5 @@ Encore.Models.CurrentUser = Backbone.Model.extend({
       delete response.tracked_concerts;
     }
     return response;
-  },
-
-  signOut: function (options) {
-    var model = this;
-
-    $.ajax({
-      url: '/session',
-      type: "DELETE",
-      // dataType: "json",
-      success: function(){
-        // model.clear();
-        // options.success && options.success();
-        // Backbone.history.navigate("", {trigger: true});
-      }
-    });
   }
 });

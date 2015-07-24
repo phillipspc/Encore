@@ -766,7 +766,7 @@ div.header input.submit:hover {
   overflow: hidden;
 }
 
-.user-info button {
+.user-info input {
   position: absolute;
   bottom: 30px;
   left: 10px;
@@ -778,5 +778,5 @@ div.header input.submit:hover {
   border: 1px solid transparent;
   font-size: 14px;
   padding: 3px 10px;
-  display: none;
+  cursor: pointer;
 }

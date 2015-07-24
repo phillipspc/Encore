@@ -4,8 +4,17 @@
     <h2>stats: </h2>
     <p> following <%= user.artists().length %> artists <br>
         tracking artists in <%= user.locales().length %> locations<br>
+        
     </p>
-    <button>sign out</button>
+    <form action="/session" method="post">
+      <input type="hidden"
+             name="_method"
+             value="delete">
+      <input type="hidden"
+             name="authenticity_token"
+             id="authenticity_token">
+      <input type="submit" class="submit" value="Log out">
+    </form>
   </div>
   <img src="<%= user.escape('image_url') %>" class="profile">
 </div>

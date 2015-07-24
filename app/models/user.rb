@@ -22,13 +22,13 @@ class User < ActiveRecord::Base
 
   after_initialize :ensure_session_token
 
-  has_many :user_locales
+  has_many :user_locales, dependent: :destroy
   has_many :locales, through: :user_locales
 
-  has_many :artist_trackings
+  has_many :artist_trackings, dependent: :destroy
   has_many :artists, through: :artist_trackings
 
-  has_many :concert_trackings
+  has_many :concert_trackings, dependent: :destroy
   has_many :tracked_concerts, through: :concert_trackings, source: :concert
   has_many :artist_concerts, through: :artists, source: :concerts
   has_many :locale_concerts, through: :locales, source: :concerts
@@ -53,6 +53,25 @@ class User < ActiveRecord::Base
       user.image_url = auth['info']['image']
     end
   end
+
+  def refreshGuest!
+    self.destroy!
+    User.create!({username: 'guest', email: 'guest@gmail.com',
+                password: 'password', image_url: '/assets/images/avatar.jpg'})
+
+    UserLocale.create({user_id: User.last.id, locale_id: 1})
+
+    def artist_rand
+      return (1 + rand(Artist.all.length))
+    end
+
+    10.times do
+      
+      ArtistTracking.create({user_id: User.last.id, artist_id: artist_rand})
+    end
+
+  end
+
 
   def locale_concerts
     self.artist_concerts.where(locale_id: self.locale_ids)
