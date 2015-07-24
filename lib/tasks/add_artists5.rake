@@ -1,5 +1,5 @@
 desc 'add artists to the database'
-task add_artists2: :environment do
+task add_artists5: :environment do
   ['Mark Ronson', '5 Seconds Of Summer', 'Rae Sremmurd', 'One Direction', 'Trey Songz',
   'James Taylor', 'Between The Buried And Me', 'Kid Ink', 'Thomas Rhett', 'Owl City'].each do |name|
     artist = Artist.create({name: name})

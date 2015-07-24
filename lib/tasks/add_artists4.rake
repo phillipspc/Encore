@@ -1,9 +1,7 @@
 desc 'add artists to the database'
-task add_artists: :environment do
-  ['Taylor Swift', 'Kanye West', 'The War On Drugs', 'Radiohead',
-    'Arctic Monkeys', 'Lana Del Rey', 'The Weeknd',
-    'Katy Perry', 'Tame Impala', 'The Strokes', 'Jamie XX',
-    'Godspeed You Black Emperor', 'Explosions In The Sky', 'Mogwai', 'Sigur Ros'].each do |name|
+task add_artists4: :environment do
+  ['Sam Smith', 'Fifth Harmony', 'Kendrick Lamar', 'Selena Gomez', 'Justin Bieber',
+  'R5', 'Blake Shelton', 'Rihanna', 'Demi Lovato', 'Shawn Mendes', 'Eminem'].each do |name|
       artist = Artist.create({name: name})
       puts artist.name
       artist.getLargeImage
