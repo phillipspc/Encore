@@ -66,7 +66,7 @@ class User < ActiveRecord::Base
     end
 
     10.times do
-      
+
       ArtistTracking.create({user_id: User.last.id, artist_id: artist_rand})
     end
 

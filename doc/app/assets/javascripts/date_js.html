@@ -1,0 +1,623 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<meta charset="UTF-8">
+
+<title>date.js - RDoc Documentation</title>
+
+<script type="text/javascript">
+  var rdoc_rel_prefix = "../../../";
+</script>
+
+<script src="../../../js/jquery.js"></script>
+<script src="../../../js/darkfish.js"></script>
+
+<link href="../../../css/fonts.css" rel="stylesheet">
+<link href="../../../css/rdoc.css" rel="stylesheet">
+
+
+
+<body id="top" role="document" class="file">
+<nav role="navigation">
+  <div id="project-navigation">
+    <div id="home-section" role="region" title="Quick navigation" class="nav-section">
+  <h2>
+    <a href="../../../index.html" rel="home">Home</a>
+  </h2>
+
+  <div id="table-of-contents-navigation">
+    <a href="../../../table_of_contents.html#pages">Pages</a>
+    <a href="../../../table_of_contents.html#classes">Classes</a>
+    <a href="../../../table_of_contents.html#methods">Methods</a>
+  </div>
+</div>
+
+    <div id="search-section" role="search" class="project-section initially-hidden">
+  <form action="#" method="get" accept-charset="utf-8">
+    <div id="search-field-wrapper">
+      <input id="search-field" role="combobox" aria-label="Search"
+             aria-autocomplete="list" aria-controls="search-results"
+             type="text" name="search" placeholder="Search" spellcheck="false"
+             title="Type to search, Up and Down to navigate, Enter to load">
+    </div>
+
+    <ul id="search-results" aria-label="Search Results"
+        aria-busy="false" aria-expanded="false"
+        aria-atomic="false" class="initially-hidden"></ul>
+  </form>
+</div>
+
+  </div>
+
+  
+
+  <div id="project-metadata">
+    <div id="fileindex-section" class="nav-section">
+  <h3>Pages</h3>
+
+  <ul class="link-list">
+  
+    <li><a href="../../../Gemfile.html">Gemfile</a>
+  
+    <li><a href="../../../Gemfile_lock.html">Gemfile.lock</a>
+  
+    <li><a href="../../../README_md.html">README</a>
+  
+    <li><a href="../../../README_rdoc.html">README</a>
+  
+    <li><a href="../../../Rakefile.html">Rakefile</a>
+  
+    <li><a href="../../../app/assets/javascripts/application_js.html">application.js</a>
+  
+    <li><a href="../../../app/assets/javascripts/collections/artists_js.html">artists.js</a>
+  
+    <li><a href="../../../app/assets/javascripts/collections/concert_js.html">concert.js</a>
+  
+    <li><a href="../../../app/assets/javascripts/collections/concert_photos_js.html">concert_photos.js</a>
+  
+    <li><a href="../../../app/assets/javascripts/collections/locale_search_results_js.html">locale_search_results.js</a>
+  
+    <li><a href="../../../app/assets/javascripts/collections/locales_js.html">locales.js</a>
+  
+    <li><a href="../../../app/assets/javascripts/collections/search_results_js.html">search_results.js</a>
+  
+    <li><a href="../../../app/assets/javascripts/date_js.html">date.js</a>
+  
+    <li><a href="../../../app/assets/javascripts/encore_js.html">encore.js</a>
+  
+    <li><a href="../../../app/assets/javascripts/models/artist_js.html">artist.js</a>
+  
+    <li><a href="../../../app/assets/javascripts/models/concert_js.html">concert.js</a>
+  
+    <li><a href="../../../app/assets/javascripts/models/concert_photo_js.html">concert_photo.js</a>
+  
+    <li><a href="../../../app/assets/javascripts/models/current_user_js.html">current_user.js</a>
+  
+    <li><a href="../../../app/assets/javascripts/models/locale_js.html">locale.js</a>
+  
+    <li><a href="../../../app/assets/javascripts/routers/router_js.html">router.js</a>
+  
+    <li><a href="../../../app/assets/javascripts/views/artists/show_js.html">show.js</a>
+  
+    <li><a href="../../../app/assets/javascripts/views/artists/show_concert_js.html">show_concert.js</a>
+  
+    <li><a href="../../../app/assets/javascripts/views/concerts/photo_new_js.html">photo_new.js</a>
+  
+    <li><a href="../../../app/assets/javascripts/views/concerts/photos_js.html">photos.js</a>
+  
+    <li><a href="../../../app/assets/javascripts/views/concerts/show_js.html">show.js</a>
+  
+    <li><a href="../../../app/assets/javascripts/views/locales/show_js.html">show.js</a>
+  
+    <li><a href="../../../app/assets/javascripts/views/locales/show_concert_js.html">show_concert.js</a>
+  
+    <li><a href="../../../app/assets/javascripts/views/search/locale_show_js.html">locale_show.js</a>
+  
+    <li><a href="../../../app/assets/javascripts/views/search/show_js.html">show.js</a>
+  
+    <li><a href="../../../app/assets/javascripts/views/session/artist_js.html">artist.js</a>
+  
+    <li><a href="../../../app/assets/javascripts/views/session/artists_js.html">artists.js</a>
+  
+    <li><a href="../../../app/assets/javascripts/views/session/concert_js.html">concert.js</a>
+  
+    <li><a href="../../../app/assets/javascripts/views/session/dashboard_js.html">dashboard.js</a>
+  
+    <li><a href="../../../app/assets/javascripts/views/session/locale_js.html">locale.js</a>
+  
+    <li><a href="../../../app/assets/javascripts/views/session/locales_js.html">locales.js</a>
+  
+    <li><a href="../../../app/assets/javascripts/views/session/plans_js.html">plans.js</a>
+  
+    <li><a href="../../../app/assets/javascripts/views/session/show_js.html">show.js</a>
+  
+    <li><a href="../../../app/assets/stylesheets/application_css.html">application.css</a>
+  
+    <li><a href="../../../app/assets/templates/artists/show_jst_ejs.html">show.jst.ejs</a>
+  
+    <li><a href="../../../app/assets/templates/artists/show_concert_jst_ejs.html">show_concert.jst.ejs</a>
+  
+    <li><a href="../../../app/assets/templates/concerts/photo_new_jst_ejs.html">photo_new.jst.ejs</a>
+  
+    <li><a href="../../../app/assets/templates/concerts/photos_jst_ejs.html">photos.jst.ejs</a>
+  
+    <li><a href="../../../app/assets/templates/concerts/show_jst_ejs.html">show.jst.ejs</a>
+  
+    <li><a href="../../../app/assets/templates/locales/show_jst_ejs.html">show.jst.ejs</a>
+  
+    <li><a href="../../../app/assets/templates/locales/show_concert_jst_ejs.html">show_concert.jst.ejs</a>
+  
+    <li><a href="../../../app/assets/templates/search/locale_show_jst_ejs.html">locale_show.jst.ejs</a>
+  
+    <li><a href="../../../app/assets/templates/search/show_jst_ejs.html">show.jst.ejs</a>
+  
+    <li><a href="../../../app/assets/templates/session/artist_jst_ejs.html">artist.jst.ejs</a>
+  
+    <li><a href="../../../app/assets/templates/session/artists_jst_ejs.html">artists.jst.ejs</a>
+  
+    <li><a href="../../../app/assets/templates/session/concert_jst_ejs.html">concert.jst.ejs</a>
+  
+    <li><a href="../../../app/assets/templates/session/dashboard_jst_ejs.html">dashboard.jst.ejs</a>
+  
+    <li><a href="../../../app/assets/templates/session/locale_jst_ejs.html">locale.jst.ejs</a>
+  
+    <li><a href="../../../app/assets/templates/session/locales_jst_ejs.html">locales.jst.ejs</a>
+  
+    <li><a href="../../../app/assets/templates/session/plans_jst_ejs.html">plans.jst.ejs</a>
+  
+    <li><a href="../../../app/assets/templates/session/show_jst_ejs.html">show.jst.ejs</a>
+  
+    <li><a href="../../../app/views/api/artists/_artist_json_jbuilder.html">_artist.json.jbuilder</a>
+  
+    <li><a href="../../../app/views/api/artists/index_json_jbuilder.html">index.json.jbuilder</a>
+  
+    <li><a href="../../../app/views/api/artists/show_json_jbuilder.html">show.json.jbuilder</a>
+  
+    <li><a href="../../../app/views/api/concert_photos/_concert_photo_json_jbuilder.html">_concert_photo.json.jbuilder</a>
+  
+    <li><a href="../../../app/views/api/concert_photos/show_json_jbuilder.html">show.json.jbuilder</a>
+  
+    <li><a href="../../../app/views/api/concerts/_concert_json_jbuilder.html">_concert.json.jbuilder</a>
+  
+    <li><a href="../../../app/views/api/concerts/index_json_jbuilder.html">index.json.jbuilder</a>
+  
+    <li><a href="../../../app/views/api/concerts/show_json_jbuilder.html">show.json.jbuilder</a>
+  
+    <li><a href="../../../app/views/api/locale_search/locale_search_json_jbuilder.html">locale_search.json.jbuilder</a>
+  
+    <li><a href="../../../app/views/api/locales/_locale_json_jbuilder.html">_locale.json.jbuilder</a>
+  
+    <li><a href="../../../app/views/api/locales/index_json_jbuilder.html">index.json.jbuilder</a>
+  
+    <li><a href="../../../app/views/api/locales/show_json_jbuilder.html">show.json.jbuilder</a>
+  
+    <li><a href="../../../app/views/api/search/locale_search_json_jbuilder.html">locale_search.json.jbuilder</a>
+  
+    <li><a href="../../../app/views/api/search/search_json_jbuilder.html">search.json.jbuilder</a>
+  
+    <li><a href="../../../app/views/api/sessions/_user_json_jbuilder.html">_user.json.jbuilder</a>
+  
+    <li><a href="../../../app/views/api/sessions/show_json_jbuilder.html">show.json.jbuilder</a>
+  
+    <li><a href="../../../config_ru.html">config.ru</a>
+  
+    <li><a href="../../../docs/phases/phase1_md.html">phase1</a>
+  
+    <li><a href="../../../docs/phases/phase2_md.html">phase2</a>
+  
+    <li><a href="../../../docs/phases/phase3_md.html">phase3</a>
+  
+    <li><a href="../../../docs/phases/phase4_md.html">phase4</a>
+  
+    <li><a href="../../../docs/schema_md.html">schema</a>
+  
+    <li><a href="../../../docs/views_md.html">views</a>
+  
+    <li><a href="../../../log/development_log.html">development.log</a>
+  
+    <li><a href="../../../public/404_html.html">404.html</a>
+  
+    <li><a href="../../../public/422_html.html">422.html</a>
+  
+    <li><a href="../../../public/500_html.html">500.html</a>
+  
+    <li><a href="../../../public/favicon_ico.html">favicon.ico</a>
+  
+    <li><a href="../../../public/robots_txt.html">robots</a>
+  
+  </ul>
+</div>
+
+  </div>
+</nav>
+
+<main role="main" aria-label="Page app/assets/javascripts/date.js">
+
+<pre>Version: 1.0 Alpha-1 
+Build Date: 13-Nov-2007
+Copyright (c) 2006-2007, Coolite Inc. (http://www.coolite.com/). All rights reserved.
+License: Licensed under The MIT License. See license.txt and http://www.datejs.com/license/. 
+Website: http://www.datejs.com/ or http://www.coolite.com/datejs/</pre>
+
+<p>Date.CultureInfo={name:“en-US”,englishName:“English (United
+States)”,nativeName:“English (United <a
+href=""Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"">States)”,dayNames:</a>,<a
+href=""Sun","Mon","Tue","Wed","Thu","Fri","Sat"">abbreviatedDayNames:</a>,<a
+href=""Su","Mo","Tu","We","Th","Fr","Sa"">shortestDayNames:</a>,<a
+href=""S","M","T","W","T","F","S"">firstLetterDayNames:</a>,<a
+href=""January","February","March","April","May","June","July","August","September","October","November","December"">monthNames:</a>,<a
+href=""Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"">abbreviatedMonthNames:</a>,amDesignator:“AM”,pmDesignator:“PM”,firstDayOfWeek:0,twoDigitYearMax:2029,dateElementOrder:“mdy”,formatPatterns:{shortDate:“M/d/yyyy”,longDate:“dddd,
+MMMM dd, yyyy”,shortTime:“h:mm tt”,longTime:“h:mm:ss
+tt”,fullDateTime:“dddd, MMMM dd, yyyy h:mm:ss
+tt”,sortableDateTime:“yyyy-MM-ddTHH:mm:ss”,universalSortableDateTime:“yyyy-MM-dd
+HH:mm:ssZ”,rfc1123:“ddd, dd MMM yyyy HH:mm:ss GMT”,monthDay:“MMMM
+dd”,yearMonth:“MMMM,
+yyyy”},regexPatterns:{jan:/^jan(uary)?/i,feb:/^feb(ruary)?/i,mar:/^mar(ch)?/i,apr:/^apr(il)?/i,may:/^may/i,jun:/^jun(e)?/i,jul:/^jul(y)?/i,aug:/^aug(ust)?/i,sep:/^sep(t(ember)?)?/i,oct:/^oct(ober)?/i,nov:/^nov(ember)?/i,dec:/^dec(ember)?/i,sun:/^su(n(day)?)?/i,mon:/^mo(n(day)?)?/i,tue:/^tu(e(s(day)?)?)?/i,wed:/^we(d(nesday)?)?/i,thu:/^th(u(r(s(day)?)?)?)?/i,fri:/^fr(i(day)?)?/i,sat:/^sa(t(urday)?)?/i,future:/^next/i,past:/^last|past|prev(ious)?/i,add:/^(+|after|from)/i,subtract:/^(-|before|ago)/i,yesterday:/^yesterday/i,today:/^t(oday)?/i,tomorrow:/^tomorrow/i,now:/^n(ow)?/i,millisecond:/^ms|milli(second)?s?/i,second:/^sec(ond)?s?/i,minute:/^min(ute)?s?/i,hour:/^h(ou)?rs?/i,week:/^w(ee)?k/i,month:/^m(o(nth)?s?)?/i,day:/^d(ays?)?/i,year:/^y((ea)?rs?)?/i,shortMeridian:/^(a|p)/i,longMeridian:/^(a.?m?.?|p.?m?.?)/i,timezone:/^((e(s|d)t|c(s|d)t|m(s|d)t|p(s|d)t)|((gmt)?s*(+|-)s*dddd?)|gmt)/i,ordinalSuffix:/^s*(st|nd|rd|th)/i,timeContext:/^s*(:|a|p)/i},abbreviatedTimeZoneStandard:{GMT:“-000”,EST:“-0400”,CST:“-0500”,MST:“-0600”,PST:“-0700”},abbreviatedTimeZoneDST:{GMT:“-000”,EDT:“-0500”,CDT:“-0600”,MDT:“-0700”,PDT:“-0800”}};
+Date.getMonthNumberFromName=function(name){var
+n=Date.CultureInfo.monthNames,m=Date.CultureInfo.abbreviatedMonthNames,s=name.toLowerCase();for(var
+i=0;i&lt;n.length;i++){<a href="i">if(n</a>.<a
+href="i">toLowerCase()==s||m</a>.toLowerCase()==s){return i;}}
+return-1;};Date.getDayNumberFromName=function(name){var
+n=Date.CultureInfo.dayNames,m=Date.CultureInfo.abbreviatedDayNames,o=Date.CultureInfo.shortestDayNames,s=name.toLowerCase();for(var
+i=0;i&lt;n.length;i++){<a href="i">if(n</a>.<a
+href="i">toLowerCase()==s||m</a>.toLowerCase()==s){return i;}}
+return-1;};Date.isLeapYear=function(year){return(((year%4===0)&amp;&amp;(year%100!==0))||(year%400===0));};Date.getDaysInMonth=function(year,month){<a
+href="31,(Date.isLeapYear(year)?29:28),31,30,31,30,31,31,30,31,30,31">return</a>[month];};Date.getTimezoneOffset=function(s,dst){<a
+href="s.toUpperCase()">return(dst||false)?Date.CultureInfo.abbreviatedTimeZoneDST</a>:<a
+href="s.toUpperCase()">Date.CultureInfo.abbreviatedTimeZoneStandard</a>;};Date.getTimezoneAbbreviation=function(offset,dst){var
+n=(dst||false)?Date.CultureInfo.abbreviatedTimeZoneDST:Date.CultureInfo.abbreviatedTimeZoneStandard,p;for(p
+in n){<a href="p">if(n</a>===offset){return p;}} return
+null;};Date.prototype.clone=function(){return new
+Date(this.getTime());};Date.prototype.compareTo=function(date){if(isNaN(this)){throw
+new Error(this);} if(date instanceof
+Date&amp;&amp;!isNaN(date)){return(this&gt;date)?1:(this&lt;date)?-1:0;}else{throw
+new
+TypeError(date);}};Date.prototype.equals=function(date){return(this.compareTo(date)===0);};Date.prototype.between=function(start,end){var
+t=this.getTime();return
+t&gt;=start.getTime()&amp;&amp;t&lt;=end.getTime();};Date.prototype.addMilliseconds=function(value){this.setMilliseconds(this.getMilliseconds()+value);return
+this;};Date.prototype.addSeconds=function(value){return
+this.addMilliseconds(value*1000);};Date.prototype.addMinutes=function(value){return
+this.addMilliseconds(value*60000);};Date.prototype.addHours=function(value){return
+this.addMilliseconds(value*3600000);};Date.prototype.addDays=function(value){return
+this.addMilliseconds(value*86400000);};Date.prototype.addWeeks=function(value){return
+this.addMilliseconds(value*604800000);};Date.prototype.addMonths=function(value){var
+n=this.getDate();this.setDate(1);this.setMonth(this.getMonth()+value);this.setDate(Math.min(n,this.getDaysInMonth()));return
+this;};Date.prototype.addYears=function(value){return
+this.addMonths(value*12);};Date.prototype.add=function(config){if(typeof
+config==“number”){this._orient=config;return this;} var
+x=config;if(x.millisecond||x.milliseconds){this.addMilliseconds(x.millisecond||x.milliseconds);}
+if(x.second||x.seconds){this.addSeconds(x.second||x.seconds);}
+if(x.minute||x.minutes){this.addMinutes(x.minute||x.minutes);}
+if(x.hour||x.hours){this.addHours(x.hour||x.hours);}
+if(x.month||x.months){this.addMonths(x.month||x.months);}
+if(x.year||x.years){this.addYears(x.year||x.years);}
+if(x.day||x.days){this.addDays(x.day||x.days);} return
+this;};Date._validate=function(value,min,max,name){if(typeof
+value!=“number”){throw new TypeError(value+“ is not a Number.”);}else
+if(value&lt;min||value&gt;max){throw new RangeError(value+“ is not a valid
+value for ”<code>name</code>“.”);} return
+true;};Date.validateMillisecond=function(n){return
+Date._validate(n,0,999,“milliseconds”);};Date.validateSecond=function(n){return
+Date._validate(n,0,59,“seconds”);};Date.validateMinute=function(n){return
+Date._validate(n,0,59,“minutes”);};Date.validateHour=function(n){return
+Date._validate(n,0,23,“hours”);};Date.validateDay=function(n,year,month){return
+Date._validate(n,1,Date.getDaysInMonth(year,month),“days”);};Date.validateMonth=function(n){return
+Date._validate(n,0,11,“months”);};Date.validateYear=function(n){return
+Date._validate(n,1,9999,“seconds”);};Date.prototype.set=function(config){var
+x=config;if(!x.millisecond&amp;&amp;x.millisecond!==0){x.millisecond=-1;}
+if(!x.second&amp;&amp;x.second!==0){x.second=-1;}
+if(!x.minute&amp;&amp;x.minute!==0){x.minute=-1;}
+if(!x.hour&amp;&amp;x.hour!==0){x.hour=-1;}
+if(!x.day&amp;&amp;x.day!==0){x.day=-1;}
+if(!x.month&amp;&amp;x.month!==0){x.month=-1;}
+if(!x.year&amp;&amp;x.year!==0){x.year=-1;}
+if(x.millisecond!=-1&amp;&amp;Date.validateMillisecond(x.millisecond)){this.addMilliseconds(x.millisecond-this.getMilliseconds());}
+if(x.second!=-1&amp;&amp;Date.validateSecond(x.second)){this.addSeconds(x.second-this.getSeconds());}
+if(x.minute!=-1&amp;&amp;Date.validateMinute(x.minute)){this.addMinutes(x.minute-this.getMinutes());}
+if(x.hour!=-1&amp;&amp;Date.validateHour(x.hour)){this.addHours(x.hour-this.getHours());}
+if(x.month!==-1&amp;&amp;Date.validateMonth(x.month)){this.addMonths(x.month-this.getMonth());}
+if(x.year!=-1&amp;&amp;Date.validateYear(x.year)){this.addYears(x.year-this.getFullYear());}
+if(x.day!=-1&amp;&amp;Date.validateDay(x.day,this.getFullYear(),this.getMonth())){this.addDays(x.day-this.getDate());}
+if(x.timezone){this.setTimezone(x.timezone);}
+if(x.timezoneOffset){this.setTimezoneOffset(x.timezoneOffset);} return
+this;};Date.prototype.clearTime=function(){this.setHours(0);this.setMinutes(0);this.setSeconds(0);this.setMilliseconds(0);return
+this;};Date.prototype.isLeapYear=function(){var
+y=this.getFullYear();return(((y%4===0)&amp;&amp;(y%100!==0))||(y%400===0));};Date.prototype.isWeekday=function(){return!(this.is().sat()||this.is().sun());};Date.prototype.getDaysInMonth=function(){return
+Date.getDaysInMonth(this.getFullYear(),this.getMonth());};Date.prototype.moveToFirstDayOfMonth=function(){return
+this.set({day:1});};Date.prototype.moveToLastDayOfMonth=function(){return
+this.set({day:this.getDaysInMonth()});};Date.prototype.moveToDayOfWeek=function(day,orient){var
+diff=(day-this.getDay()+7*(orient||+1))%7;return
+this.addDays((diff===0)?diff+=7*(orient||+1):diff);};Date.prototype.moveToMonth=function(month,orient){var
+diff=(month-this.getMonth()+12*(orient||+1))%12;return
+this.addMonths((diff===0)?diff+=12*(orient||+1):diff);};Date.prototype.getDayOfYear=function(){return
+Math.floor((this-new
+Date(this.getFullYear(),0,1))/86400000);};Date.prototype.getWeekOfYear=function(firstDayOfWeek){var
+y=this.getFullYear(),m=this.getMonth(),d=this.getDate();var
+dow=firstDayOfWeek||Date.CultureInfo.firstDayOfWeek;var offset=7+1-new
+Date(y,0,1).getDay();if(offset==8){offset=1;} var
+daynum=((Date.UTC(y,m,d,0,0,0)-Date.UTC(y,0,1,0,0,0))/86400000)+1;var
+w=Math.floor((daynum-offset+7)/7);if(w===dow){y–;var prevOffset=7+1-new
+Date(y,0,1).getDay();if(prevOffset==2||prevOffset==8){w=53;}else{w=52;}}
+return
+w;};Date.prototype.isDST=function(){console.log(&#39;isDST&#39;);return <a
+href="2">this.toString().match(/(E|C|M|P)(S|D)T/)</a>==“D”;};Date.prototype.getTimezone=function(){return
+Date.getTimezoneAbbreviation(this.getUTCOffset,this.isDST());};Date.prototype.setTimezoneOffset=function(s){var
+here=this.getTimezoneOffset(),there=Number(s)*-6/10;this.addMinutes(there-here);return
+this;};Date.prototype.setTimezone=function(s){return
+this.setTimezoneOffset(Date.getTimezoneOffset(s));};Date.prototype.getUTCOffset=function(){var
+n=this.getTimezoneOffset()*-10/6,r;if(n&lt;0){r=(n-10000).toString();return
+<a
+href="0">r</a>+r.substr(2);}else{r=(n+10000).toString();return“+”+r.substr(1);}};Date.prototype.getDayName=function(abbrev){return
+<a href="this.getDay()">abbrev?Date.CultureInfo.abbreviatedDayNames</a>:<a
+href="this.getDay()">Date.CultureInfo.dayNames</a>;};Date.prototype.getMonthName=function(abbrev){return
+<a
+href="this.getMonth()">abbrev?Date.CultureInfo.abbreviatedMonthNames</a>:<a
+href="this.getMonth()">Date.CultureInfo.monthNames</a>;};Date.prototype._toString=Date.prototype.toString;Date.prototype.toString=function(format){var
+self=this;var p=function
+p(s){return(s.toString().length==1)?“0”+s:s;};return
+format?format.replace(/dd?d?d?|MM?M?M?|yy?y?y?|hh?|HH?|mm?|ss?|tt?|zz?z?/g,function(format){switch(format){case“hh”:return
+p(self.getHours()&lt;13?self.getHours():(self.getHours()-12));case“h”:return
+self.getHours()&lt;13?self.getHours():(self.getHours()-12);case“HH”:return
+p(self.getHours());case“H”:return self.getHours();case“mm”:return
+p(self.getMinutes());case“m”:return self.getMinutes();case“ss”:return
+p(self.getSeconds());case“s”:return self.getSeconds();case“yyyy”:return
+self.getFullYear();case“yy”:return
+self.getFullYear().toString().substring(2,4);case“dddd”:return
+self.getDayName();case“ddd”:return self.getDayName(true);case“dd”:return
+p(self.getDate());case“d”:return
+self.getDate().toString();case“MMMM”:return
+self.getMonthName();case“MMM”:return
+self.getMonthName(true);case“MM”:return
+p((self.getMonth()+1));case“M”:return self.getMonth()+1;case“t”:return
+self.getHours()&lt;12?Date.CultureInfo.amDesignator.substring(0,1):Date.CultureInfo.pmDesignator.substring(0,1);case“tt”:return
+self.getHours()&lt;12?Date.CultureInfo.amDesignator:Date.CultureInfo.pmDesignator;case“zzz”:case“zz”:case“z”:return“”;}}):this._toString();};
+Date.now=function(){return new Date();};Date.today=function(){return
+Date.now().clearTime();};Date.prototype._orient=+1;Date.prototype.next=function(){this._orient=+1;return
+this;};Date.prototype.last=Date.prototype.prev=Date.prototype.previous=function(){this._orient=-1;return
+this;};Date.prototype._is=false;Date.prototype.is=function(){this._is=true;return
+this;};Number.prototype._dateElement=“day”;Number.prototype.fromNow=function(){var
+c={};<a href="this._dateElement">c</a>=this;return
+Date.now().add©;};Number.prototype.ago=function(){var c={};<a
+href="this._dateElement">c</a>=this*-1;return
+Date.now().add©;};(function(){var $D=Date.prototype,$N=Number.prototype;var
+dx=(“sunday monday tuesday wednesday thursday friday
+saturday”).split(/s/),mx=(“january february march april may june july
+august september october november december”).split(/s/),px=(“Millisecond
+Second Minute Hour Day Week Month Year”).split(/s/),de;var
+df=function(n){return function(){if(this._is){this._is=false;return
+this.getDay()==n;} return this.moveToDayOfWeek(n,this._orient);};};for(var
+i=0;i&lt;dx.length;i++){$<a href="i">D[dx</a>]=$<a
+href="i">D[dx</a>.substring(0,3)]=df(i);} var mf=function(n){return
+function(){if(this._is){this._is=false;return this.getMonth()===n;} return
+this.moveToMonth(n,this._orient);};};for(var j=0;j&lt;mx.length;j++){$<a
+href="j">D[mx</a>]=$<a href="j">D[mx</a>.substring(0,3)]=mf(j);} var
+ef=function(j){return function(){if(j.substring(j.length-1)!=“s”){j+=“s”;}
+return <a href=""add"+j">this</a>(this._orient);};};var
+nf=function(n){return function(){this._dateElement=n;return
+this;};};for(var k=0;k&lt;px.length;k++){<a href="k">de=px</a>.<a
+href="de">toLowerCase();$D</a>=$<a href="de+"s"">D</a>=<a
+href="k">ef(px</a>);$<a href="de">N</a>=$<a
+href="de+"s"">N</a>=nf(de);}}());Date.prototype.toJSONString=function(){return
+this.toString(“yyyy-MM-ddThh:mm:ssZ”);};Date.prototype.toShortDateString=function(){return
+this.toString(Date.CultureInfo.formatPatterns.shortDatePattern);};Date.prototype.toLongDateString=function(){return
+this.toString(Date.CultureInfo.formatPatterns.longDatePattern);};Date.prototype.toShortTimeString=function(){return
+this.toString(Date.CultureInfo.formatPatterns.shortTimePattern);};Date.prototype.toLongTimeString=function(){return
+this.toString(Date.CultureInfo.formatPatterns.longTimePattern);};Date.prototype.getOrdinal=function(){switch(this.getDate()){case
+1:case 21:case 31:return“st”;case 2:case 22:return“nd”;case 3:case
+23:return“rd”;default:return“th”;}};
+(function(){Date.Parsing={Exception:function(s){this.message=“Parse error
+at &#39;”+s.substring(0,10)+“ …&#39;”;}};var $P=Date.Parsing;var
+_=$P.Operators={rtoken:function®{return function(s){var
+mx=s.match®;if(mx){<a href="0">return([mx</a>,<a
+href="0">s.substring(mx</a>.length)]);}else{throw new
+$P.Exception(s);}};},token:function(s){return function(s){return
+_.rtoken(new
+RegExp(“^s*”<code>s</code>“s*”))(s);};},stoken:function(s){return
+_.rtoken(new RegExp(“^”+s));},until:function(p){return function(s){var <a
+href="0">qx=[],rx=null;while(s.length){try{rx=p.call(this,s);}catch(e){qx.push(rx</a>);<a
+href="1">s=rx</a>;continue;} break;} <a
+href="qx,s">return</a>;};},many:function(p){return function(s){var <a
+href="rx,s">rx=[],r=null;while(s.length){try{r=p.call(this,s);}catch(e){return</a>;}
+<a href="0">rx.push(r</a>);<a href="1">s=r</a>;} <a
+href="rx,s">return</a>;};},optional:function(p){return function(s){var
+r=null;try{r=p.call(this,s);}catch(e){<a href="null,s">return</a>;} <a
+href="0">return[r</a>,<a href="1">r</a>];};},not:function(p){return
+function(s){try{p.call(this,s);}catch(e){<a href="null,s">return</a>;}
+throw new $P.Exception(s);};},ignore:function(p){return p?function(s){var
+<a
+href="1">r=null;r=p.call(this,s);return[null,r</a>];}:null;},product:function(){var
+<a
+href="0">px=arguments</a>,qx=Array.prototype.slice.call(arguments,1),rx=[];for(var
+i=0;i&lt;px.length;i++){<a href="i">rx.push(_.each(px</a>,qx));} return
+rx;},cache:function(rule){var cache={},r=null;return function(s){try{<a
+href="s">r=cache</a>=(<a
+href="s">cache</a>||rule.call(this,s));}catch(e){<a
+href="s">r=cache</a>=e;} if(r instanceof $P.Exception){throw r;}else{return
+r;}};},any:function(){var px=arguments;return function(s){var
+r=null;for(var i=0;i&lt;px.length;i++){<a
+href="i">if(px</a>==null){continue;} try{<a
+href="i">r=(px</a>.call(this,s));}catch(e){r=null;} if®{return r;}} throw
+new $P.Exception(s);};},each:function(){var px=arguments;return
+function(s){var rx=[],r=null;for(var i=0;i&lt;px.length;i++){<a
+href="i">if(px</a>==null){continue;} try{<a
+href="i">r=(px</a>.call(this,s));}catch(e){throw new $P.Exception(s);} <a
+href="0">rx.push(r</a>);<a href="1">s=r</a>;} <a
+href="rx,s">return</a>;};},all:function(){var px=arguments,_=_;return
+<em>.each(</em>.optional(px));},sequence:function(px,d,c){d=d||_.rtoken(/^s*/);c=c||null;if(px.length==1){return
+<a href="0">px</a>;} return function(s){var r=null,q=null;var rx=[];for(var
+i=0;i&lt;px.length;i++){try{<a
+href="i">r=px</a>.call(this,s);}catch(e){break;} <a
+href="0">rx.push(r</a>);try{<a
+href="1">q=d.call(this,r</a>);}catch(ex){q=null;break;} <a
+href="1">s=q</a>;} if(!r){throw new $P.Exception(s);} if(q){throw new $<a
+href="1">P.Exception(q</a>);} if©{try{<a
+href="1">r=c.call(this,r</a>);}catch(ey){throw new $<a
+href="1">P.Exception(r</a>);}} <a
+href="1">return[rx,(r?r</a>:s)];};},between:function(d1,p,d2){d2=d2||d1;var
+<em>fn=</em>.each(_.ignore(d1),p,_.ignore(d2));return function(s){var <a
+href="0">rx=_fn.call(this,s);return[[rx</a>[<a href="0">0],r</a>[<a
+href="1">2]],rx</a>];};},list:function(p,d,c){d=d||_.rtoken(/^s*/);c=c||null;return(p
+instanceof
+Array?<em>.each(</em>.product(p.slice(0,-1),_.ignore(d)),p.slice(-1),_.ignore©):<em>.each(</em>.many(_.each(p,_.ignore(d))),px,_.ignore©));},set:function(px,d,c){d=d||_.rtoken(/^s*/);c=c||null;return
+function(s){var <a
+href="">r=null,p=null,q=null,rx=null,best=[</a>,s],last=false;for(var
+i=0;i&lt;px.length;i++){q=null;p=null;r=null;last=(px.length==1);try{<a
+href="i">r=px</a>.call(this,s);}catch(e){continue;} <a
+href="0">rx=[[r</a>],<a href="1">r</a>];<a
+href="1">if(r</a>.length&gt;0&amp;&amp;!last){try{<a
+href="1">q=d.call(this,r</a>);}catch(ex){last=true;}}else{last=true;} <a
+href="1">if(!last&&q</a>.length===0){last=true;} if(!last){var
+qx=[];for(var j=0;j&lt;px.length;j++){if(i!=j){<a
+href="j">qx.push(px</a>);}} <a href="1">p=_.set(qx,d).call(this,q</a>);<a
+href="0">if(p</a>.length&gt;0){<a href="0">rx</a>=<a href="0">rx</a>.<a
+href="0">concat(p</a>);<a href="1">rx</a>=<a href="1">p</a>;}} <a
+href="1">if(rx</a>.<a href="1">length<best</a>.length){best=rx;} <a
+href="1">if(best</a>.length===0){break;}} <a
+href="0">if(best</a>.length===0){return best;} if©{try{<a
+href="1">q=c.call(this,best</a>);}catch(ey){throw new $<a
+href="1">P.Exception(best</a>);} <a href="1">best</a>=<a href="1">q</a>;}
+return best;};},forward:function(gr,fname){return function(s){return <a
+href="fname">gr</a>.call(this,s);};},replace:function(rule,repl){return
+function(s){var <a
+href="1">r=rule.call(this,s);return[repl,r</a>];};},process:function(rule,fn){return
+function(s){var <a
+href="0">r=rule.call(this,s);return[fn.call(this,r</a>),<a
+href="1">r</a>];};},min:function(min,rule){return function(s){var <a
+href="0">rx=rule.call(this,s);if(rx</a>.length&lt;min){throw new
+$P.Exception(s);} return rx;};}};var _generator=function(op){return
+function(){var
+args=null,rx=[];if(arguments.length&gt;1){args=Array.prototype.slice.call(arguments);}else
+<a href="0">if(arguments</a>instanceof Array){<a
+href="0">args=arguments</a>;} if(args){for(var
+i=0,px=args.shift();i&lt;px.length;i++){<a
+href="i">args.unshift(px</a>);rx.push(op.apply(null,args));args.shift();return
+rx;}}else{return op.apply(null,arguments);}};};var gx=“optional not ignore
+cache”.split(/s/);for(var i=0;i&lt;gx.length;i++){<a
+href="i">_[gx</a>]=<em><a href="i">generator([gx</a></em>]);} var
+_vector=function(op){return function(){<a
+href="0">if(arguments</a>instanceof Array){return <a
+href="0">op.apply(null,arguments</a>);}else{return
+op.apply(null,arguments);}};};var vx=“each any all”.split(/s/);for(var
+j=0;j&lt;vx.length;j++){<a href="j">_[vx</a>]=<em><a
+href="j">vector([vx</a></em>]);}}());(function(){var
+flattenAndCompact=function(ax){var rx=[];for(var i=0;i&lt;ax.length;i++){<a
+href="i">if(ax</a>instanceof Array){<a
+href="i">rx=rx.concat(flattenAndCompact(ax</a>));}else{<a
+href="i">if(ax</a>){<a href="i">rx.push(ax</a>);}}} return
+rx;};Date.Grammar={};Date.Translator={hour:function(s){return
+function(){this.hour=Number(s);};},minute:function(s){return
+function(){this.minute=Number(s);};},second:function(s){return
+function(){this.second=Number(s);};},meridian:function(s){return
+function(){this.meridian=s.slice(0,1).toLowerCase();};},timezone:function(s){return
+function(){var <a
+href="^\d+\-">n=s.replace(/</a>/g,“”);if(n.length){this.timezoneOffset=Number(n);}else{this.timezone=s.toLowerCase();}};},day:function(x){var
+<a href="0">s=x</a>;return function(){<a
+href="0">this.day=Number(s.match(/d+/)</a>);};},month:function(s){return
+function(){this.month=((s.length==3)?Date.getMonthNumberFromName(s):(Number(s)-1));};},year:function(s){return
+function(){var
+n=Number(s);this.year=((s.length&gt;2)?n:(n+(((n+2000)&lt;Date.CultureInfo.twoDigitYearMax)?2000:1900)));};},rday:function(s){return
+function(){switch(s){case“yesterday”:this.days=-1;break;case“tomorrow”:this.days=1;break;case“today”:this.days=0;break;case“now”:this.days=0;this.now=true;break;}};},finishExact:function(x){x=(x
+instanceof <a href="x">Array)?x:</a>;var now=new
+Date();this.year=now.getFullYear();this.month=now.getMonth();this.day=1;this.hour=0;this.minute=0;this.second=0;for(var
+i=0;i&lt;x.length;i++){<a href="i">if(x</a>){<a
+href="i">x</a>.call(this);}}
+this.hour=(this.meridian==“p”&amp;&amp;this.hour&lt;13)?this.hour+12:this.hour;if(this.day&gt;Date.getDaysInMonth(this.year,this.month)){throw
+new RangeError(this.day+“ is not a valid value for days.”);} var r=new
+Date(this.year,this.month,this.day,this.hour,this.minute,this.second);if(this.timezone){r.set({timezone:this.timezone});}else
+if(this.timezoneOffset){r.set({timezoneOffset:this.timezoneOffset});}
+return r;},finish:function(x){x=(x instanceof <a
+href="x">Array)?flattenAndCompact(x):</a>;if(x.length===0){return null;}
+for(var i=0;i&lt;x.length;i++){if(typeof <a href="i">x</a>==“function”){<a
+href="i">x</a>.call(this);}} if(this.now){return new Date();} var
+today=Date.today();var method=null;var
+expression=!!(this.days!=null||this.orient||this.operator);if(expression){var
+gap,mod,orient;orient=((this.orient==“past”||this.operator==“subtract”)?-1:1);if(this.weekday){this.unit=“day”;gap=(Date.getDayNumberFromName(this.weekday)-today.getDay());mod=7;this.days=gap?((gap+(orient*mod))%mod):(orient*mod);}
+if(this.month){this.unit=“month”;gap=(this.month-today.getMonth());mod=12;this.months=gap?((gap+(orient*mod))%mod):(orient*mod);this.month=null;}
+if(!this.unit){this.unit=“day”;} <a
+href="this.unit+"s"">if(this</a>==null||this.operator!=null){if(!this.value){this.value=1;}
+if(this.unit==“week”){this.unit=“day”;this.value=this.value*7;} <a
+href="this.unit+"s"">this</a>=this.value*orient;} return
+today.add(this);}else{if(this.meridian&amp;&amp;this.hour){this.hour=(this.hour&lt;13&amp;&amp;this.meridian==“p”)?this.hour+12:this.hour;}
+if(this.weekday&amp;&amp;!this.day){this.day=(today.addDays((Date.getDayNumberFromName(this.weekday)-today.getDay()))).getDate();}
+if(this.month&amp;&amp;!this.day){this.day=1;} return
+today.set(this);}}};var <a
+href="\s\-\.\,\/\x27">_=Date.Parsing.Operators,g=Date.Grammar,t=Date.Translator,_fn;g.datePartDelimiter=_.rtoken(/^(</a>+)/);<a
+href="\s\,">g.timePartDelimiter=_.stoken(“:”);g.whiteSpace=_.rtoken(/^s*/);g.generalDelimiter=_.rtoken(/^((</a>|at|on)+)/);var
+_C={};g.ctoken=function(keys){var <a href="keys">fn=_C</a>;if(!fn){var
+c=Date.CultureInfo.regexPatterns;var kx=keys.split(/s+/),px=[];for(var
+i=0;i&lt;kx.length;i++){<a href="i">px.push(.replace(.rtoken(c[kx</a>]),<a
+href="i">kx</a>));} <a href="keys">fn=_C</a>=_.any.apply(null,px);} return
+fn;};g.ctoken2=function(key){return <a
+href="key">_.rtoken(Date.CultureInfo.regexPatterns</a>);};<a
+href="0-9">g.h=.cache(.process(_.rtoken(/^(0</a>|<a href="0-2">1</a>|[<a
+href="0-9">1-9])/),t.hour));g.hh=.cache(.process(_.rtoken(/^(0</a>|<a
+href="0-2">1</a>)/),<a
+href="0-1">t.hour));g.H=.cache(.process(_.rtoken(/^(</a>[<a
+href="0-3">0-9]|2</a>|[<a
+href="0-1">0-9])/),t.hour));g.HH=.cache(.process(_.rtoken(/^(</a>[<a
+href="0-3">0-9]|2</a>)/),<a
+href="0-5">t.hour));g.m=.cache(.process(_.rtoken(/^(</a>[<a
+href="0-9">0-9]|</a>)/),<a
+href="0-5">t.minute));g.mm=.cache(.process(_.rtoken(/^</a>[<a
+href="0-5">0-9]/),t.minute));g.s=.cache(.process(_.rtoken(/^(</a>[<a
+href="0-9">0-9]|</a>)/),<a
+href="0-5">t.second));g.ss=.cache(.process(_.rtoken(/^</a>[<a
+href="g.H,g.mm,g.ss">0-9]/),t.second));g.hms=.cache(.sequence(</a>,<a
+href="g.tt,g.zzz">g.timePartDelimiter));g.t=.cache(.process(g.ctoken2(“shortMeridian”),t.meridian));g.tt=.cache(.process(g.ctoken2(“longMeridian”),t.meridian));g.z=.cache(.process(_.rtoken(/^(+|-)?s*dddd?/),t.timezone));g.zz=.cache(.process(_.rtoken(/^(+|-)s*dddd/),t.timezone));g.zzz=.cache(.process(g.ctoken2(“timezone”),t.timezone));g.timeSuffix=.each(.ignore(g.whiteSpace),_.set(</a>));<a
+href="0-2">g.time=.each(.optional(.ignore(.stoken(“T”))),g.hms,g.timeSuffix);g.d=.cache(.process(.each(.rtoken(/^(</a><a
+href=“0-1”>d|3</a>|<a
+href=“0-2”>d)/),_.optional(g.ctoken2(“ordinalSuffix”))),t.day));g.dd=.cache(.process(.each(.rtoken(/^(</a><a
+href=“0-1”>d|3</a>)/),_.optional(g.ctoken2(“ordinalSuffix”))),t.day));g.ddd=g.dddd=<em>.cache(</em>.process(g.ctoken(“sun
+mon tue wed thu fri sat”),function(s){return
+function(){this.weekday=s;};}));<a
+href="0-2">g.M=.cache(.process(_.rtoken(/^(1</a>|<a
+href="0-2">0d|d)/),t.month));g.MM=.cache(.process(_.rtoken(/^(1</a>|0d)/),t.month));g.MMM=g.MMMM=<em>.cache(</em>.process(g.ctoken(“jan
+feb mar apr may jun jul aug sep oct nov
+dec”),t.month));g.y=<em>.cache(</em>.process(_.rtoken(/^(dd?)/),t.year));g.yy=<em>.cache(</em>.process(_.rtoken(/^(dd)/),t.year));g.yyy=<em>.cache(</em>.process(_.rtoken(/^(dd?d?d?)/),t.year));g.yyyy=<em>.cache(</em>.process(_.rtoken(/^(dddd)/),t.year));_fn=function(){return
+<em>.each(</em>.any.apply(null,arguments),_.not(g.ctoken2(“timeContext”)));};g.day=_fn(g.d,g.dd);g.month=_fn(g.M,g.MMM);g.year=_fn(g.yyyy,g.yy);g.orientation=_.process(g.ctoken(“past
+future”),function(s){return
+function(){this.orient=s;};});g.operator=_.process(g.ctoken(“add
+subtract”),function(s){return
+function(){this.operator=s;};});g.rday=_.process(g.ctoken(“yesterday
+tomorrow today now”),t.rday);g.unit=_.process(g.ctoken(“minute hour day
+week month year”),function(s){return
+function(){this.unit=s;};});g.value=<em>.process(</em>.rtoken(/^dd?(st|nd|rd|th)?/),function(s){return
+function(){this.value=s.replace(/D/g,“”);};});<a
+href="g.rday,g.operator,g.value,g.unit,g.orientation,g.ddd,g.MMM">g.expression=_.set(</a>);_fn=function(){return
+_.set(arguments,g.datePartDelimiter);};g.mdy=_fn(g.ddd,g.month,g.day,g.year);g.ymd=_fn(g.ddd,g.year,g.month,g.day);g.dmy=_fn(g.ddd,g.day,g.month,g.year);g.date=function(s){<a
+href="Date.CultureInfo.dateElementOrder">return((g</a>||g.mdy).call(this,s));};g.format=<em>.process(</em>.many(<em>.any(</em>.process(_.rtoken(/^(dd?d?d?|MM?M?M?|yy?y?y?|hh?|HH?|mm?|ss?|tt?|zz?z?)/),function(fmt){<a
+href="fmt">if(g</a>){return <a href="fmt">g</a>;}else{throw
+Date.Parsing.Exception(fmt);}}),<em>.<a
+href="^dMyhHmstz">process(.rtoken(/^</a></em>+/),function(s){return
+<em>.ignore(</em>.stoken(s));}))),function(rules){return
+<em>.process(</em>.each.apply(null,rules),t.finishExact);});var _F={};var
+_get=function(f){return <a href="f">_F</a>=(<a href="f">_F</a>||<a
+href="0">g.format(f)</a>);};g.formats=function(fx){if(fx instanceof
+Array){var rx=[];for(var i=0;i&lt;fx.length;i++){<a
+href="i">rx.push(_get(fx</a>));} return _.any.apply(null,rx);}else{return
+_get(fx);}};g._formats=g.formats([“yyyy-MM-ddTHH:mm:ss”,“ddd, MMM dd, yyyy
+H:mm:ss tt”,“ddd MMM d yyyy HH:mm:ss <a
+href="g.date,g.time,g.expression">zzz”,“d”]);g.start=.process(_.set(</a>,g.generalDelimiter,g.whiteSpace),t.finish);g.start=function(s){try{var
+r=g._formats.call({},<a href="1">s);if(r</a>.length===0){return
+r;}}catch(e){} return
+g._start.call({},s);};}());Date._parse=Date.parse;Date.parse=function(s){var
+r=null;if(!s){return null;}
+try{r=Date.Grammar.start.call({},s);}catch(e){return null;} <a
+href="1">return((r</a>.<a
+href="0">length===0)?r</a>:null);};Date.getParseFunction=function(fx){var
+fn=Date.Grammar.formats(fx);return function(s){var
+r=null;try{r=fn.call({},s);}catch(e){return null;} <a
+href="1">return((r</a>.<a
+href="0">length===0)?r</a>:null);};};Date.parseExact=function(s,fx){return
+Date.getParseFunction(fx)(s);};</p>
+</main>
+
+
+
+<footer id="validator-badges" role="contentinfo">
+  <p><a href="http://validator.w3.org/check/referer">Validate</a>
+  <p>Generated by <a href="http://docs.seattlerb.org/rdoc/">RDoc</a> 4.2.0.
+  <p>Based on <a href="http://deveiate.org/projects/Darkfish-RDoc/">Darkfish</a> by <a href="http://deveiate.org">Michael Granger</a>.
+</footer>
+

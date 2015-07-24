@@ -20,6 +20,7 @@ class SessionsController < ApplicationController
   def twittercreate
     auth = request.env['omniauth.auth']
     user = User.find_by_provider_and_uid(auth['provider'], auth['uid']) || User.create_with_omniauth(auth)
+    UserLocale.create!({user_id: user.id, locale_id: 1})
     log_in(user)
     redirect_to root_url
   end
