@@ -21,7 +21,7 @@ task add_trackings: :environment do
     Time.at(from + rand(diff)).to_date
   end
 
-  1000.times do
+  (artist_count/10).times do
     artist = 1 + rand(artist_count)
     locale = 1 + rand(locale_count)
 
