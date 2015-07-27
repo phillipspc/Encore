@@ -96,6 +96,7 @@ a {
 
 a:hover {
   text-decoration: underline;
+
 }
 
 .main {
@@ -185,6 +186,8 @@ nav {
 nav a:hover {
   color: #0277ad;
   text-decoration: none;
+  transition: color .05s;
+
 }
 
 nav ul.nav {
@@ -209,6 +212,8 @@ nav li {
 nav a {
   color: white;
   text-decoration: none;
+  transition: color .05s;
+
 }
 
 nav #last {
@@ -220,10 +225,13 @@ nav #last {
 
 nav .submit:hover{
   color: #0277ad;
+  transition: color .05s;
+
 }
 
 nav .logo:hover {
   color: #f80046;
+
 }
 
 nav .submit {
@@ -233,6 +241,8 @@ nav .submit {
   font: inherit;
   cursor: pointer;
   color: inherit;
+  transition: color .05s;
+
 }
 
 .user-nav-item {
@@ -279,9 +289,16 @@ img.twitter {
   float: right;
   display: block;
   margin: 0 0 15px 0;
-  padding: 5px 0;
+  padding: 5px 0 5px 5px;
+  transition: border .05s;
+  border-radius: 3px;
 }
 
+.log-in input:focus {
+  border: 1px solid #0277AD;
+  transition: border .05s;
+
+}
 .log-in-button {
   border: 1px solid #aaa;
   border-radius: 3px;
@@ -290,22 +307,35 @@ img.twitter {
   padding: 6px 35px;
   background: #ccc;
   cursor: pointer;
+  transition: border .05s;
 }
 
 .log-in-button:hover {
   border: 1px solid black;
+  transition: border .05s;
 }
 
 .log-in .guest {
-  font-weight: normal;
-  color: #0277ad;
-  border: none;
+  float: right;
+  padding: 5px 10px;
+  background: #007298;
+  color: white;
+  border-radius: 5px;
+  font-weight: bold;
+  border: 1px solid transparent;
+  font-size: 14px;
+  margin: 0;
   cursor: pointer;
 }
 
+.log-in .guest:hover {
+  text-decoration: underline;
+}
+
 .log-in aside {
-  float: left;
   font-weight: normal;
+  margin: 30px 0;
+  text-align: center;
 }
 
 
@@ -350,6 +380,14 @@ img.twitter {
   border-radius: 3px;
   font-weight: normal;
   width: 200px;
+  transition: border .05s;
+  padding: 5px 0 5px 5px;
+}
+
+.sign-up-content input:focus {
+  border: 1px solid #0277AD;
+  transition: border .05s;
+
 }
 
 .sign-up-content form div {
@@ -403,6 +441,7 @@ img.thumb {
   font-size: 14px;
   padding: 3px 10px;
   cursor: pointer;
+  transition: border .05s;
 }
 
 .track {
@@ -414,10 +453,14 @@ img.thumb {
   font-size: 14px;
   padding: 3px 10px;
   cursor: pointer;
+  transition: border .05s;
+
 }
 
 .untrack:hover, .track:hover {
   border: 1px solid black;
+  transition: border .05s;
+
 }
 
 
@@ -567,10 +610,14 @@ ul .info-box {
   width: 500px;
   background: #ECE9E9;
   position: relative;
+  transition: background .05s
 }
 
 ul .info-box:hover {
   background: #DADADA;
+  transition: background .05s
+
+
 }
 
 ul .info-box button {
@@ -606,10 +653,14 @@ section.artist-concert {
   background: #ECE9E9;
   padding: 10px;
   margin: 0 0 10px;
+  transition: background .05s
+
 }
 
 section.artist-concert:hover {
   background: #DADADA;
+  transition: background .05s
+
 }
 
 .artist-concert a {
@@ -630,10 +681,15 @@ section.locale-concert {
   padding: 10px;
   margin: 0 0 10px;
   position: relative;
+  transition: background .05s
+
+
 }
 
 section.locale-concert:hover {
   background: #DADADA;
+  transition: background .05s
+
 }
 
 .locale-concert a {
@@ -664,10 +720,12 @@ section.locale-concert:hover {
   background: #ECE9E9;
   margin: 5px 0 10px;
   padding: 10px;
+  transition: background .05s
 }
 
 .session-locale:hover {
   background: #DADADA;
+  transition: background .05s
 }
 
 .session-locale a {
@@ -710,16 +768,16 @@ div.header input.search {
   padding: 5px 2px;
   margin: 10px 0 0 0;
   color: #C1B6AE;
-  border-radius: 3px;
+  transition: border .05s;
+
 }
 
 div.header input.search:focus {
   color: black;
+  border: 1px solid #0277AD;
+  transition: border .05s;
 }
 
-div.header input.search:hover {
-  border: 1px solid #0277AD;
-}
 
 
 div.header input.submit {
@@ -729,10 +787,14 @@ div.header input.submit {
   padding: 5px 30px;
   background: #EEEEEE;
   cursor: pointer;
+  transition: background .05s
+
 }
 
 div.header input.submit:hover {
   background: #ccc;
+  transition: background .05s
+
 }
 
 
@@ -779,4 +841,10 @@ div.header input.submit:hover {
   font-size: 14px;
   padding: 3px 10px;
   cursor: pointer;
+  transition: border .05s;
+}
+
+.user-info input:hover {
+  border: 1px solid black;
+  transition: border .05s;
 }

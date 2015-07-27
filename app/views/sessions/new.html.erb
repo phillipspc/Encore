@@ -1,26 +1,36 @@
-<div class='main '>
+<div class='main'>
   <div class="log-in group">
   <h2>Log in with your username and password</h3>
-  <form action="<%= session_url %>" method="post">
-    <%= render 'shared/auth_token' %>
-    <p>Username/email</p> <input type="text" name="user[username_or_email]"><br>
-    <p>Password</p> <input type="password" name="user[password]"><br>
-  <button class='log-in-button'>Log in</button>
-  </form>
-
-  <p>
     <form action="<%= session_url %>" method="post">
     <%= render 'shared/auth_token' %>
-    <input type="hidden" name="user[username_or_email]" value="guest">
-    <input type="hidden" name="user[password]" value="password">
-    <input type="submit" class= "guest" value="Sign in as Guest user.">
+    <div class="field group">
+      <p>Username/email </p><input type="text" name="user[username_or_email]">
+    </div>
+
+    <div class="field group">
+      <p>Password </p><input type="password" name="user[password]">
+    </div>
+
+    <div class="field group">
+      <button class='log-in-button'>Log in</button>
+    </div>
     </form>
-  </p>
-  <aside>Don't have an Encore account yet?
-    <a href="<%= new_user_url %>">Sign up</a>
-    <a href="/auth/twitter">
-      <img src="/assets/images/button.png" class="twitter">
-    </a>
-  </aside>
+
+    <div class="field group">
+      <a href="/auth/twitter">
+        <img src="/assets/images/button.png" class="twitter">
+      </a>
+    </div>
+
+    <aside>
+      Don't have an Encore account yet?
+      <a href="<%= new_user_url %>">Sign up</a>
+    </aside>
+      <form action="<%= session_url %>" method="post">
+      <%= render 'shared/auth_token' %>
+      <input type="hidden" name="user[username_or_email]" value="guest">
+      <input type="hidden" name="user[password]" value="password">
+      <input type="submit" class= "guest" value="Sign in as Guest user.">
+      </form>
   </div>
 </div>
