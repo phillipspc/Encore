@@ -11,6 +11,6 @@
     <button class="untrack untrack-concert">Stop tracking</button>
   <% } %>
   <a href="#/concerts/<%= concert.id %>">
-    <img src="<%= concert.escape('small_image_url') %>">
+    <img src="<%= concert.artist().escape('small_image_url') %>">
   </a>
 </div>

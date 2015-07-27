@@ -18,6 +18,7 @@ Encore.Views.SessionLocales = Backbone.View.extend({
 
     var that = this;
     locales.each( function (locale){
+      locale = Encore.locales.getOrFetch(locale.id);
       var view = new Encore.Views.SessionLocale({
         model: locale,
         collection: locales
