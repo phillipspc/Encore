@@ -502,14 +502,29 @@ img.profile {
 .artist-text p {
   text-align: left;
   margin: 10px 10px 10px 0;
-  height: 254px;
+  max-height: 254px;
   overflow: hidden;
+  transition: max-height .8s;
+
+}
+
+.artist-text p.expanded {
+  max-height: 1500px;
 }
 
 .artist-text button {
   float: left;
   display: block;
-  margin: 0 0 10px 0px;
+  margin: 0 80px 10px 0px;
+}
+
+.artist-text .bio {
+  margin: 3px 0 0 0;
+  display: none;
+}
+
+.artist-text .active {
+  display: block;
 }
 
 

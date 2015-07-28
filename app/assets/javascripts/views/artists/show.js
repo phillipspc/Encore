@@ -3,7 +3,9 @@ Encore.Views.ArtistShow = Backbone.View.extend({
 
   events: {
     'click .track-artist': 'trackArtist',
-    'click .untrack-artist': 'untrackArtist'
+    'click .untrack-artist': 'untrackArtist',
+    'click .show': 'show',
+    'click .hide': 'hide'
   },
 
   initialize: function () {
@@ -11,14 +13,6 @@ Encore.Views.ArtistShow = Backbone.View.extend({
   },
 
   render: function () {
-    // if (!this.model.get('image_url')) {
-    //   this.model.getLargeImage();
-    //   return this;
-    // }
-    // if (!this.model.get('description')) {
-    //   this.model.getDescription();
-    //   return this;
-    // }
     var ids = this.collection.pluck('id');
     var content = this.template({
       artist: this.model,
@@ -46,6 +40,20 @@ Encore.Views.ArtistShow = Backbone.View.extend({
   untrackArtist: function (event) {
     event.preventDefault();
     this.model.untrack(this.collection);
+  },
+
+  show: function (event) {
+    event.preventDefault();
+    $('.artist-text p').toggleClass('expanded');
+    $('.artist-text .show').toggleClass('active');
+    $('.artist-text .hide').toggleClass('active');
+  },
+
+  hide: function (event) {
+    event.preventDefault();
+    $('.artist-text p').toggleClass('expanded');
+    $('.artist-text .show').toggleClass('active');
+    $('.artist-text .hide').toggleClass('active');
   }
 
 });
