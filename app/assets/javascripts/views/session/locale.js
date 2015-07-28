@@ -24,7 +24,7 @@ Encore.Views.SessionLocale = Backbone.View.extend({
   },
 
   render: function () {
-    if (!this.model.concerts()){
+    if (!this.model.escape('num_concerts')){
       return this;
     }
     var ids = this.collection.pluck('id');

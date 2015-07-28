@@ -326,10 +326,13 @@ img.twitter {
   font-size: 14px;
   margin: 0;
   cursor: pointer;
+  transition: border .05s;
 }
 
 .log-in .guest:hover {
-  text-decoration: underline;
+  border: 1px solid black;
+  transition: border .05s;
+
 }
 
 .log-in aside {

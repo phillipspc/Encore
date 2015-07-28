@@ -11,6 +11,9 @@ Encore.Views.LocaleShow = Backbone.View.extend({
   },
 
   render: function () {
+    if (!this.model.escape('city')) {
+      return this;
+    }
     var ids = this.collection.pluck('id');
     var content = this.template({
       locale: this.model,

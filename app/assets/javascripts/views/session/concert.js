@@ -28,6 +28,9 @@ Encore.Views.SessionConcert = Backbone.View.extend({
   },
 
   render: function () {
+    if (!this.model.locale().escape('city')) {
+      return this;
+    }
     var content = this.template({
       concert: this.model,
       ids: this.collection.pluck('id')
