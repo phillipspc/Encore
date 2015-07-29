@@ -39,7 +39,7 @@ class Artist < ActiveRecord::Base
     resp = RestClient.get(url)
     parse = JSON.parse(resp)
 
-    
+
     if (!parse['artists']['items'].empty? &&
       parse['artists']['items'].first['images'] &&
       !parse['artists']['items'].first['images'].empty?)
@@ -54,32 +54,32 @@ class Artist < ActiveRecord::Base
   end
 
 
-  def getDescription
-    url = Addressable::URI.new(
-    scheme: 'http',
-    host: 'developer.echonest.com',
-    path: 'api/v4/artist/biographies',
-    query_values: {
-      api_key: ENV['echonest_key'],
-      name: self.name,
-      format: 'json',
-      results: 1,
-      start: 0,
-      license: 'cc-by-sa'
-    }
-    ).to_s
-
-    resp = RestClient.get(url)
-    parse = JSON.parse(resp)
-
-    if (parse['response']['biographies'])
-      self.description = parse['response']['biographies'].first['text']
-    else
-      self.description = 'No bio found for this artist.'
-    end
-
-    self.save!
-  end
+  # def getDescription
+  #   url = Addressable::URI.new(
+  #   scheme: 'http',
+  #   host: 'developer.echonest.com',
+  #   path: 'api/v4/artist/biographies',
+  #   query_values: {
+  #     api_key: ENV['echonest_key'],
+  #     name: self.name,
+  #     format: 'json',
+  #     results: 1,
+  #     start: 0,
+  #     license: 'cc-by-sa'
+  #   }
+  #   ).to_s
+  #
+  #   resp = RestClient.get(url)
+  #   parse = JSON.parse(resp)
+  #
+  #   if (parse['response']['biographies'])
+  #     self.description = parse['response']['biographies'].first['text']
+  #   else
+  #     self.description = 'No bio found for this artist.'
+  #   end
+  #
+  #   self.save!
+  # end
 
   def self.getArtists(start)
     url = Addressable::URI.new(
