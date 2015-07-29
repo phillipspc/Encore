@@ -7,7 +7,8 @@
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
 
-
+# Generates 50 city locales
+###############################################################################
 Locale.create({city: 'New York', state: "NY"})
 
 
@@ -84,31 +85,44 @@ Locale.create({city: "Minneapolis", state: "MN"})
 Locale.create({city: "Wichita", state: "KS"})
 
 Locale.create({city: "New Orleans", state: "LA"})
+###############################################################################
 
 
 
 
-
-
-100.times do
-  User.create!({username: Faker::Internet.user_name,
-                email: Faker::Internet.email,
-                password: Faker::Internet.password(8),
-                image_url: Faker::Avatar.image})
-end
-
-
-def locale_rand
-  1 + rand(Locale.all.length)
-end
-
-User.count.times do |id|
-  2.times do
-    UserLocale.create({user_id: (id+1), locale_id: locale_rand})
-  end
-end
+# Generates Guest user account
+###############################################################################
 
 User.create!({username: 'guest', email: 'guest@gmail.com',
             password: 'password', image_url: '/assets/images/avatar.jpg'})
-
 UserLocale.create({user_id: User.last.id, locale_id: 1})
+
+
+###############################################################################
+
+
+
+
+
+# Generates 100 faker user account, assigns 2 random locales to each
+###############################################################################
+
+# 100.times do
+#   User.create!({username: Faker::Internet.user_name,
+#                 email: Faker::Internet.email,
+#                 password: Faker::Internet.password(8),
+#                 image_url: Faker::Avatar.image})
+# end
+#
+#
+# def locale_rand
+#   1 + rand(Locale.all.length)
+# end
+#
+# User.count.times do |id|
+#   2.times do
+#     UserLocale.create({user_id: (id+1), locale_id: locale_rand})
+#   end
+# end
+
+###############################################################################

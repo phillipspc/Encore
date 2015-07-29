@@ -1,18 +1,13 @@
-desc 'add artists to the database'
+desc 'add 1000 artists to database seed'
 task add_artists: :environment do
-  ['Taylor Swift', 'Kanye West', 'The War On Drugs', 'Radiohead',
-    'Arctic Monkeys', 'Lana Del Rey', 'The Weeknd',
-    'Katy Perry', 'Tame Impala', 'The Strokes', 'Jamie XX',
-    'Godspeed You Black Emperor', 'Explosions In The Sky', 'Mogwai', 'Sigur Ros'].each do |name|
-      artist = Artist.create({name: name})
-      puts artist.name
-      artist.getLargeImage
-      puts artist.name + ' got large image'
-      artist.getSmallImage
-      puts artist.name + ' got small image'
-      artist.getDescription
-      puts artist.name + ' got description'
-    end
-
-
+  Artist.getArtists(0)
+  Artist.getArtists(100)
+  Artist.getArtists(200)
+  Artist.getArtists(300)
+  Artist.getArtists(400)
+  Artist.getArtists(500)
+  Artist.getArtists(600)
+  Artist.getArtists(700)
+  Artist.getArtists(800)
+  Artist.getArtists(900)
 end
