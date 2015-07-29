@@ -10,7 +10,7 @@ Encore.Collections.LocaleSearchResults = Backbone.Collection.extend({
 
   parse: function (response) {
     if (response.locales) {
-      this.locales().set(response.locales);
+      this.locales().set(response.locales, { parse: true });
       delete response.locales;
     }
     return response;

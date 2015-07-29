@@ -9,7 +9,6 @@ Encore.Views.SessionLocale = Backbone.View.extend({
   },
 
   initialize: function () {
-    this.model.fetch();
     this.listenTo(this.model, 'sync', this.render);
   },
 
