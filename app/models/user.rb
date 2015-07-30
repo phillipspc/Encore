@@ -56,18 +56,25 @@ class User < ActiveRecord::Base
 
   def refreshGuest!
     self.destroy!
-    User.create!({username: 'guest', email: 'guest@gmail.com',
+    user = User.create!({username: 'guest', email: 'guest@gmail.com',
                 password: 'password', image_url: '/assets/images/avatar.jpg'})
 
-    UserLocale.create({user_id: User.last.id, locale_id: 1})
+    UserLocale.create({user_id: user.id, locale_id: 1})
 
     def artist_rand
-      return (1 + rand(Artist.all.length))
+      return (1 + rand(100))
     end
 
     10.times do
+      ArtistTracking.create({user_id: user.id, artist_id: artist_rand})
+    end
 
-      ArtistTracking.create({user_id: User.last.id, artist_id: artist_rand})
+    def concert_rand
+      return (1 + rand(Concert.all.count))
+    end
+
+    5.times do
+      ConcertTracking.create({user_id: user.id, concert_id: concert_rand})
     end
 
   end
