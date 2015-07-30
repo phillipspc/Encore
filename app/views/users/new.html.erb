@@ -10,7 +10,16 @@
 
   <div class="sign-up-content">
     <h1>Track your favorite artists and never miss them live.</h1>
+      <div class="field group">
+        <form action="<%= session_url %>" method="post">
+        <%= render 'shared/auth_token' %>
+        <input type="hidden" name="user[username_or_email]" value="guest">
+        <input type="hidden" name="user[password]" value="password">
+        <input type="submit" class= "guest" value="Sign in as Guest user.">
+        </form>
+      </div>
     <h2>Sign up with your email address.</h2>
+
       <form action="<%= users_url %>" method="post">
         <%= render 'shared/auth_token' %>
         <div class="field group">

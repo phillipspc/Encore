@@ -1,6 +1,16 @@
 <div class='main'>
   <div class="log-in group">
-  <h2>Log in with your username and password</h3>
+    <div class="field group">
+      <form action="<%= session_url %>" method="post">
+      <%= render 'shared/auth_token' %>
+      <input type="hidden" name="user[username_or_email]" value="guest">
+      <input type="hidden" name="user[password]" value="password">
+      <input type="submit" class= "guest" value="Sign in as Guest user.">
+      </form>
+    </div>
+
+
+    <h2>Log in with your username and password</h3>
     <form action="<%= session_url %>" method="post">
     <%= render 'shared/auth_token' %>
     <div class="field group">
@@ -26,11 +36,5 @@
       Don't have an Encore account yet?
       <a href="<%= new_user_url %>">Sign up</a>
     </aside>
-      <form action="<%= session_url %>" method="post">
-      <%= render 'shared/auth_token' %>
-      <input type="hidden" name="user[username_or_email]" value="guest">
-      <input type="hidden" name="user[password]" value="password">
-      <input type="submit" class= "guest" value="Sign in as Guest user.">
-      </form>
   </div>
 </div>
