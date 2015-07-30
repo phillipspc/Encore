@@ -11,17 +11,15 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150723190620) do
+ActiveRecord::Schema.define(version: 20150730222934) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
   enable_extension "pg_trgm"
 
   create_table "artist_trackings", force: :cascade do |t|
-    t.integer  "user_id",    null: false
-    t.integer  "artist_id",  null: false
-    t.datetime "created_at"
-    t.datetime "updated_at"
+    t.integer "user_id",   null: false
+    t.integer "artist_id", null: false
   end
 
   create_table "artists", force: :cascade do |t|
@@ -35,8 +33,6 @@ ActiveRecord::Schema.define(version: 20150723190620) do
 
   create_table "concert_photos", force: :cascade do |t|
     t.integer  "concert_id",         null: false
-    t.datetime "created_at"
-    t.datetime "updated_at"
     t.string   "photo_file_name"
     t.string   "photo_content_type"
     t.integer  "photo_file_size"
@@ -44,27 +40,21 @@ ActiveRecord::Schema.define(version: 20150723190620) do
   end
 
   create_table "concert_trackings", force: :cascade do |t|
-    t.integer  "user_id",                    null: false
-    t.integer  "concert_id",                 null: false
-    t.datetime "created_at"
-    t.datetime "updated_at"
-    t.boolean  "attending",  default: false
+    t.integer "user_id",                    null: false
+    t.integer "concert_id",                 null: false
+    t.boolean "attending",  default: false
   end
 
   create_table "concerts", force: :cascade do |t|
-    t.integer  "artist_id",       null: false
-    t.integer  "locale_id",       null: false
-    t.date     "date",            null: false
-    t.datetime "created_at"
-    t.datetime "updated_at"
-    t.string   "small_image_url"
+    t.integer "artist_id",       null: false
+    t.integer "locale_id",       null: false
+    t.date    "date",            null: false
+    t.string  "small_image_url"
   end
 
   create_table "locales", force: :cascade do |t|
-    t.string   "city",       null: false
-    t.string   "state",      null: false
-    t.datetime "created_at"
-    t.datetime "updated_at"
+    t.string "city",  null: false
+    t.string "state", null: false
   end
 
   add_index "locales", ["city"], name: "index_locales_on_city", unique: true, using: :btree
@@ -77,10 +67,8 @@ ActiveRecord::Schema.define(version: 20150723190620) do
   add_index "states", ["abbrev"], name: "index_states_on_abbrev", unique: true, using: :btree
 
   create_table "user_locales", force: :cascade do |t|
-    t.integer  "user_id",    null: false
-    t.integer  "locale_id",  null: false
-    t.datetime "created_at"
-    t.datetime "updated_at"
+    t.integer "user_id",   null: false
+    t.integer "locale_id", null: false
   end
 
   create_table "users", force: :cascade do |t|

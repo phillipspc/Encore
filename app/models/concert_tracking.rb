@@ -5,8 +5,6 @@
 #  id         :integer          not null, primary key
 #  user_id    :integer          not null
 #  concert_id :integer          not null
-#  created_at :datetime
-#  updated_at :datetime
 #  attending  :boolean          default(FALSE)
 #
 

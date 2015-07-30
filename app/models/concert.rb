@@ -6,8 +6,6 @@
 #  artist_id       :integer          not null
 #  locale_id       :integer          not null
 #  date            :date             not null
-#  created_at      :datetime
-#  updated_at      :datetime
 #  small_image_url :string
 #
 

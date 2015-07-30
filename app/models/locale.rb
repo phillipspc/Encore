@@ -2,11 +2,9 @@
 #
 # Table name: locales
 #
-#  id         :integer          not null, primary key
-#  city       :string           not null
-#  state      :string           not null
-#  created_at :datetime
-#  updated_at :datetime
+#  id    :integer          not null, primary key
+#  city  :string           not null
+#  state :string           not null
 #
 
 class Locale < ActiveRecord::Base
