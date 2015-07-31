@@ -94,7 +94,7 @@ Encore.Models.Artist = Backbone.Model.extend({
     if (this.get('name')) {
       $.ajax({
         url: 'http://developer.echonest.com/api/v4/artist/biographies?api_key=P5IRNLNKLZHCK9XQP&name='
-        + that.get('name') +
+        + that.get('name').replace(/[^\w\s]/gi, '') +
         '&format=json&results=1&start=0&license=cc-by-sa',
 
         success: function (response) {
