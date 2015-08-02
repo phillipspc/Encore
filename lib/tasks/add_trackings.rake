@@ -1,7 +1,7 @@
 desc 'add artist trackings and concerts'
 task add_trackings: :environment do
   def artist_rand
-    return (1 + rand(Artist.all.length))
+    return (1 + rand(200))
   end
 
   User.count.times do |artist_id|
