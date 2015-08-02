@@ -9,5 +9,5 @@ task add_artists: :environment do
   Artist.getArtists(600)
   Artist.getArtists(700)
   Artist.getArtists(800)
-  # Artist.getArtists(900)
+  Artist.getArtists(900)
 end
