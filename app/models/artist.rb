@@ -26,6 +26,7 @@ class Artist < ActiveRecord::Base
   pg_search_scope :search_by_name, against: :name, using: :trigram
 
   def getImages
+    return if self.image_url
     url = Addressable::URI.new(
     scheme: 'https',
     host: 'api.spotify.com',
