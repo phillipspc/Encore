@@ -61,20 +61,25 @@ class User < ActiveRecord::Base
 
     UserLocale.create({user_id: user.id, locale_id: 1})
 
-    def artist_rand
-      return (1 + rand(100))
+    # Ensures guest user follows 5 of the top 100 artists
+    5.times do
+      ArtistTracking.create({user_id: user.id, artist_id: (1 + rand(100))})
     end
 
-    10.times do
-      ArtistTracking.create({user_id: user.id, artist_id: artist_rand})
+    # Ensures guest user follows at least 5 artists playing in New York
+    ids = Locale.find_by_city("New York").artist_ids
+    until user.artists.count >= 10
+      ArtistTracking.create({user_id: user.id, artist_id: ids.sample})
     end
+
 
     def concert_rand
       return (1 + rand(Concert.all.count))
     end
 
     5.times do
-      ConcertTracking.create({user_id: user.id, concert_id: concert_rand})
+      ConcertTracking.create({ user_id: user.id,
+                               concert_id: (1 + rand(Concert.all.count)) })
     end
 
   end
